@@ -7,7 +7,7 @@
 @keyframes pulse{
   0% {
     scale:1;
-    opacity:0.65;
+    opacity:1;
   }
   100%{
     scale:1.6;
@@ -17,7 +17,7 @@
 @keyframes pulse2{
   0% {
     scale:1;
-    opacity:0.25;
+    opacity:1;
   }
   100%{
     scale:2.5;
@@ -27,7 +27,7 @@
 @keyframes pulse3{
   0% {
     scale:1;
-    opacity:0.1;
+    opacity:1;
   }
   100%{
     scale:3.5;

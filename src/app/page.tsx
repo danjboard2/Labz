@@ -1,7 +1,11 @@
+"use client"
 import Image from 'next/image'
+import CustomButton from "../components/slider/CustomButton.js";
+import "../components/slider/CustomButton.css";
 
 export default function Home() {
   return (
+    <>
     <main className="flex bg-homepage bg-cover min-h-screen flex-col items-center justify-center p-24">
      <div className="slide-unlock flex relative">
       <div className="pulsing-rectangle relative flex w-[59px] h-[62px]">
@@ -15,5 +19,7 @@ export default function Home() {
       </div>
      </div>
     </main>
+    <CustomButton />
+    </>
   )
 }
