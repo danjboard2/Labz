@@ -6,7 +6,7 @@
 /* homepage */
 @keyframes pulse{
   0% {
-    scale:0.7;
+    scale:1;
     opacity:0;
   }
   30% {
@@ -16,7 +16,39 @@
     opacity:1;
   }
   100%{
-    scale:1.2;
+    scale:3;
+    opacity:0;
+  }
+}
+@keyframes pulse2{
+  0% {
+    scale:1.3;
+    opacity:0;
+  }
+  30% {
+    opacity:0.4;
+  }
+  55% {
+    opacity:1;
+  }
+  100%{
+    scale:4;
+    opacity:0;
+  }
+}
+@keyframes pulse3{
+  0% {
+    scale:1.6;
+    opacity:0;
+  }
+  30% {
+    opacity:0.4;
+  }
+  55% {
+    opacity:1;
+  }
+  100%{
+    scale:5;
     opacity:0;
   }
 }
@@ -25,6 +57,8 @@
 /* homepage */
 
 .pulse {animation-name: pulse; animation-duration: 3s; animation-iteration-count: infinite; }
+.pulse2 {animation-name: pulse2; animation-duration: 3s; animation-iteration-count: infinite; }
+.pulse3 {animation-name: pulse3; animation-duration: 3s; animation-iteration-count: infinite; }
 
 :root {
   --foreground-rgb: 0, 0, 0;
