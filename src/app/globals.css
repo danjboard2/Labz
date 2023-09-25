@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== animations ===== */
+/* homepage */
+@keyframes pulse{
+  0% {
+    scale:0.7;
+    opacity:0;
+  }
+  30% {
+    opacity:0.4;
+  }
+  55% {
+    opacity:1;
+  }
+  100%{
+    scale:1.2;
+    opacity:0;
+  }
+}
+
+/* ===== styles ===== */
+/* homepage */
+
+.pulse {animation-name: pulse; animation-duration: 3s; animation-iteration-count: infinite; }
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
