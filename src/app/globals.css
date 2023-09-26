@@ -9,6 +9,7 @@
     scale:0.89;
     opacity:0;
   }
+  29% {scale:0.95; opacity:0}
   30% {scale:0.95; opacity:1}
   100%{
     scale:1.6;
@@ -20,6 +21,7 @@
     scale:0.89;
     opacity:0;
   }
+  29% {scale:0.95; opacity:0}
   30% {scale:0.95; opacity:1}
   100%{
     scale:2.5;
@@ -31,6 +33,7 @@
     scale:0.89;
     opacity:0;
   }
+  29% {scale:0.95; opacity:0}
   30% {scale:0.95; opacity:1}
   100%{
     scale:3.5;
