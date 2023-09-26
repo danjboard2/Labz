@@ -6,7 +6,7 @@
 /* homepage */
 @keyframes pulse{
   0% {
-    scale:0.85;
+    scale:0.89;
     opacity:0;
   }
   30% {scale:0.95; opacity:1}
@@ -17,7 +17,7 @@
 }
 @keyframes pulse2{
   0% {
-    scale:0.85;
+    scale:0.89;
     opacity:0;
   }
   30% {scale:0.95; opacity:1}
@@ -28,7 +28,7 @@
 }
 @keyframes pulse3{
   0% {
-    scale:0.85;
+    scale:0.89;
     opacity:0;
   }
   30% {scale:0.95; opacity:1}
