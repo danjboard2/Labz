@@ -47,6 +47,25 @@ export default class CustomButton extends Component {
   updateSliderStyle = () => {
     if (this.unmounted || this.state.unlocked) return;
 
+            // Calculate the widths based on the slider's position
+        const maxWidth = 4; // Initial maximum width
+        const minWidth = 6; // Target minimum width
+        const width = minWidth + (maxWidth - minWidth) * (this.sliderLeft / this.containerWidth);
+
+        const maxHeight = 18; // Target minimum width
+        const minHeight = 54; // Initial maximum width
+        const height = minHeight + (maxHeight - minHeight) * (this.sliderLeft / this.containerWidth);
+
+        // Apply the calculated widths to the right-top and right-bottom elements
+        const rightTop = document.querySelector('.right-top');
+        const rightBottom = document.querySelector('.right-bottom');
+        if (rightTop && rightBottom) {
+          rightTop.style.width = width + 'px';
+          rightBottom.style.width = width + 'px';
+          rightTop.style.height = height + '%';
+          rightBottom.style.height = height + '%';         
+        }
+
       // Calculate opacity based on the slider's position
       const maxOpacity = 1;
       const minOpacity = 0;
@@ -66,9 +85,9 @@ export default class CustomButton extends Component {
         counter.style.opacity = opacity;
       }
         // Calculate border width based on the slider's position
-        const maxWidth = 6.5; // Initial maximum border width
-        const minWidth = 4; // Target minimum border width
-        const borderWidth = maxWidth - (maxWidth - minWidth) * (this.sliderLeft / this.containerWidth);
+        const maxBorderWidth = 6.5; // Initial maximum border width
+        const minBorderWidth = 4; // Target minimum border width
+        const borderWidth = maxBorderWidth - (maxBorderWidth - minBorderWidth) * (this.sliderLeft / this.containerWidth);
 
         // Apply the calculated border width to the logo-rect element
         const logoRect = document.querySelector('.logo-rect');
@@ -202,7 +221,10 @@ export default class CustomButton extends Component {
             <div className="rsbcSliderCircle -z-20">
             <div className="pulsing-rectangle relative flex w-[59px] h-[62px] float-right">
             <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[7px] top-[6px] text-[6px] font-bold text-[#fff]">{this.state.count}</p>
-               <div className="logo-rect absolute block -z-[1] pointer-events-none w-[59px] h-[61px]"></div>
+               <div className="logo-rect absolute block -z-[1] pointer-events-none w-[59px] h-[61px]">
+                  <div className="right-top"></div>
+                  <div className="right-bottom"></div>
+               </div>
             </div>
             <div className="outer-rectangles absolute w-[59px] h-[62px]">
             <Image className="pulse absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer1.png" width={82} height={84} alt={'Welcome to Labz'}/>
