@@ -9,7 +9,7 @@
     scale:0.85;
     opacity:0;
   }
-  30% {scale:1; opacity:1}
+  30% {scale:0.95; opacity:1}
   100%{
     scale:1.6;
     opacity:0;
@@ -20,7 +20,7 @@
     scale:0.85;
     opacity:0;
   }
-  30% {scale:1; opacity:1}
+  30% {scale:0.95; opacity:1}
   100%{
     scale:2.5;
     opacity:0;
@@ -31,7 +31,7 @@
     scale:0.85;
     opacity:0;
   }
-  30% {scale:1; opacity:1}
+  30% {scale:0.95; opacity:1}
   100%{
     scale:3.5;
     opacity:0;
