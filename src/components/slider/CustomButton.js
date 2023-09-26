@@ -50,17 +50,31 @@ export default class CustomButton extends Component {
       // Calculate opacity based on the slider's position
       const maxOpacity = 1;
       const minOpacity = 0;
+      const maxTextScale = 1.4;
+      const minTextScale = 1;
       const opacity = minOpacity + (maxOpacity - minOpacity) * (this.sliderLeft / this.containerWidth);
+      const textscale = minTextScale + (maxTextScale - minTextScale) * (this.sliderLeft / this.containerWidth);
 
       // Apply the calculated opacity to the rsbcText element
       const rsbcText = document.querySelector('.rsbcText');
       if (rsbcText) {
         rsbcText.style.opacity = opacity;
+        rsbcText.style.scale = textscale;
       }
       const counter = document.querySelector('.counter');
       if (counter) {
         counter.style.opacity = opacity;
       }
+        // Calculate border width based on the slider's position
+        const maxWidth = 6.5; // Initial maximum border width
+        const minWidth = 4; // Target minimum border width
+        const borderWidth = maxWidth - (maxWidth - minWidth) * (this.sliderLeft / this.containerWidth);
+
+        // Apply the calculated border width to the logo-rect element
+        const logoRect = document.querySelector('.logo-rect');
+        if (logoRect) {
+          logoRect.style.borderWidth = borderWidth + 'px';
+  }
       // Calculate scale based on the slider's position
       const maxScale = 2;
       const minScale = 1;
@@ -187,11 +201,14 @@ export default class CustomButton extends Component {
             <div className=""></div>
             <div className="rsbcSliderCircle -z-20">
             <div className="pulsing-rectangle relative flex w-[59px] h-[62px] float-right">
-            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[12px] top-[10px] text-[6px] font-bold text-[#fff]">{this.state.count}</p>
-            <Image className="absolute block -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide.png" width={59} height={61} alt={'Welcome to Labz'}/></div>
+            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[7px] top-[6px] text-[6px] font-bold text-[#fff]">{this.state.count}</p>
+               <div className="logo-rect absolute block -z-[1] pointer-events-none w-[59px] h-[61px]"></div>
+            </div>
+            <div className="outer-rectangles absolute w-[59px] h-[62px]">
             <Image className="pulse absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer1.png" width={82} height={84} alt={'Welcome to Labz'}/>
             <Image className="pulse2 absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer2.png" width={107} height={110} alt={'Welcome to Labz'}/>
             <Image className="pulse3 absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer3.png" width={147} height={152} alt={'Welcome to Labz'}/>
+            </div>
             </div>
             </div>
             { /* end slider circle */}

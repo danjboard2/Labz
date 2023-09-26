@@ -26,6 +26,12 @@
   }
   .pulsing-rectangle {scale:1;  transition: scale 0s ease; /* You can adjust the transition duration */ }
   .counter {opacity:0; transition: opacity 0.5s ease; /* You can adjust the transition duration */}
+  .logo-rect {
+    border: 6.5px solid #fc3d03;
+    border-radius: 6px;
+      border-style: solid; /* Add this if not already specified */
+      transition: border-width 0s ease; /* You can adjust the transition duration */
+}
   .rsbContainerUnlocked {
    /* width: 50% !important;
     margin-left: 25%; */
@@ -79,11 +85,24 @@
   }
   .rsbcSliderCircle {
   }
-  
+  .rsbcSlider:hover .rsbcSliderText, .rsbcSlider:focus .rsbcSliderText, .rsbcSlider:active .rsbcSliderText, .rsbcSlider:target .rsbcSliderText, .rsbContainer.Unlocked .rsbcSliderText {
+    opacity: 0;
+    transition: 0.3s;
+}
+  .rsbcSlider:hover .pulsing-rectangle .outer-rectangles,
+   .rsbcSlider:focus .pulsing-rectangle .outer-rectangles,
+ .rsbcSlider:active .pulsing-rectangle .outer-rectangles,
+ .rsbcSlider:target .pulsing-rectangle .outer-rectangles,
+ .rsbContainer.Unlocked .pulsing-rectangle .outer-rectangles {
+  opacity:0 !important;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  }
   .rsbcText {
     float: left;
     position: absolute;
-    margin-left:170px;
+    margin-left: 168px;
     top: 0;
     left: 0;
     right: 0;
@@ -98,5 +117,6 @@
     color: #fff;
     opacity: 0;
   transition: opacity 0.5s ease; /* You can adjust the transition duration */
+  transition: scale 0.05s ease; /* You can adjust the transition duration */
   }
   
