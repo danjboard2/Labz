@@ -57,6 +57,19 @@ export default class CustomButton extends Component {
       if (rsbcText) {
         rsbcText.style.opacity = opacity;
       }
+      const counter = document.querySelector('.counter');
+      if (counter) {
+        counter.style.opacity = opacity;
+      }
+      // Calculate scale based on the slider's position
+      const maxScale = 2;
+      const minScale = 1;
+      const scale = minScale + (maxScale - minScale) * (this.sliderLeft / this.containerWidth);
+
+      const rectangle = document.querySelector('.pulsing-rectangle');
+      if (rectangle) {
+        rectangle.style.scale = scale;
+      }
 
     if (!this.isDragging && this.sliderLeft !== this.containerWidth) {
       // Apply the CSS transition when not dragging and slider isn't at the end
@@ -118,7 +131,7 @@ export default class CustomButton extends Component {
 
   onSuccess = () => {
     console.log("Slider Unlocked"); // Debug statement
-    container.current.style.width = container.current.clientWidth + "px";
+    /* container.current.style.width = container.current.clientWidth + "px"; */
     this.setState({
       unlocked: true
     });
@@ -153,7 +166,7 @@ export default class CustomButton extends Component {
         <div
           className={
             "rsbContainer " +
-            (this.state.unlocked ? "rsbContainerUnlocked" : "")
+            (this.state.unlocked ? "Unlocked" : "")
           }
           ref={container}
         >
@@ -174,7 +187,7 @@ export default class CustomButton extends Component {
             <div className=""></div>
             <div className="rsbcSliderCircle -z-20">
             <div className="pulsing-rectangle relative flex w-[59px] h-[62px] float-right">
-            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[12px] top-[10px] text-[8.9px] font-bold text-[#fff]">{this.state.count}</p>
+            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[12px] top-[10px] text-[6px] font-bold text-[#fff]">{this.state.count}</p>
             <Image className="absolute block -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide.png" width={59} height={61} alt={'Welcome to Labz'}/></div>
             <Image className="pulse absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer1.png" width={82} height={84} alt={'Welcome to Labz'}/>
             <Image className="pulse2 absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer2.png" width={107} height={110} alt={'Welcome to Labz'}/>

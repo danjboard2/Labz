@@ -24,10 +24,11 @@
     /* box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1); */
     overflow: visible; /* was hidden */
   }
-
+  .pulsing-rectangle {scale:1;  transition: scale 0s ease; /* You can adjust the transition duration */ }
+  .counter {opacity:0; transition: opacity 0.5s ease; /* You can adjust the transition duration */}
   .rsbContainerUnlocked {
-    width: 50% !important;
-    margin-left: 25%;
+   /* width: 50% !important;
+    margin-left: 25%; */
     transition: 0.5s;
     cursor: default;
   }
