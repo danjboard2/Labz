@@ -46,6 +46,18 @@ export default class CustomButton extends Component {
 
   updateSliderStyle = () => {
     if (this.unmounted || this.state.unlocked) return;
+
+      // Calculate opacity based on the slider's position
+      const maxOpacity = 1;
+      const minOpacity = 0;
+      const opacity = minOpacity + (maxOpacity - minOpacity) * (this.sliderLeft / this.containerWidth);
+
+      // Apply the calculated opacity to the rsbcText element
+      const rsbcText = document.querySelector('.rsbcText');
+      if (rsbcText) {
+        rsbcText.style.opacity = opacity;
+      }
+
     if (!this.isDragging && this.sliderLeft !== this.containerWidth) {
       // Apply the CSS transition when not dragging and slider isn't at the end
       slider.current.style.transition = "left 0.5s ease";
@@ -114,8 +126,8 @@ export default class CustomButton extends Component {
 
   getText = () => {
     return this.state.unlocked
-      ? this.props.text_unlocked || "UNLOCKED"
-      : this.props.text || "SLIDE";
+      ? this.props.text_unlocked || "Labz"
+      : this.props.text || "Labz";
   };
 
   reset = () => {
@@ -136,7 +148,7 @@ export default class CustomButton extends Component {
     console.log("Component Rendered"); // Debug statement
     return (
       <>
-      <div className="slide-unlock relative w-[10%] min-w-[300px]">
+      <div className="slide-unlock relative w-[220px] mr-[172px]">
       <div className="ReactSwipeButton">
         <div
           className={

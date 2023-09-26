@@ -78,19 +78,23 @@
   }
   .rsbcSliderCircle {
   }
+  
   .rsbcText {
     float: left;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    height: 61px;
+    line-height: 61px;
+    text-align: right;
+    font-family: "ABC", arial, sans-serif,
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
-    font-size: 13px;
-    color: #aaa;
+    font-size: 55px;
+    font-weight:bold;
+    color: #fff;
+    opacity: 0;
+  transition: opacity 0.5s ease; /* You can adjust the transition duration */
   }
   

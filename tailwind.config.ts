@@ -25,6 +25,9 @@ const config: Config = {
       backgroundImage: {
         'homepage': "url('/media/images/homepage-bg.jpg')",
       },
+      fontFamily: {
+        sans: ['"ABC"', 'arial' , 'sans-serif']
+      }
     },
   },
   plugins: [],

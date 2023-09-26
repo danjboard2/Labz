@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ABC';
+  src: url("../../public/media/fonts/abc-diatype-regular.otf") format("opentype");
+  font-weight:normal;
+}
+@font-face {
+  font-family: 'ABC';
+  src: url("../../public/media/fonts/abc-diatype-light.otf") format("opentype");
+  font-weight:light;
+}
+@font-face {
+  font-family: 'ABC';
+  src: url("../../public/media/fonts/abc-diatype-bold.otf") format("opentype");
+  font-weight:bold;
+}
+@font-face {
+  font-family: 'ABC';
+  src: url("../../public/media/fonts/abc-diatype-italic.otf") format("opentype");
+  font-style:italic
+}
+
 /* ===== animations ===== */
 /* homepage */
 @keyframes pulse{
