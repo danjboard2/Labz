@@ -1,7 +1,7 @@
 .ReactSwipeButton {
     float: left;
     width: 100%;
-    height: 50px;
+    height: 61px;
     position: relative;
   }
   .ReactSwipeButton,
@@ -18,11 +18,11 @@
     float: left;
     width: 100%;
     height: 100%;
-    background: #157946;
+    background: transparent;
     border-radius: 50px;
     position: relative;
     /* box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1); */
-    overflow: hidden;
+    overflow: visible; /* was hidden */
   }
 
   .rsbContainerUnlocked {
@@ -48,28 +48,18 @@
     float: left;
     width: 100%;
     position: absolute;
-    height: 50px;
+    height: 61px;
     top: 0;
     left: 50px;
     margin-left: -100%;
-    background: #51ad7e;
+    background: transparent;
     border-radius: 25px;
     z-index: 100;
     /* box-shadow: 1px 1px 5px rgba(0,0,0,0.3); */
     cursor: pointer;
   }
   .rsbcSliderText {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    line-height: 50px;
-    text-align: center;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    letter-spacing: 2px;
-    color: #fff;
-    font-size: 13px;
+
   }
   .rsbcSliderArrow {
     float: left;
@@ -87,14 +77,6 @@
     z-index: 10;
   }
   .rsbcSliderCircle {
-    position: absolute;
-    right: 0;
-    background: #51ad7e;
-    /* border: 5px solid #157946; */
-    top: 0;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
   }
   .rsbcText {
     float: left;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Image from "next/image"
 
 const slider = React.createRef();
 const container = React.createRef();
@@ -134,6 +135,8 @@ export default class CustomButton extends Component {
   render() {
     console.log("Component Rendered"); // Debug statement
     return (
+      <>
+      <div className="slide-unlock relative w-[10%] min-w-[300px]">
       <div className="ReactSwipeButton">
         <div
           className={
@@ -143,23 +146,37 @@ export default class CustomButton extends Component {
           ref={container}
         >
           <div
-            className="rsbcSlider"
+            className="rsbcSlider z-100"
             ref={slider}
             onMouseDown={this.startDrag}
             style={{ background: this.props.color }}
             onTouchStart={this.startDrag}
             onSuccess={this.onSuccess}
           >
-            <span className="rsbcSliderText">{this.getText()}</span>
-            <span className="rsbcSliderArrow"></span>
-            <span
-              className="rsbcSliderCircle"
-              style={{ background: this.props.color }}
-            ></span>
+
+            <div className="rsbcSliderText arrow-right absolute -right-[120px] top-[20px] w-[46px]">
+        <Image src="/media/images/arrow-right.png" width={46} height={20} alt={'Swipe right'}/>
+      </div>
+
+            { /* slider circle */}
+            <div className=""></div>
+            <div className="rsbcSliderCircle -z-20">
+            <div className="pulsing-rectangle relative flex w-[59px] h-[62px] float-right">
+            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[12px] top-[10px] text-[8.9px] font-bold text-[#fff]">{this.state.count}</p>
+            <Image className="absolute block -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide.png" width={59} height={61} alt={'Welcome to Labz'}/></div>
+            <Image className="pulse absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer1.png" width={82} height={84} alt={'Welcome to Labz'}/>
+            <Image className="pulse2 absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer2.png" width={107} height={110} alt={'Welcome to Labz'}/>
+            <Image className="pulse3 absolute -z-[1] pointer-events-none" src="/media/images/labz-rectangle-slide-outer3.png" width={147} height={152} alt={'Welcome to Labz'}/>
+            </div>
+            </div>
+            { /* end slider circle */}
+
           </div>
           <div className="rsbcText">{this.getText()}</div>
         </div>
       </div>
-    );
+  </div>
+  </>
+      );
+    }
   }
-}
