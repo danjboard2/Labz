@@ -33,7 +33,7 @@ export default class CustomButton extends Component {
         );
       }
       this.updateSliderStyle();
-      console.log("Slider Left:", this.sliderLeft); // Debug statement
+     // console.log("Slider Left:", this.sliderLeft); // Debug statement
     }
   };
 
@@ -54,10 +54,7 @@ export default class CustomButton extends Component {
       this.isDragging = false;
       if (this.sliderLeft > this.containerWidth * 0.9) {
         this.sliderLeft = this.containerWidth;
-        console.log("Before onSuccess check");
-        if (this.props.onSuccess) {
-          console.log("Calling this.props.onSuccess");
-          this.props.onSuccess();
+        if (this.onSuccess) {
           this.onSuccess();
         }
       } else {
@@ -126,6 +123,7 @@ export default class CustomButton extends Component {
             onMouseDown={this.startDrag}
             style={{ background: this.props.color }}
             onTouchStart={this.startDrag}
+            onSuccess={this.onSuccess}
           >
             <span className="rsbcSliderText">{this.getText()}</span>
             <span className="rsbcSliderArrow"></span>
