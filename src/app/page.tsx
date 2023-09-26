@@ -1,14 +1,33 @@
 "use client"
+import React, { Component } from "react";
 import Image from 'next/image'
 import CustomButton from "../components/slider/CustomButton.js";
 import "../components/slider/CustomButton.css";
 
-export default function Home() {
-  return (
+interface ParentState {
+  count: number;
+}
+
+class ParentComponent extends Component<{}, ParentState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+
+  // Define a function to update the count
+  updateCount = (newCount: number) => {
+    this.setState({ count: newCount });
+  };
+
+  render() {
+    return (
     <>
     <main className="flex bg-homepage bg-cover min-h-screen flex-col items-center justify-center p-24">
      <div className="slide-unlock flex relative">
       <div className="pulsing-rectangle relative flex w-[59px] h-[62px]">
+        <div className="counter absolute left-[12px] top-[10px] text-[10px] font-bold text-[#fff]">{this.state.count}</div>
         <Image className="absolute block" src="/media/images/labz-rectangle-slide.png" width={59} height={61} alt={'Welcome to Labz'}/>
         <Image className="pulse absolute" src="/media/images/labz-rectangle-slide-outer1.png" width={82} height={84} alt={'Welcome to Labz'}/>
         <Image className="pulse2 absolute" src="/media/images/labz-rectangle-slide-outer2.png" width={107} height={110} alt={'Welcome to Labz'}/>
@@ -19,7 +38,9 @@ export default function Home() {
       </div>
      </div>
     </main>
-    <CustomButton />
+    <CustomButton updateCount={this.updateCount} count={this.state.count} />
     </>
   )
 }
+}
+export default ParentComponent;

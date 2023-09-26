@@ -5,7 +5,9 @@ const container = React.createRef();
 const isTouchDevice = typeof document !== 'undefined' && 'ontouchstart' in document.documentElement;
 
 export default class CustomButton extends Component {
-  state = {};
+    state = {
+        count: 0, // Initialize count to zero
+      };
 
   componentDidMount() {
     if (isTouchDevice) {
@@ -33,7 +35,11 @@ export default class CustomButton extends Component {
         );
       }
       this.updateSliderStyle();
-     // console.log("Slider Left:", this.sliderLeft); // Debug statement
+      // Calculate and update the count based on slider position
+      const maxCount = 57; // Maximum count value
+      const newCount = Math.round((this.sliderLeft / this.containerWidth) * maxCount);
+      this.setState({ count: newCount });
+      this.props.updateCount(Math.round(newCount));
     }
   };
 
@@ -64,6 +70,25 @@ export default class CustomButton extends Component {
         if (this.props.onFailure) {
           this.props.onFailure();
         }
+  
+        // Gradually decrease the count back to zero over half a second
+        const maxCount = 57; // Maximum count value
+        const startCount = this.state.count;
+        const duration = 500; // half a second
+        const step = 1; // Decrease count by 1 in each step
+        const steps = duration / step;
+        let currentStep = 0;
+  
+        const countInterval = setInterval(() => {
+          if (currentStep < steps) {
+            const newCount = Math.max(0, startCount - (startCount / steps) * currentStep);
+            this.setState({ count: Math.round(newCount) });
+            this.props.updateCount(Math.round(newCount));
+            currentStep++;
+          } else {
+            clearInterval(countInterval);
+          }
+        }, step);
       }
     }
   };
