@@ -58,7 +58,7 @@ export default class CustomButton extends Component {
     if (this.unmounted || this.state.unlocked) return;
     if (this.isDragging) {
       this.isDragging = false;
-      if (this.sliderLeft > this.containerWidth * 0.9) {
+      if (this.sliderLeft > this.containerWidth * 0.99) {
         this.sliderLeft = this.containerWidth;
         if (this.onSuccess) {
           this.onSuccess();
