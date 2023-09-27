@@ -100,12 +100,18 @@
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   }
-  .right-top, .right-bottom {position:absolute; width:6px; height:54%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
+  .right-top, .right-bottom, .right-middle {position:absolute; width:6px; height:15%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
   .right-top {top:-1px; right:0px;border-radius: 0px 1px 0px 0px;}
   .right-bottom {
     bottom: -1px;
     right: 0px;
     border-radius: 0px 0px 1px 0px;
+}
+.right-middle {
+  right: 0px;
+  top: 13.5%;
+  bottom: 14.5%;
+  height: 73%;
 }
   .rsbcText {
     float: left;

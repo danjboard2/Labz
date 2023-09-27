@@ -52,19 +52,48 @@ export default class CustomButton extends Component {
         const minWidth = 6; // Target minimum width
         const width = minWidth + (maxWidth - minWidth) * (this.sliderLeft / this.containerWidth);
 
-        const maxHeight = 18; // Target minimum width
-        const minHeight = 54; // Initial maximum width
-        const height = minHeight + (maxHeight - minHeight) * (this.sliderLeft / this.containerWidth);
 
         // Apply the calculated widths to the right-top and right-bottom elements
         const rightTop = document.querySelector('.right-top');
         const rightBottom = document.querySelector('.right-bottom');
         if (rightTop && rightBottom) {
           rightTop.style.width = width + 'px';
-          rightBottom.style.width = width + 'px';
-          rightTop.style.height = height + '%';
-          rightBottom.style.height = height + '%';         
+          rightBottom.style.width = width + 'px';      
         }
+  // Calculate the midpoint of the slider
+  const midpoint = this.containerWidth / 2;
+
+  // Check if the slider is past the midpoint
+  if (this.sliderLeft >= midpoint) {
+    // Apply the final opacity (0) when the slider is 50% or more across
+    const rightTop = document.querySelector('.right-top');
+    const rightBottom = document.querySelector('.right-bottom');
+
+    if (rightTop && rightBottom) {
+     /* rightTop.style.opacity = 0;
+      rightBottom.style.opacity = 0; */
+    }
+
+    // Remove the transition
+    slider.current.style.transition = "none";
+  } else {
+    // Calculate the opacity change when the slider is 0% to 50% across
+    const halfWidth = this.containerWidth / 2; // Half of the container width
+    const completionPercentage = (this.sliderLeft / halfWidth) * 100; // Percentage of completion
+
+    // Calculate the new opacity based on the completion percentage
+    const initialOpacity = 1; // Initial opacity
+    const opacity = initialOpacity - (completionPercentage / 100);
+
+    // Apply the calculated opacities to the right-top and right-bottom elements
+    const rightMiddle = document.querySelector('.right-middle');
+
+    if (rightMiddle) {
+      rightMiddle.style.opacity = opacity;
+    }
+  }
+    // Remove the transition
+    slider.current.style.transition = "none";
 
       // Calculate opacity based on the slider's position
       const maxOpacity = 1;
@@ -224,6 +253,7 @@ export default class CustomButton extends Component {
                <div className="logo-rect absolute block -z-[1] pointer-events-none w-[59px] h-[61px]">
                   <div className="right-top"></div>
                   <div className="right-bottom"></div>
+                  <div className="right-middle"></div>
                </div>
             </div>
             <div className="outer-rectangles absolute w-[59px] h-[62px]">
