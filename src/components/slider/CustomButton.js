@@ -48,17 +48,24 @@ export default class CustomButton extends Component {
     if (this.unmounted || this.state.unlocked) return;
 
             // Calculate the widths based on the slider's position
-        const maxWidth = 4; // Initial maximum width
+        const maxWidth = 4.45; // Initial maximum width
         const minWidth = 6; // Target minimum width
+        const minRightTopBorder = 0;
+        const maxRightTopBorder = 2;
+        const minRightBottomBorder = 0;
+        const maxRightBottomBorder = 2;
         const width = minWidth + (maxWidth - minWidth) * (this.sliderLeft / this.containerWidth);
-
+        const rightTopBorder = minRightTopBorder + (maxRightTopBorder - minRightTopBorder) * (this.sliderLeft / this.containerWidth);
+        const rightBottomBorder = minRightBottomBorder + (maxRightBottomBorder - minRightBottomBorder) * (this.sliderLeft / this.containerWidth);
 
         // Apply the calculated widths to the right-top and right-bottom elements
         const rightTop = document.querySelector('.right-top');
         const rightBottom = document.querySelector('.right-bottom');
         if (rightTop && rightBottom) {
           rightTop.style.width = width + 'px';
-          rightBottom.style.width = width + 'px';      
+          rightBottom.style.width = width + 'px';    
+          rightTop.style.borderTopRightRadius = rightTopBorder + 'px';
+          rightBottom.style.borderBottomRightRadius = rightBottomBorder + 'px';  
         }
   // Calculate the midpoint of the slider
   const midpoint = this.containerWidth / 2;
@@ -83,7 +90,7 @@ export default class CustomButton extends Component {
 
     // Calculate the new opacity based on the completion percentage
     const initialOpacity = 1; // Initial opacity
-    const opacity = initialOpacity - (completionPercentage / 100);
+    const opacity = initialOpacity - (completionPercentage / 80); //ends up with minus opacity, but that's fine
 
     // Apply the calculated opacities to the right-top and right-bottom elements
     const rightMiddle = document.querySelector('.right-middle');
