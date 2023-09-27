@@ -118,6 +118,9 @@
   bottom: 12%;
   height: 77%;
 }
+.rsbContainer.Unlocked .right-middle {
+  display: none;
+}
   .rsbcText {
     float: left;
     position: absolute;
