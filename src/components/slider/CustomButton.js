@@ -74,7 +74,7 @@ export default class CustomButton extends Component {
       rightBottom.style.opacity = 0; */
     }
 
-    // Remove the transition
+    // Remove the transition 
     slider.current.style.transition = "none";
   } else {
     // Calculate the opacity change when the slider is 0% to 50% across
