@@ -48,7 +48,7 @@ export default class CustomButton extends Component {
     if (this.unmounted || this.state.unlocked) return;
 
             // Calculate the widths based on the slider's position
-        const maxWidth = 4.45; // Initial maximum width
+        const maxWidth = 4.75; // Initial maximum width
         const minWidth = 6; // Target minimum width
         const minRightTopBorder = 0;
         const maxRightTopBorder = 2;
