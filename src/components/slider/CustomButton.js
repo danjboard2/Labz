@@ -230,7 +230,7 @@ export default class CustomButton extends Component {
     console.log("Component Rendered"); // Debug statement
     return (
       <>
-      <div className="slide-unlock relative w-[220px] mr-[250px]">
+      <div className="slide-unlock relative w-[220px] mr-[100px] sm:mr-[250px]">
       <div className="ReactSwipeButton">
         <div
           className={
