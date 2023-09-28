@@ -24,6 +24,15 @@
     /* box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1); */
     overflow: visible; /* was hidden */
   }
+  @keyframes fadeOut {
+    from {
+      opacity:1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .rsbContainer.Unlocked.fadeOut {animation-name:fadeOut; animation-duration: 1s; animation-delay: 0.05s; animation-iteration-count: once; animation-fill-mode: forwards;}
   .pulsing-rectangle {scale:1;  transition: scale 0s ease; /* You can adjust the transition duration */ }
   .counter {opacity:0; transition: opacity 0.5s ease; /* You can adjust the transition duration */}
   .logo-rect {
@@ -66,9 +75,6 @@
     /* box-shadow: 1px 1px 5px rgba(0,0,0,0.3); */
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-  }
-  .rsbcSliderText {
-
   }
   .rsbcSliderArrow {
     float: left;

@@ -204,6 +204,13 @@ export default class CustomButton extends Component {
     this.setState({
       unlocked: true
     });
+    setTimeout(function() {
+      //code to be executed after 1 second
+        var unlockedElements = document.getElementsByClassName("Unlocked");
+        if (unlockedElements.length > 0) {
+          unlockedElements[0].classList.add("fadeOut");
+        }
+    }, 1000);
   };
 
   getText = () => {
@@ -227,7 +234,6 @@ export default class CustomButton extends Component {
   }
 
   render() {
-    console.log("Component Rendered"); // Debug statement
     return (
       <>
       <div className="slide-unlock relative w-[220px] mr-[100px] sm:mr-[250px]">
