@@ -99,7 +99,7 @@
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   }
-  .right-top, .right-bottom, .right-middle {position:absolute; width:6px; height:14%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
+  .right-top, .right-bottom, .right-middle {position:absolute; width:6px; height:13.7%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
 .right-top {
   top: -0.8px;
   right: 0px;
