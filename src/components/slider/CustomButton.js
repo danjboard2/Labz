@@ -122,7 +122,7 @@ export default class CustomButton extends Component {
       }
         // Calculate border width based on the slider's position
         const maxBorderWidth = 6.5; // Initial maximum border width
-        const minBorderWidth = 4; // Target minimum border width
+        const minBorderWidth = 4.75; // Target minimum border width
         const borderWidth = maxBorderWidth - (maxBorderWidth - minBorderWidth) * (this.sliderLeft / this.containerWidth);
 
         // Apply the calculated border width to the logo-rect element
@@ -256,7 +256,7 @@ export default class CustomButton extends Component {
             <div className=""></div>
             <div className="rsbcSliderCircle -z-20">
             <div className="pulsing-rectangle relative flex w-[59px] h-[62px] float-right">
-            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[7px] top-[6px] text-[6px] font-bold text-[#fff]">{this.state.count}</p>
+            <div className="w-[59px] h-[62px] -z-[1] pointer-events-none"><p className="counter absolute left-[6.4px] top-[5px] text-[6.4px] font-bold text-[#fff]">{this.state.count}</p>
                <div className="logo-rect absolute block -z-[1] pointer-events-none w-[59px] h-[61px]">
                   <div className="right-top"></div>
                   <div className="right-bottom"></div>

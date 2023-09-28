@@ -85,8 +85,6 @@
     transform-origin: center;
     z-index: 10;
   }
-  .rsbcSliderCircle {
-  }
   .rsbcSlider:hover .rsbcSliderText, .rsbcSlider:focus .rsbcSliderText, .rsbcSlider:active .rsbcSliderText, .rsbcSlider:target .rsbcSliderText, .rsbContainer.Unlocked .rsbcSliderText {
     opacity: 0;
     transition: 0.3s;
@@ -101,9 +99,9 @@
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   }
-  .right-top, .right-bottom, .right-middle {position:absolute; width:6px; height:15%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
+  .right-top, .right-bottom, .right-middle {position:absolute; width:6px; height:14%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
 .right-top {
-  top: -0.5px;
+  top: -0.8px;
   right: 0px;
   border-radius: 0px 0px 0px 0px;
 }
@@ -124,7 +122,7 @@
   .rsbcText {
     float: left;
     position: absolute;
-    margin-left: 157.5px;
+    margin-left: 162.3px;
     top: 0;
     left: 0;
     right: 0;
@@ -138,6 +136,7 @@
     font-weight:bold;
     color: #fff;
     opacity: 0;
+    letter-spacing: 0.03px;
   transition: opacity 0.5s ease; /* You can adjust the transition duration */
   transition: scale 0.05s ease; /* You can adjust the transition duration */
   }
