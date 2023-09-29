@@ -207,10 +207,12 @@ export default class CustomButton extends Component {
     setTimeout(function() {
       //code to be executed after 1 second
         var unlockedElements = document.getElementsByClassName("Unlocked");
+        var unlockedPageBg = document.getElementsByClassName("bg-homepage");
         var unlockedPage = document.getElementsByClassName("lockedhp");
         var showHomepage = document.getElementsByClassName("homepage");
         if (unlockedElements.length > 0) {
           unlockedElements[0].classList.add("fadeOut");
+          unlockedPageBg[0].classList.add("fadeOut");
           unlockedPage[0].classList.add("fadeOut");
           showHomepage[0].classList.add("fadeIn");
         }

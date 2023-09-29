@@ -27,7 +27,8 @@ class ParentComponent extends Component<{}, ParentState> {
     return (
     <>
      <Script src="/media/scripts/dat.gui.min.js" strategy="afterInteractive" async/>
-    <main className="lockedhp flex bg-homepage bg-cover min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100">
+     <div className="bg-homepage bg-cover z-1 absolute top-0 bottom-0 left-0 right-0"></div>
+    <main className="lockedhp flex min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100">
     <CustomButton updateCount={this.updateCount} count={this.state.count} />
     </main>
     <main className="homepage bg-[#000] min-h-screen p-0 opacity-0 relative">
