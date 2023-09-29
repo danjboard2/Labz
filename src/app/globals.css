@@ -71,7 +71,7 @@ canvas.homepage-bg-canvas {
   height: 100vh;
   z-index: -1;
 }
-.dg.ac {display:block;}
+.dg.ac {display:none;}
 /* ===== styles ===== */
 /* homepage */
 
