@@ -1,8 +1,10 @@
 "use client"
 import React, { Component } from "react";
 import Image from 'next/image'
+import Script from 'next/script'
 import CustomButton from "../components/slider/CustomButton.js";
 import "../components/slider/CustomButton.css";
+import Logo from "../components/Logo"
 
 interface ParentState {
   count: number;
@@ -24,14 +26,21 @@ class ParentComponent extends Component<{}, ParentState> {
   render() {
     return (
     <>
+     <Script src="/media/scripts/dat.gui.min.js" strategy="afterInteractive" async/>
     <main className="lockedhp flex bg-homepage bg-cover min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100">
     <CustomButton updateCount={this.updateCount} count={this.state.count} />
     </main>
-    <main className="homepage bg-[#000] min-h-screen flex-col items-center justify-center p-24 flex opacity-0">
-      <section className="hp-content">
-      <h1 className="font-bold text-6xl text-[#fff]">Homepage shizzle.</h1>
+    <main className="homepage bg-[#000] min-h-screen p-0 opacity-0 relative">
+
+      <nav className="navigation absolute top-0 left-0 w-full flex p-[50px] pointer-events-none">
+      <Logo />
+      </nav>
+      <canvas className="homepage-bg-canvas w-full flex"></canvas>
+      <section className="hp-content pointer-events-none flex w-screen h-screen items-center justify-center">
+      <h1 className="font-bold text-6xl text-[#fff] select-none flex">Homepage shizzle.</h1>
       </section>
     </main>
+    <Script src="/media/scripts/script.js" strategy="afterInteractive" async/>
     </>
   )
 }
