@@ -41,8 +41,8 @@
     }
   }
   .bg-homepage.fadeOut  {animation-name:fadeOut; animation-duration: 0.5s; animation-delay: 0s; animation-iteration-count: once; animation-fill-mode: forwards;}
- main.lockedhp.fadeOut  {animation-name:fadeOut; animation-duration: 1s; animation-delay: 0.5s; animation-iteration-count: once; animation-fill-mode: forwards;}
- main.homepage.fadeIn  {animation-name:fadeIn; animation-duration: 1s; animation-delay: 1.5s; animation-iteration-count: once; animation-fill-mode: forwards;} 
+ main.lockedhp.fadeOut  {animation-name:fadeOut; animation-duration: 0.4s; animation-delay: 0.5s; animation-iteration-count: once; animation-fill-mode: forwards;}
+ main.homepage.fadeIn  {animation-name:fadeIn; animation-duration: 1s; animation-delay: 1.1s; animation-iteration-count: once; animation-fill-mode: forwards;} 
   .pulsing-rectangle {scale:1;  transition: scale 0s ease; /* You can adjust the transition duration */ }
   .counter {opacity:0; transition: opacity 0.5s ease; /* You can adjust the transition duration */}
   .logo-rect {

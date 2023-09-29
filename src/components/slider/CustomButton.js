@@ -216,7 +216,7 @@ export default class CustomButton extends Component {
           unlockedPage[0].classList.add("fadeOut");
           showHomepage[0].classList.add("fadeIn");
         }
-    }, 1000);
+    }, 0);
   };
 
   getText = () => {
