@@ -37,7 +37,7 @@ class ParentComponent extends Component<{}, ParentState> {
       </nav>
       <canvas className="homepage-bg-canvas w-full flex"></canvas>
       <section className="hp-content pointer-events-none flex w-screen h-screen items-center justify-center">
-      <h1 className="font-bold text-6xl text-[#fff] select-none flex">Homepage shizzle.</h1>
+      <h1 className="font-regular text-[40px] text-[#fff] select-none">We are <span className="font-bold text-[#FF3D00]">reshaping the future</span> of the digital world.</h1>
       </section>
     </main>
     <Script src="/media/scripts/script.js" strategy="afterInteractive" async/>
