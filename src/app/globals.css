@@ -24,6 +24,45 @@
 }
 
 /* ===== animations ===== */
+
+/* navigation */
+@keyframes nav-pulse{
+  0% {
+    scale:0.8;
+    opacity:0;
+  }
+  29% {scale:0.95; opacity:0}
+  30% {scale:0.95; opacity:1}
+  100%{
+    scale:1.6;
+    opacity:0;
+  }
+}
+@keyframes nav-pulse2{
+  0% {
+    scale:0.8;
+    opacity:0;
+  }
+  29% {scale:0.95; opacity:0}
+  30% {scale:0.95; opacity:1}
+  100%{
+    scale:1.9;
+    opacity:0;
+  }
+}
+@keyframes nav-pulse3{
+  0% {
+    scale:0.8;
+    opacity:0;
+  }
+  29% {scale:0.95; opacity:0}
+  30% {scale:0.95; opacity:1}
+  100%{
+    scale:2.3;
+    opacity:0;
+  }
+}
+
 /* homepage */
 @keyframes pulse{
   0% {
@@ -73,6 +112,12 @@ canvas.homepage-bg-canvas {
 }
 .dg.ac {display:none;}
 /* ===== styles ===== */
+
+/* navigation */
+.nav-pulse {animation-name: nav-pulse; animation-duration: 3s; animation-iteration-count: infinite; animation-timing-function: ease-out;}
+.nav-pulse2 {animation-name: nav-pulse2; animation-duration: 3s;  animation-iteration-count: infinite; animation-timing-function: ease-out; }
+.nav-pulse3 {animation-name: nav-pulse3; animation-duration: 3s;  animation-iteration-count: infinite; animation-timing-function: ease-out; }
+
 /* homepage */
 
 .pulse {animation-name: pulse; animation-duration: 3s; animation-iteration-count: infinite; animation-timing-function: ease-out;}

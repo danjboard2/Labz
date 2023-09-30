@@ -14,7 +14,8 @@
     "react-dom": "latest",
     "react-native-gesture-handler": "^2.13.1",
     "react-native-reanimated": "^3.5.4",
-    "rn-slide-button": "^1.0.3"
+    "rn-slide-button": "^1.0.3",
+    "rsuite": "^5.40.0"
   },
   "devDependencies": {
     "@types/node": "latest",

@@ -1,5 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import 'rsuite/dist/rsuite.min.css';
+import '../app/nav-overrides.css';
 
 export const metadata: Metadata = {
   title: 'The Labz',

@@ -40,7 +40,6 @@ export default class CustomButton extends Component {
       const maxCount = 57; // Maximum count value
       const newCount = Math.round((this.sliderLeft / this.containerWidth) * maxCount);
       this.setState({ count: newCount });
-      this.props.updateCount(Math.round(newCount));
     }
   };
 
@@ -178,7 +177,6 @@ export default class CustomButton extends Component {
           if (currentStep < steps) {
             const newCount = Math.max(0, startCount - (startCount / steps) * currentStep);
             this.setState({ count: Math.round(newCount) });
-            this.props.updateCount(Math.round(newCount));
             currentStep++;
           } else {
             clearInterval(countInterval);

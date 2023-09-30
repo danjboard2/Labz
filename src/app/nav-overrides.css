@@ -1,0 +1,10 @@
+/* navigation background colour override */
+.rs-drawer-content { background: rgb(66 66 66 / 15%); opacity: 1;}
+.rs-drawer-backdrop.rs-anim-in {opacity:0;}
+.rs-drawer-wrapper { height: 0px; left: 0;  top: 0; width: 0px; z-index: 0;}
+.rs-drawer-body {border-left: 1px solid #232323;padding: 0px 0px;position: relative; display: flex;flex-flow: column;}
+.rs-drawer-body-close { left: 0px; position: absolute; top: 0px; width: 100%;height: 170px;}
+.rs-btn-icon.rs-btn-sm {line-height: 0px; padding: 0px;opacity: 0; position:relative;}
+.rs-btn:focus-visible, .rs-btn-subtle:focus, .rs-btn-subtle:hover { border-radius: 0px; opacity: 0;}
+a.navlink {transition:0.5s;}
+a.navlink:hover, a.navlink:active { transition:0.5s; color: #fff;  font-weight: 800; text-decoration: none; background: #e33e0a;}
