@@ -40,9 +40,9 @@
       opacity: 1;
     }
   }
-  .bg-homepage.fadeOut  {animation-name:fadeOut; animation-duration: 0.5s; animation-delay: 0s; animation-iteration-count: once; animation-fill-mode: forwards;}
- main.lockedhp.fadeOut  {animation-name:fadeOut; animation-duration: 0.4s; animation-delay: 0.4s; animation-iteration-count: once; animation-fill-mode: forwards;}
- main.homepage.fadeIn  {animation-name:fadeIn; animation-duration: 1s; animation-delay: 1.1s; animation-iteration-count: once; animation-fill-mode: forwards;} 
+  .bg-homepage.fadeOut  {animation-name:fadeOut; animation-duration: 0.7s; animation-delay: 0s; animation-iteration-count: once; animation-fill-mode: forwards; transition-timing-function: cubic-bezier(.22,.06,.78,.94);}
+ main.lockedhp.fadeOut  {animation-name:fadeOut; animation-duration: 0.9s; animation-delay: 0.3s; animation-iteration-count: once; animation-fill-mode: forwards; transition-timing-function: cubic-bezier(.22,.06,.78,.94);}
+ main.homepage.fadeIn  {animation-name:fadeIn; animation-duration: 0.8s; animation-delay: 1s; animation-iteration-count: once; animation-fill-mode: forwards; transition-timing-function: cubic-bezier(.22,.06,.78,.94);} 
   .pulsing-rectangle {scale:1;  transition: scale 0s ease; /* You can adjust the transition duration */ }
   .counter {opacity:0; transition: opacity 0.5s ease; /* You can adjust the transition duration */}
   .logo-rect {
