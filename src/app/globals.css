@@ -64,6 +64,24 @@
 }
 
 /* homepage */
+@keyframes h1-fade-inout {
+  0% {
+    opacity:0;
+    display:none !important;
+  }
+  20% {
+    opacity:1;
+    display:block !important;
+  }
+  80% {
+    opacity:1;
+    display:block !important;
+  }
+ 100% {
+    opacity:0;
+    display:none !important;
+  }
+}
 @keyframes pulse{
   0% {
     scale:0.89;
@@ -118,7 +136,10 @@ canvas.homepage-bg-canvas {
 .nav-pulse2 {animation-name: nav-pulse2; animation-duration: 3s;  animation-iteration-count: infinite; animation-timing-function: ease-out; }
 .nav-pulse3 {animation-name: nav-pulse3; animation-duration: 3s;  animation-iteration-count: infinite; animation-timing-function: ease-out; }
 
+
 /* homepage */
+.h1-fade {display:none;}
+.h1-fade.h1-fade-inout {display:block; animation-name: h1-fade-inout; animation-duration: 5s; animation-iteration-count:1; animation-fill-mode: forwards; animation-timing-function: ease-out;}
 
 .pulse {animation-name: pulse; animation-duration: 3s; animation-iteration-count: infinite; animation-timing-function: ease-out;}
 .pulse2 {animation-name: pulse2; animation-duration: 3s;  animation-iteration-count: infinite; animation-timing-function: ease-out; }

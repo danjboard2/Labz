@@ -1,5 +1,5 @@
 "use client"
-import React, { Component, useState } from "react";
+import React, { Component, useState,  useEffect } from "react";
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -15,6 +15,31 @@ const ParentComponent: React.FC<{}> = () => {
   const toggleOpen = () => {
     setOpen(!open);
   };
+  const h1s = [
+    <h1 key={1} className="font-regular text-[40px] text-[#fff] select-none">
+      We are <span className="font-bold text-[#FF3D00]">reshaping the future</span> of the digital world
+    </h1>,
+    <h1 key={2} className="font-regular text-[40px] text-[#fff] select-none">
+      We are leaders in building <span className="font-bold text-[#FF3D00]">deep tech ecosystems</span>
+    </h1>,
+    <h1 key={3} className="font-regular text-[40px] text-[#fff] select-none">
+      We specialize in innovative <span className="font-bold text-[#FF3D00]">Web3 technologies</span>
+    </h1>,
+    <h1 key={4} className="font-regular text-[40px] text-[#fff] select-none">
+      We create <span className="font-bold text-[#FF3D00]">blockchain-focused</span> architecture
+    </h1>,
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % h1s.length);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
     return (
     <>
      <Script src="/media/scripts/dat.gui.min.js" strategy="afterInteractive" async/>
@@ -50,7 +75,18 @@ const ParentComponent: React.FC<{}> = () => {
       </nav>
       <canvas className="homepage-bg-canvas w-full flex"></canvas>
       <section className="hp-content pointer-events-none flex w-screen h-screen items-center justify-center">
-      <h1 className="font-regular text-[40px] text-[#fff] select-none">We are <span className="font-bold text-[#FF3D00]">reshaping the future</span> of the digital world.</h1>
+      <div className="h1-container relative w-full">
+      {h1s.map((h1, index) => (
+        <div
+          key={index}
+          className={`h1-fade text-center ${
+            index === currentIndex ? "h1-fade-inout" : ""
+          }`}
+        >
+          {h1}
+        </div>
+      ))}
+    </div>
       </section>
     </main>
     <Script src="/media/scripts/script.js" strategy="afterInteractive" async/>
