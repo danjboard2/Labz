@@ -40,10 +40,11 @@ const ParentComponent: React.FC<{}> = () => {
       </Button>
       </ButtonToolbar>
       <Drawer backdropClassName={'backdrop'} backdrop={false} size={'xs'} open={open} onClose={() => setOpen(false)}>
+        <div className="absolute top-0 bottom-0 left-0 right-0 blur-lg"></div>
         <Drawer.Body style={{ background: 'transparent'}}>
-          <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl" href="#" title="About us">About us</Link>
-          <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl" href="#" title="Services &amp; Projects">Services &amp; projects</Link>
-          <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl" href="#" title="Contact us">Contact us</Link>
+          <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl select-none" href="#" title="About us">About us</Link>
+          <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl select-none" href="#" title="Services &amp; Projects">Services &amp; projects</Link>
+          <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl select-none" href="#" title="Contact us">Contact us</Link>
         </Drawer.Body>
       </Drawer>
       </nav>

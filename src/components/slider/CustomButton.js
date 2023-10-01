@@ -4,11 +4,15 @@ import Image from "next/image"
 const slider = React.createRef();
 const container = React.createRef();
 const isTouchDevice = typeof document !== 'undefined' && 'ontouchstart' in document.documentElement;
-
 export default class CustomButton extends Component {
     state = {
         count: 0, // Initialize count to zero
       };
+
+      handleSkipIntroClick = () =>  {
+        // Your action or code to be executed here when "Skip intro" is clicked
+        this.onSuccess()
+      }
 
   componentDidMount() {
     if (isTouchDevice) {
@@ -287,6 +291,7 @@ export default class CustomButton extends Component {
         </div>
       </div>
   </div>
+  <div className="absolute z-[10000] bottom-[30px] right-[50px]" onClick={this.handleSkipIntroClick}><p className="text-[#FF3D00] text-md">Skip intro</p></div>
   </>
       );
     }
