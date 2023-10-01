@@ -291,7 +291,7 @@ export default class CustomButton extends Component {
         </div>
       </div>
   </div>
-  <div className="absolute z-[10000] bottom-[30px] right-[50px]" onClick={this.handleSkipIntroClick}><p className="text-[#FF3D00] text-md">Skip intro</p></div>
+  <div className="absolute z-[10000] bottom-[30px] right-[50px] cursor-pointer" onClick={this.handleSkipIntroClick}><p className="text-[#FF3D00] text-md">Skip intro</p></div>
   </>
       );
     }
