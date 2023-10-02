@@ -6,6 +6,7 @@ import Script from 'next/script'
 import CustomButton from "../components/slider/CustomButton.js";
 import "../components/slider/CustomButton.css";
 import Logo from "../components/Logo"
+import WhatWeDo from '../components/homepage/WhatWeDo.js'
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 interface ParentState {
   count: number;
@@ -44,10 +45,10 @@ const ParentComponent: React.FC<{}> = () => {
     <>
      <Script src="/media/scripts/dat.gui.min.js" strategy="afterInteractive" async/>
      <div className="bg-homepage bg-cover z-1 absolute top-0 bottom-0 left-0 right-0"></div>
-    <main className="lockedhp flex min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100">
+    <main className="lockedhp w-full flex min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100">
     <CustomButton/>
     </main>
-    <main className="homepage bg-[#000] min-h-screen p-0 opacity-0 relative">
+    <main className="homepage bg-[#000] min-h-screen p-0 opacity-0 relative w-full ">
 
       <nav className="navigation absolute top-0 left-0 w-full flex p-[50px] justify-between">
       <Logo />
@@ -73,8 +74,8 @@ const ParentComponent: React.FC<{}> = () => {
         </Drawer.Body>
       </Drawer>
       </nav>
-      <canvas className="homepage-bg-canvas w-full flex"></canvas>
-      <section className="hp-content pointer-events-none flex w-screen h-screen items-center justify-center">
+      <canvas className="homepage-bg-canvas flex !w-full"></canvas>
+      <section className="hp-content pointer-events-none flex w-full h-screen items-center justify-center flex-col">
       <div className="h1-container relative w-full">
       {h1s.map((h1, index) => (
         <div
@@ -88,6 +89,7 @@ const ParentComponent: React.FC<{}> = () => {
       ))}
     </div>
       </section>
+      <WhatWeDo />
     </main>
     <Script src="/media/scripts/script.js" strategy="afterInteractive" async/>
     </>
