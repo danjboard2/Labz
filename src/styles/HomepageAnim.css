@@ -1,0 +1,22 @@
+.box.active {
+    background-color: blue;
+  }
+  .box {
+    width: fit-content;
+    height: fit-content;
+    /* border:1px solid #fff; */
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    float:left;
+  }
+  
+.a {
+    margin-left:20%;
+  }
+.b {
+    margin-left:25%;
+}
+.c {
+    margin-left:30%;
+}
