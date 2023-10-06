@@ -21,14 +21,14 @@ const MovingImage = ({ src, width, height, initialPosition, initialOpacity, clas
     const deltaY = 100 * Math.sin(angle);
     const newLeft = roundedPosition.left + deltaX;
     const newTop = roundedPosition.top + deltaY;
-    const newOpacity = 0.5 + Math.random() * 0.5;
+    const newOpacity = Math.random();
 
     const timeline = gsap.timeline(); // Create a timeline for continuous animation
 
     timeline.to(imageRef.current, {
       left: `${newLeft}px`,
       top: `${newTop}px`,
-      opacity: newOpacity,
+      opacity: 1,
       duration: 12,
       ease: 'linear',
     });
@@ -36,7 +36,7 @@ const MovingImage = ({ src, width, height, initialPosition, initialOpacity, clas
     timeline.to(imageRef.current, {
       left: `${roundedPosition.left}px`,
       top: `${roundedPosition.top}px`,
-      opacity: initialOpacity,
+      opacity: newOpacity,
       duration: 12,
       ease: 'linear',
     });
