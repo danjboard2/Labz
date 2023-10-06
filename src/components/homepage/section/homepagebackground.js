@@ -45,8 +45,9 @@ const MovingImage = ({ src, width, height, initialPosition, initialOpacity, clas
     timeline.call(animateImage);
   };
 
-  useEffect(() => {
-    animateImage(); // Start the animation when the component mounts
+  // Start the animation when the component mounts
+  React.useEffect(() => {
+    animateImage();
   }, []);
 
   return (
