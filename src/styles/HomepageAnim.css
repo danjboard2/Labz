@@ -10,13 +10,13 @@
     text-align: center;
     float:left;
   }
-  
-.a {
+/* what we do text */
+.a { /* what */
     margin-left:20%;
   }
-.b {
+.b { /* we */
     margin-left:25%;
 }
-.c {
+.c { /* do */
     margin-left:30%;
 }

@@ -1,4 +1,5 @@
 import WhatWeDoText from './section/whatwedo-text'
+import HomepageBackground from './section/homepagebackground'
 import "../../styles/HomepageAnim.css";
 import { gsap } from "gsap";
 import React, {useLayoutEffect} from "react";
@@ -17,7 +18,7 @@ export default function WhatWeDo() {
                     scrollTrigger: {
                 trigger: ".whatwedo",
                 pin: ".whatwedo",
-                start: "top top+=100px",
+                start: "top top",
                 end: "+=500",
                 //markers:true,
                 id: "Pin"
@@ -30,7 +31,8 @@ export default function WhatWeDo() {
 
     return (
         <>
-        <section className="whatwedo relative w-full min-h-full">
+        <section className="whatwedo relative w-full min-h-full overflow-hidden">
+        <HomepageBackground />
             <WhatWeDoText />
         </section>
         <section className="afterpin bg-primary h-full w-full">

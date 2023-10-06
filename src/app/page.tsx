@@ -7,6 +7,7 @@ import CustomButton from "../components/slider/CustomButton.js";
 import "../styles/CustomButton.css";
 import Logo from "../components/Logo"
 import WhatWeDo from '../components/homepage/WhatWeDo'
+
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 interface ParentState {
   count: number;

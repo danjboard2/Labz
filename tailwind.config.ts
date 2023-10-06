@@ -14,9 +14,6 @@ const config: Config = {
       xl: '1440px',
       xxl: '1920px',
     },
-    colors: {
-      'primary': '#FF3D00',
-    },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
@@ -24,6 +21,9 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'homepage': "url('/media/images/homepage-bg.jpg')",
+      },
+      colors: {
+        'primary': '#FF3D00',
       },
       fontFamily: {
         sans: ['"ABC"', 'arial' , 'sans-serif']

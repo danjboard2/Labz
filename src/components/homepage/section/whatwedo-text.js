@@ -52,6 +52,19 @@ export default function WhatWeDoText() {
         }
       });
 
+      gsap.fromTo(".labz-wwd-text", {
+        lineHeight:'378.5%'},{
+        lineHeight:'159%',
+        scrollTrigger: {
+          trigger: ".labz-wwd-text",
+          start: "top bottom-=500px",
+          end: "bottom+=100px bottom-=700px",
+          scrub: true,
+          markers: true,
+          id: "Labz intro text"
+        }
+      });
+
 
     },); // <- IMPORTANT! Scopes selector text
     
@@ -61,11 +74,12 @@ export default function WhatWeDoText() {
   return (
    <>
    <div className="wwd-content w-full overflow-hidden">
-   <div className="wwd-container min-w-[5000px] pb-[500px] overflow-hidden">
+   <div className="wwd-container min-w-[5000px] pb-[20px] overflow-hidden">
     <div class="box a mr-[20px] text-[120px] font-bold text-primary">What</div>
     <div class="box b mr-[20px] text-[120px] font-bold text-[#fff]">we</div>
     <div class="box c mr-[20px] text-[120px] font-bold text-[#fff]">do</div>
     </div>
+    <p className="labz-wwd-text ml-[50px] lg:w-2/5 text-3xl text-white z-1 relative">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
     </div>
     </>
   );
