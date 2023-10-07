@@ -19,7 +19,7 @@ export default function WhatWeDo() {
                 trigger: ".whatwedo",
                 pin: ".whatwedo",
                 start: "top top",
-                end: "+=500",
+                end: "+=900",
                 //markers:true,
                 id: "Pin"
                     }
