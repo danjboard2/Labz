@@ -21,7 +21,7 @@ export default function WhatWeDoText() {
     let ctx = gsap.context(() => {
 
       gsap.to(".box.a", {
-        marginLeft: 50,
+        marginLeft: 93,
         rotation: 0,
         scrollTrigger: {
           trigger: ".box.a",
@@ -169,10 +169,10 @@ export default function WhatWeDoText() {
             <div class="box b mr-[20px] text-[120px] font-bold text-[#fff]">we</div>
             <div class="box c mr-[20px] text-[120px] font-bold text-[#fff]">do</div>
           </div>
-        <p className="labz-wwd-text ml-[50px] lg:w-4/5 text-3xl text-white z-1 relative pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
+        <p className="labz-wwd-text xl:ml-[93px] lg:w-4/5 text-3xl text-white z-1 relative pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
       </div>
       <div className="w-1/2 flex flex-col">
-         <div className="wwd-buttons flex flex-row !flex-wrap pt-[256px] w-3/4">
+         <div className="wwd-buttons flex flex-row !flex-wrap ml-[93px] pt-[256px] w-3/4">
          <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon a w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'a' ? 'active' : '' }`} onClick={() => handleClick('a')}><Image src="/media/images/wwd-icons/icon-ip.svg" width={77} height={58} alt="Network"/></div></div>
          <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon b w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'b' ? 'active' : '' }`} onClick={() => handleClick('b')}><Image src="/media/images/wwd-icons/icon-wa.svg" width={85} height={72} alt="Wallet"/></div></div>
          <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon c w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'c' ? 'active' : '' }`} onClick={() => handleClick('c')}><Image src="/media/images/wwd-icons/icon-se.svg" width={66} height={66} alt="Services"/></div></div>
