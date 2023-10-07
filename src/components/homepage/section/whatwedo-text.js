@@ -25,10 +25,10 @@ export default function WhatWeDoText() {
         rotation: 0,
         scrollTrigger: {
           trigger: ".box.a",
-          start: "top bottom-=300px",
+          start: "top bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "A"
         }
       });
@@ -41,7 +41,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=400px",
           end: "bottom+=100px bottom-=600px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "B"
         }
       });
@@ -54,7 +54,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=500px",
           end: "bottom+=100px bottom-=700px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "C"
         }
       });
@@ -67,7 +67,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=500px",
           end: "bottom+=100px bottom-=700px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "Labz intro text"
         }
       });
@@ -82,7 +82,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=300px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "A"
         }
       });
@@ -96,7 +96,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=400px",
           end: "bottom+=100px bottom-=600px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "B"
         }
       });
@@ -110,7 +110,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=500px",
           end: "bottom+=100px bottom-=700px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "C"
         }
       });
@@ -124,7 +124,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=300px",
           end: "bottom+=100px bottom-=700px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "D"
         }
       });
@@ -137,7 +137,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=400px",
           end: "bottom+=100px bottom-=800px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "E"
         }
       });
@@ -150,7 +150,7 @@ export default function WhatWeDoText() {
           start: "top bottom-=500px",
           end: "bottom+=100px bottom-=900px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "F"
         }
       });

@@ -22,7 +22,7 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   }
 /* what we do text */
 .box.a { /* what */
-    margin-left:20%;
+    margin-left:25%;
   }
 .box.b { /* we */
     margin-left:25%;
@@ -58,10 +58,10 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   transition: 0.3s;
   box-shadow: 0.2911110818386078px 0.2911110818386078px 0.2911110818386078px rgba(255, 255, 255, 0.15), 0px 0px 47.79656219482422px #FF3D00;
 }
-.icon-wrap.active .icon img {
+.icon-wrap .icon.active img {
   transition:0.5s
 }
-.icon-wrap.active .icon img {
+.icon-wrap .icon.active img {
   transition:0.5s;
   filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(1000%);}
 

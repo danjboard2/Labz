@@ -146,7 +146,7 @@ export default function HomepageBackground() {
             start: 'top bottom-=500px',
             end: 'bottom+=100px bottom-=700px',
             scrub: true,
-            markers: true,
+           // markers: true,
             id: 'Homepage background opacity',
           },
         }
@@ -164,7 +164,7 @@ export default function HomepageBackground() {
             start: 'top bottom-=500px',
             end: 'bottom+=100px bottom-=200px',
             scrub: true,
-            markers: true,
+           // markers: true,
             id: 'Homepage background position',
           },
         }
