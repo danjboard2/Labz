@@ -1,3 +1,13 @@
+@keyframes boxShadowAnimation {
+  0% {
+box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
+  }
+  100% {
+    box-shadow: 0.2911110818386078px 0.2911110818386078px 0.2911110818386078px rgba(255, 255, 255, 0.15), 0px 0px 47.79656219482422px #FF3D00;
+  }
+}
+
+
 .box.active {
     background-color: blue;
   }
@@ -43,9 +53,10 @@
 .icon-wrap {
   transition:0.5s;
 }
-.icon-wrap.active {
-  transition:0.5s;
-  filter: drop-shadow(0.2911110818386078px 0.2911110818386078px 0.2911110818386078px rgba(255, 255, 255, 0.15)) drop-shadow(0px 0px 47.79656219482422px #FF3D00);
+.icon-wrap .icon.active {
+  animation: boxShadowAnimation 0.3s ease;
+  transition: 0.3s;
+  box-shadow: 0.2911110818386078px 0.2911110818386078px 0.2911110818386078px rgba(255, 255, 255, 0.15), 0px 0px 47.79656219482422px #FF3D00;
 }
 .icon-wrap.active .icon img {
   transition:0.5s

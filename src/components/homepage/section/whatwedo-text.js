@@ -75,6 +75,7 @@ export default function WhatWeDoText() {
       //bring in the icons one by one
       gsap.to(".icon.a", {
        top: 0,
+       transition:'0s',
         rotation: 0,
         scrollTrigger: {
           trigger: ".labz-wwd-text",
@@ -88,6 +89,7 @@ export default function WhatWeDoText() {
       
       gsap.to(".icon.b", {
         top: 0,
+        transition:'0s',
         rotation: 0,
         scrollTrigger: {
           trigger: ".labz-wwd-text",
@@ -101,6 +103,7 @@ export default function WhatWeDoText() {
 
       gsap.to(".icon.c", {
         top: 0,
+        transition:'0s',
         rotation: 0,
         scrollTrigger: {
           trigger: ".labz-wwd-text",
@@ -114,6 +117,7 @@ export default function WhatWeDoText() {
 
       gsap.to(".icon.d", {
         top: 0,
+        transition:'0s',
         rotation: 0,
         scrollTrigger: {
           trigger: ".labz-wwd-text",
@@ -126,6 +130,7 @@ export default function WhatWeDoText() {
       });
       gsap.to(".icon.e", {
         top: 0,
+        transition:'0s',
         rotation: 0,
         scrollTrigger: {
           trigger: ".labz-wwd-text",
@@ -138,6 +143,7 @@ export default function WhatWeDoText() {
       });
       gsap.to(".icon.f", {
         top: 0,
+        transition:'0s',
         rotation: 0,
         scrollTrigger: {
           trigger: ".labz-wwd-text",
@@ -167,12 +173,12 @@ export default function WhatWeDoText() {
       </div>
       <div className="w-1/2 flex flex-col">
          <div className="wwd-buttons flex flex-row !flex-wrap pt-[256px] w-3/4">
-            <div className={`icon-wrap w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative ${activeElement === 'a' ? 'active' : '' }`}onClick={() => handleClick('a')}><div className="icon a w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center"><Image src="/media/images/wwd-icons/icon-dollar.svg" width={86} height={46} alt="Dollar"/></div></div>
-            <div className={`icon-wrap w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative ${activeElement === 'b' ? 'active' : '' }`}onClick={() => handleClick('b')}><div className="icon b w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center"><Image src="/media/images/wwd-icons/icon-ch.svg" width={64} height={64} alt="Chart"/></div></div>
-            <div className={`icon-wrap w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative ${activeElement === 'c' ? 'active' : '' }`}onClick={() => handleClick('c')}><div className="icon c w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center"><Image src="/media/images/wwd-icons/icon-bc.svg" width={62} height={72} alt="Blockchain"/></div></div>
-            <div className={`icon-wrap w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative ${activeElement === 'd' ? 'active' : '' }`}onClick={() => handleClick('d')}><div className="icon d w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center"><Image src="/media/images/wwd-icons/icon-se.svg" width={66} height={66} alt="Services"/></div></div>
-            <div className={`icon-wrap w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative ${activeElement === 'e' ? 'active' : '' }`}onClick={() => handleClick('e')}><div className="icon e w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center"><Image src="/media/images/wwd-icons/icon-wa.svg" width={85} height={72} alt="Wallet"/></div></div>
-            <div className={`icon-wrap w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative ${activeElement === 'f' ? 'active' : '' }`}onClick={() => handleClick('f')}><div className="icon f w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center"><Image src="/media/images/wwd-icons/icon-ip.svg" width={77} height={58} alt="Network"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon a w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'a' ? 'active' : '' }`} onClick={() => handleClick('a')}><Image src="/media/images/wwd-icons/icon-dollar.svg" width={86} height={46} alt="Dollar"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon b w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'b' ? 'active' : '' }`} onClick={() => handleClick('b')}><Image src="/media/images/wwd-icons/icon-ch.svg" width={64} height={64} alt="Chart"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon c w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'c' ? 'active' : '' }`} onClick={() => handleClick('c')}><Image src="/media/images/wwd-icons/icon-bc.svg" width={62} height={72} alt="Blockchain"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon d w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'd' ? 'active' : '' }`} onClick={() => handleClick('d')}><Image src="/media/images/wwd-icons/icon-se.svg" width={66} height={66} alt="Services"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon e w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'e' ? 'active' : '' }`} onClick={() => handleClick('e')}><Image src="/media/images/wwd-icons/icon-wa.svg" width={85} height={72} alt="Wallet"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] w-[126.8px] h-[130.67px] mb-[103px] mr-[103px] flex relative`}><div className={`icon f w-[126.8px] h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'f' ? 'active' : '' }`} onClick={() => handleClick('f')}><Image src="/media/images/wwd-icons/icon-ip.svg" width={77} height={58} alt="Network"/></div></div>
          </div>
       </div>
     </div>
