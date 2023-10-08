@@ -13,6 +13,48 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
     const [dataTwoValue, setDataTwoValue] = useState("");
     const [isFading, setIsFading] = useState(false);
   
+// Function to animate child elements
+function animateChildElements() {
+  const parentElement = document.querySelector('.wwd-buttons');
+
+  if (parentElement && parentElement.classList.contains('completed')) {
+    const childElements = parentElement.querySelectorAll('.icon-wrap');
+    childElements.forEach((child) => {
+      // Function to set a random position with a delay
+      function setRandomPositionWithDelay() {
+        // Generate random coordinates within a 100px circle
+        const angle = Math.random() * Math.PI * 2;
+        const radius = Math.random() * 50;
+        const xOffset = Math.cos(angle) * radius;
+        const yOffset = Math.sin(angle) * radius;
+
+        // Apply the new position as a CSS transform
+        child.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+      }
+
+      // Set a random position with a delay (e.g., 1 second)
+      setTimeout(setRandomPositionWithDelay, Math.random() * 1000);
+    });
+  }
+}
+
+// Create a Mutation Observer 
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+      animateChildElements(); // Call the function when class attribute changes
+    }
+  });
+});
+
+// Observe changes in the body or a specific target element
+const targetElement = document.body; // You can change this to target a specific element if needed
+
+observer.observe(targetElement, { attributes: true });
+
+// Call the function initially
+animateChildElements();
+
     useEffect(() => {
       let fadeOutTimer;
   
@@ -59,6 +101,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
     const handleFadeOutEnd = () => {
       setIsFading(false); // Trigger the fade-in animation
     };
+
+  function iconsInPosition() {
+    console.log('All icons are in position');
+  }
+
+  function iconsOutOfPosition() {
+    console.log('Icons are out of position');
+  }
 
   useLayoutEffect(() => {
   
@@ -186,17 +236,35 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
           id: "E"
         }
       });
+
+      const box = document.querySelector('.wwd-buttons');
+      let animationCompleted = false;
+
       gsap.to(".icon.f", {
         top: 0,
         transition:'0s',
         rotation: 0,
+        onUpdate: () => {
+          animationCompleted = false;
+          box.classList.remove('completed');
+          },
+        onComplete: () => {
+          animationCompleted = true;
+          if (animationCompleted) {
+              box.classList.add('completed');
+          }
+      },
+      onReverseComplete: () => {
+          animationCompleted = false;
+          box.classList.remove('completed');
+      },
         scrollTrigger: {
           trigger: ".labz-wwd-text",
           start: "top bottom-=500px",
           end: "bottom+=100px bottom-=900px",
           scrub: true,
           //markers: true,
-          id: "F"
+          id: "F",
         }
       });
 
