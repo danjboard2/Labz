@@ -7,6 +7,16 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   }
 }
 
+.wwd-changing-text {opacity:0}
+.wwd-changing-text.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.wwd-changing-text.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 
 .box.active {
     background-color: blue;
