@@ -1,9 +1,11 @@
+"use client"
 import React, {useLayoutEffect, useEffect,  useRef, useState} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import Image from "next/image";
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
@@ -16,8 +18,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 // Function to animate child elements
 function animateChildElements() {
   const parentElement = document.querySelector('.wwd-buttons');
-
-  if (parentElement && parentElement.classList.contains('completed')) {
     const childElements = parentElement.querySelectorAll('.icon-wrap');
     childElements.forEach((child) => {
       // Function to set a random position with a delay
@@ -35,35 +35,21 @@ function animateChildElements() {
       // Set a random position with a delay (e.g., 1 second)
       setTimeout(setRandomPositionWithDelay, Math.random() * 1000);
     });
-  }
 }
-
-// Check if MutationObserver is supported in the current environment
+let intervalId; // Declare intervalId here
 useEffect(() => {
-if (typeof MutationObserver !== 'undefined') {
-  // Create a Mutation Observer
-const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-      animateChildElements(); // Call the function when class attribute changes
-    }
-  });
-});
+  // Check if we are in a browser environment before using document
+  if (typeof window !== 'undefined') {
+    const intervalId = setInterval(() => {
+      const parentElement = document.querySelector('.wwd-buttons');
+      if (parentElement && parentElement.classList.contains('completed')) {
+        animateChildElements();
+      }
+    }, 200);
+  }
+  return () => clearInterval(intervalId);
+}, []); // Empty dependency array to run this effect once on component mount
 
-// Observe changes in the body or a specific target element
-const targetElement = document.body; // You can change this to target a specific element if needed
-
-observer.observe(targetElement, { attributes: true });
-// Now you can use the observer
-} else {
-console.error('MutationObserver is not supported in this environment.');
-}
-}, []); // Empty dependency array to run this effect once
-// Call the function initially
-  // Call the function initially
-  useEffect(() => {
-    animateChildElements();
-  }, []); // Empty dependency array to run this effect once
 
     useEffect(() => {
       let fadeOutTimer;
