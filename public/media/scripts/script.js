@@ -1143,7 +1143,7 @@ function updateColors (dt) {
     if (colorUpdateTimer >= 1) {
         colorUpdateTimer = wrap(colorUpdateTimer, 0, 1);
         pointers.forEach(p => {
-            p.color = generateColor();
+            p.color = generateShadeOfOrange();
         });
     }
 }
@@ -1358,7 +1358,7 @@ function splatPointer (pointer) {
 
 function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
-        const color = generateColor();
+        const color = generateShadeOfOrange()
         color.r *= 10.0;
         color.g *= 10.0;
         color.b *= 10.0;
@@ -1465,7 +1465,7 @@ function updatePointerDownData (pointer, id, posX, posY) {
     pointer.prevTexcoordY = pointer.texcoordY;
     pointer.deltaX = 0;
     pointer.deltaY = 0;
-    pointer.color = generateColor();
+    pointer.color = generateShadeOfOrange()
 }
 
 function updatePointerMoveData (pointer, posX, posY) {
@@ -1501,6 +1501,20 @@ function generateColor () {
     c.b *= 0.15;
     return c;
 }
+
+function generateShadeOfOrange() {
+    // Generate a random hue in the orange range (typically 30° to 45°)
+    const hue = Math.random() * 15 + 30;
+  
+    // Set a fixed saturation and value for shades
+    const saturation = 1.6; // Adjust as needed
+    const value = 1.3;      // Adjust as needed
+  
+    // Convert HSV to RGB
+    const c = HSVtoRGB(hue / 360, saturation, value);
+  
+    return c;
+  }
 
 function HSVtoRGB (h, s, v) {
     let r, g, b, i, f, p, q, t;
