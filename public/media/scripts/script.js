@@ -33,13 +33,13 @@ let config = {
     SIM_RESOLUTION: 256,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 2.5,
+    DENSITY_DISSIPATION: 0.6,
     VELOCITY_DISSIPATION: 2,
-    PRESSURE: 0.9,
+    PRESSURE: 1,
     PRESSURE_ITERATIONS: 100,
     CURL: 25,
-    SPLAT_RADIUS: 0.25,
-    SPLAT_FORCE: 10000,
+    SPLAT_RADIUS: 0.35,
+    SPLAT_FORCE: 8000,
     SHADING: true,
     COLORFUL: false,
     COLOR_UPDATE_SPEED: 100,
@@ -1504,10 +1504,10 @@ function generateColor () {
 
 function generateShadeOfOrange() {
     // Generate a random hue in the orange range (typically 30° to 45°)
-    const hue = Math.random() * 15 + 30;
+    const hue = Math.random() * 3 + 15;
   
     // Set a fixed saturation and value for shades
-    const saturation = 0.2; // Adjust as needed
+    const saturation = 1; // Adjust as needed
     const value = 0.1;      // Adjust as needed
   
     // Convert HSV to RGB
