@@ -39,6 +39,7 @@ function animateChildElements() {
 }
 
 // Check if MutationObserver is supported in the current environment
+useEffect(() => {
 if (typeof MutationObserver !== 'undefined') {
   // Create a Mutation Observer
 const observer = new MutationObserver((mutations) => {
@@ -57,8 +58,12 @@ observer.observe(targetElement, { attributes: true });
 } else {
 console.error('MutationObserver is not supported in this environment.');
 }
+}, []); // Empty dependency array to run this effect once
 // Call the function initially
-animateChildElements();
+  // Call the function initially
+  useEffect(() => {
+    animateChildElements();
+  }, []); // Empty dependency array to run this effect once
 
     useEffect(() => {
       let fadeOutTimer;
