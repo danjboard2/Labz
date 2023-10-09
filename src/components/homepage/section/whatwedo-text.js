@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import Image from "next/image";
+import 'mutation-observer'
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
@@ -38,7 +39,9 @@ function animateChildElements() {
   }
 }
 
-// Create a Mutation Observer 
+// Check if MutationObserver is supported in the current environment
+if (typeof MutationObserver !== 'undefined') {
+  // Create a Mutation Observer
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
@@ -51,7 +54,10 @@ const observer = new MutationObserver((mutations) => {
 const targetElement = document.body; // You can change this to target a specific element if needed
 
 observer.observe(targetElement, { attributes: true });
-
+// Now you can use the observer
+} else {
+console.error('MutationObserver is not supported in this environment.');
+}
 // Call the function initially
 animateChildElements();
 
