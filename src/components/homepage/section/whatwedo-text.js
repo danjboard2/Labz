@@ -33,7 +33,7 @@ function animateChildElements() {
       }
 
       // Set a random position with a delay (e.g., 1 second)
-      setTimeout(setRandomPositionWithDelay, Math.random() * 1000);
+      setTimeout(setRandomPositionWithDelay, Math.random() * 4000);
     });
 }
 let intervalId; // Declare intervalId here
@@ -45,7 +45,7 @@ useEffect(() => {
       if (parentElement && parentElement.classList.contains('completed')) {
         animateChildElements();
       }
-    }, 200);
+    }, 4000);
   }
   return () => clearInterval(intervalId);
 }, []); // Empty dependency array to run this effect once on component mount

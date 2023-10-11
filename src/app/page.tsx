@@ -7,6 +7,7 @@ import CustomButton from "../components/slider/CustomButton.js";
 import "../styles/CustomButton.css";
 import Logo from "../components/Logo"
 import WhatWeDo from '../components/homepage/WhatWeDo'
+import Timeline from '../components/homepage/Timeline'
 
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 interface ParentState {
@@ -91,6 +92,7 @@ const ParentComponent: React.FC<{}> = () => {
     </div>
       </section>
       <WhatWeDo />
+      <Timeline />
     </main>
     <Script src="/media/scripts/script.js" strategy="afterInteractive" async/>
     </>

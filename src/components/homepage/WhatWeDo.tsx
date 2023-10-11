@@ -20,8 +20,10 @@ export default function WhatWeDo() {
                 pin: ".whatwedo",
                 start: "top top",
                 end: "+=900",
+                pinSpacing: "margin", // Disable automatic spacing adjustment
+                scrub:true,
                 //markers:true,
-                id: "Pin"
+                id: "Pin",
                     }
         });
     },); // <- IMPORTANT! Scopes selector text
@@ -31,12 +33,9 @@ export default function WhatWeDo() {
 
     return (
         <>
-        <section className="whatwedo relative w-full min-h-full overflow-hidden">
+        <section className="whatwedo relative w-full min-h-full overflow-hidden block">
         <HomepageBackground />
             <WhatWeDoText />
-        </section>
-        <section className="afterpin bg-primary h-full w-full">
-        <h1>Content</h1>
         </section>
         </>
     )
