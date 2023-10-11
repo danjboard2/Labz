@@ -104,7 +104,7 @@ export default function TimelineAnimsTwo() {
           <div className="contain">
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
-                  <h2 className="year-2022 text-[674px] leading-[1] ml-[1000px] text-black -mb-[450px]">2022</h2>
+                  <h2 className="year-2022 text-[674px] leading-[1] ml-[1000px] text-black -mb-[450px] font-extrabold">2022</h2>
                  </div>
               <div className="company-timeline-list">
             <div className="company-timeline-year">
