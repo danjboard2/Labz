@@ -153,7 +153,10 @@
 .company-timeline-list .timeline-date .date2.finished  {opacity:0 !important;}
 .company-timeline-list .timeline-date .date2 {opacity:0}
 
-
+/* timeline 2022 - timeline-two */
+.company-timeline-two .company-timeline-slider {
+  padding-top: 395px;
+}
 
 
 

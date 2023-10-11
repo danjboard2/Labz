@@ -16,8 +16,8 @@ export default function TimelineAnims() {
   // Create a timeline context
   let ctx = gsap.context(() => {
 
-    gsap.to(".year-2021", {
-      marginLeft: 350,
+    gsap.to(".company-timeline .year-2021", {
+      marginLeft: 340,
       rotation: 0,
       scrollTrigger: {
         trigger: ".company-timeline",
@@ -29,7 +29,7 @@ export default function TimelineAnims() {
       }
     });
 
-    const blocks = gsap.utils.toArray(".company-timeline-block");
+    const blocks = gsap.utils.toArray(".company-timeline .company-timeline-block");
     const firstBlockIndex = 0;
     const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
     const lastIndex = blocks.length - 1; // Get the index of the last block
@@ -49,7 +49,7 @@ export default function TimelineAnims() {
         });
 
         const dateElement = document.querySelector(
-          `.timeline-date:nth-child(${index + 1}) .date span.date .date2`
+          `.company-timeline .timeline-date:nth-child(${index + 1}) .date span.date .date2`
         );
 
         if (dateElement) {
@@ -64,19 +64,19 @@ export default function TimelineAnims() {
                // Check if it's the last iteration and prevent onComplete
                   if (index === lastIndex) {
                     gsap.set(dateElement, { display: "inline" });
-                      console.log(`.timeline-date:nth-child(${index+1}) span.circle`)
+                      console.log(`.company-timeline .timeline-date:nth-child(${index+1}) span.circle`)
                       console.log(`Removed onComplete for last iteration (index ${index})`);
                    }
               console.log(`Play animation for index ${index}`);
               // Hide the circle element when the animation is complete
               if (index !== lastIndex) {
-                gsap.set(`.timeline-date:nth-child(${index + 1}) span.circle`, { display: "none" });
+                gsap.set(`.company-timeline .timeline-date:nth-child(${index + 1}) span.circle`, { display: "none" });
                }
             },
             onReverseComplete: () => {
               console.log("reverse");
               // Hide the circle element when the animation is complete
-              gsap.set(`.timeline-date:nth-child(${index+1}) span.circle`, { display: "block" });
+              gsap.set(`.company-timeline .timeline-date:nth-child(${index+1}) span.circle`, { display: "block" });
             },
             scrollTrigger: {
               trigger: block,
