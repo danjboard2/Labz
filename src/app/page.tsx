@@ -8,6 +8,7 @@ import "../styles/CustomButton.css";
 import Logo from "../components/Logo"
 import WhatWeDo from '../components/homepage/WhatWeDo'
 import Timeline from '../components/homepage/Timeline'
+import Inspiration from '../components/homepage/Inspiration'
 
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 interface ParentState {
@@ -93,6 +94,7 @@ const ParentComponent: React.FC<{}> = () => {
       </section>
       <WhatWeDo />
       <Timeline />
+      <Inspiration />
     </main>
     <Script src="/media/scripts/script.js" strategy="afterInteractive" async/>
     </>

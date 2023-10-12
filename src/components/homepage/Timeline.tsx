@@ -17,7 +17,7 @@ export default function Timeline() {
         <section className="timeline bg-white w-full block">
         <TimelineAnimsTwo/>
         </section>
-        <section className="timeline three w-full block pb-[2000px]">
+        <section className="timeline three w-full block">
         <TimelineAnimsThree/>
         </section>
         </>
