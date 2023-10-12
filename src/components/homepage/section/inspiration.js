@@ -39,7 +39,7 @@ export default function InspirationAnims() {
           <>
       <section className="inspiration-inner">
         <div className="quote-wrap">
-          <h1 className="quote text-9xl text-white w-4/5 pt-[10%] px-[5%]"><span className="text-primary">“Great</span> things in a business are never done by one person but instead by a <span className="text-primary">team</span> of people.”</h1>
+          <h1 className="quote text-9xl text-white w-4/5 pt-[10%] px-[5%] font-bold"><span className="text-primary">“Great</span> things in a business are never done by one person but instead by a <span className="text-primary">team</span> of people.”</h1>
         </div>
       </section>
       </>
