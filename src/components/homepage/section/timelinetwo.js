@@ -20,7 +20,7 @@ export default function TimelineAnimsTwo() {
       marginLeft: 340,
       rotation: 0,
       scrollTrigger: {
-        trigger: ".company-timeline-two",
+        trigger: ".company-timeline.two",
         start: "top bottom-=100px",
         end: "top+=600px bottom-=400px",
         scrub: true,
@@ -29,7 +29,7 @@ export default function TimelineAnimsTwo() {
       }
     });
 
-    const blocks = gsap.utils.toArray(".company-timeline-two .company-timeline-block");
+    const blocks = gsap.utils.toArray(".company-timeline.two .company-timeline-block");
     const firstBlockIndex = 0;
     const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
     const lastIndex = blocks.length - 1; // Get the index of the last block
@@ -49,7 +49,7 @@ export default function TimelineAnimsTwo() {
         });
 
         const dateElement = document.querySelector(
-          `.company-timeline-two .timeline-date:nth-child(${index + 1}) .date span.date .date2`
+          `.company-timeline.two .timeline-date:nth-child(${index + 1}) .date span.date .date2`
         );
 
         if (dateElement) {
@@ -70,13 +70,13 @@ export default function TimelineAnimsTwo() {
               console.log(`Play animation for index ${index}`);
               // Hide the circle element when the animation is complete
               if (index !== lastIndex) {
-                gsap.set(`.company-timeline-two .timeline-date:nth-child(${index + 1}) span.circle`, { display: "none" });
+                gsap.set(`.company-timeline.two .timeline-date:nth-child(${index + 1}) span.circle`, { display: "none" });
                }
             },
             onReverseComplete: () => {
               console.log("reverse");
               // Hide the circle element when the animation is complete
-              gsap.set(`.company-timeline-two .timeline-date:nth-child(${index+1}) span.circle`, { display: "block" });
+              gsap.set(`.company-timeline.two .timeline-date:nth-child(${index+1}) span.circle`, { display: "block" });
             },
             scrollTrigger: {
               trigger: block,
@@ -100,7 +100,7 @@ export default function TimelineAnimsTwo() {
 
   return (
           <>
-      <section className="company-timeline-two" id="company-timeline">
+      <section className="company-timeline two" id="company-timeline">
           <div className="contain">
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
