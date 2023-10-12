@@ -22,6 +22,7 @@
   src: url("../../public/media/fonts/abc-diatype-italic.otf") format("opentype");
   font-style:italic
 }
+h1,h2,h3,h4,h5,h6,p,span,ul,li,strong,b,a,div,button,textarea,input,select,option,form,fieldset,legend,table,td,th,tr,thead,tbody,tfoot,blockquote,pre,code,em,small,img,video,iframe,canvas,svg,article,aside,footer,header,nav,section{font-family:"ABC", Arial, sans-serif}
 
 /* ===== animations ===== */
 

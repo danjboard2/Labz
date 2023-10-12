@@ -17,7 +17,7 @@ export default function TimelineAnimsTwo() {
   let ctx = gsap.context(() => {
 
     gsap.to(".year-2022", {
-      marginLeft: 340,
+      marginLeft: 220,
       rotation: 0,
       scrollTrigger: {
         trigger: ".company-timeline.two",
@@ -64,7 +64,7 @@ export default function TimelineAnimsTwo() {
                // Check if it's the last iteration and prevent onComplete
                   if (index === lastIndex) {
                     gsap.set(dateElement, { display: "inline" });
-                      console.log(`.company-timeline-two .timeline-date:nth-child(${index+1}) span.circle`)
+                      console.log(`.company-timeline.two .timeline-date:nth-child(${index+1}) span.circle`)
                       console.log(`Removed onComplete for last iteration (index ${index})`);
                    }
               console.log(`Play animation for index ${index}`);
@@ -105,32 +105,33 @@ export default function TimelineAnimsTwo() {
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
                   <h2 className="year-2022 text-[674px] leading-[1] ml-[1000px] text-black -mb-[450px] font-extrabold">2022</h2>
+                  <h4 className="roadmap">Roadmap</h4>
                  </div>
               <div className="company-timeline-list">
             <div className="company-timeline-year">
                 <span className="timeline-date">
-                    <div className="date"><span className="date relative"><span className="date2 z-10 relative text-black text-4xl leading-[4rem]">January</span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle"></span>
+                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-black text-4xl leading-[4rem]">January</span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle"></span>
                 </span>
                 <span className="timeline-date">
-                    <div className="date"><span className="date relative"><span className="date2 z-10 relative text-black text-4xl leading-[4rem]">March</span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle"></span>
+                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-black text-4xl leading-[4rem]">March</span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle"></span>
                 </span>
                 <span className="timeline-date">
-                    <div className="date"><span className="date relative"><span className="date2 z-10 relative text-black text-4xl leading-[4rem]">June</span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle"></span>
+                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-black text-4xl leading-[4rem]">June</span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle"></span>
                  </span>
                  <span className="timeline-date">
-                     <div className="date"><span className="date relative"><span className="date2 z-10 relative text-black text-4xl leading-[4rem]">August</span><div className="absolute top-0 bottom-0 left-0 right z-0"></div></span></div><span className="circle"></span>
+                     <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-black text-4xl leading-[4rem]">August</span><div className="absolute top-0 bottom-0 left-0 right z-0"></div></span></div><span className="circle"></span>
                  </span>
                  <span className="timeline-date">
-                     <div className="date"><span className="date relative"><span className="date2 z-10 relative text-black text-4xl leading-[4rem]">December</span><div className="absolute top-0 bottom-0 left-0 right-0z-0"></div></span></div><span className="circle"></span>
+                     <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-black text-4xl leading-[4rem]">December</span><div className="absolute top-0 bottom-0 left-0 right-0z-0"></div></span></div><span className="circle"></span>
                 </span>
              </div>
     </div>
       <div className="company-timeline-slider">
-        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">January</span><span className="circle"></span><h4 className="text-black">The Labz team formed.</h4><p className="text-black">Although small we used our 10+ yrs blockchain experience to navigate this promising landscape with opportunity and knowledge to gain at each turn.</p></div></div>
-        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">March</span><span className="circle"></span><h4 className="text-black">Lorem Ipsum Dolor 3</h4><p className="text-black">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p></div></div>
-        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">June</span><span className="circle"></span><h4 className="text-black">Lorem Ipsum Dolor 3</h4><p className="text-black">Lorem ipsum dolor sit amet, consetetur lorem ips sadipscing elitr, sed diam nonumy eirmorem ipsum dolor sit amet, consetetur lorem ips sadipscing elitr, sed diam nonumy eirmod.d.</p></div></div>
-        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">August</span><span className="circle"></span><h4 className="text-black">Lorem Ipsum Dolor 3</h4><p className="text-black">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p></div></div>
-        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">December</span><span className="circle"></span><h4 className="text-black">Lorem Ipsum Dolor 3</h4><p className="text-black">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p>
+        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">January</span><span className="circle"></span><h4 className="text-black text-4xl">The Labz team formed.</h4><p className="text-black text-xl">Although small we used our 10+ yrs blockchain experience to navigate this promising landscape with opportunity and knowledge to gain at each turn.</p></div></div>
+        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">March</span><span className="circle"></span><h4 className="text-black text-4xl">Lorem Ipsum Dolor 3</h4><p className="text-black text-xl">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p></div></div>
+        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">June</span><span className="circle"></span><h4 className="text-black text-4xl">Lorem Ipsum Dolor 3</h4><p className="text-black text-xl">Lorem ipsum dolor sit amet, consetetur lorem ips sadipscing elitr, sed diam nonumy eirmorem ipsum dolor sit amet, consetetur lorem ips sadipscing elitr, sed diam nonumy eirmod.d.</p></div></div>
+        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">August</span><span className="circle"></span><h4 className="text-black text-4xl">Lorem Ipsum Dolor 3</h4><p className="text-black text-xl">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p></div></div>
+        <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">December</span><span className="circle"></span><h4 className="text-black text-4xl">Lorem Ipsum Dolor 3</h4><p className="text-black text-xl">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p>
       </div>
       </div>
       </div>

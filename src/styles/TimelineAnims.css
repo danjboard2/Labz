@@ -3,7 +3,10 @@
 }
 
 .company-timeline {
-  margin: 120px 0;
+  padding: 120px 0;
+}
+.company-timeline.two {
+  padding: 0px 0px 120px 0px;
 }
 .company-timeline:before {
   width: 100%;
@@ -19,6 +22,7 @@
   max-width: 100%;
   margin-bottom: 0;
   margin-bottom: 108px;
+  position: relative;
 }
 .company-timeline-wrapper {
   display: flex;
@@ -29,9 +33,11 @@
   position: sticky;
   top: 50%;
   width: 200px !important;
-  margin-left: 85px;
+  margin-left: 40px;
   display: flex;
   flex-wrap: wrap;
+  margin-right: -172px;
+  z-index: 20;
 }
 .company-timeline-list .company-timeline-year {
   position: relative;
@@ -39,11 +45,12 @@
   height: 80px;
   margin-left: auto;
   overflow: hidden;
-  transform: translateX(8px);
+  transform: translateX(5px);
+  z-index: 10;
 }
 .company-timeline-list .timeline-date {
   position: absolute;
-  left: 0;
+  left: -5px;
   top: 0;
   width: 100%;
   display: block;
@@ -54,35 +61,54 @@
 }
 .company-timeline-list .timeline-date .date {
  /* background: #ff3d00; */
+ z-index: 10;
 }
 
 .company-timeline-list .circle {
   position: absolute;
-  right: 0;
-  top: 70%;
+  left: 5px;
+  top: 63%;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border: 1px solid #F80964;
-  border-radius: 16px;
-  background-color: #fff;
+  width: 47px;
+  height: 49px;
+  border: 4px solid #ff3d00;
+  border-radius: 3px 3px 3px 3px;
+  background-color: #000;
+  border-right: 0px;
+  z-index: 8;
+}
+.company-timeline.two .company-timeline-list .circle {
+    background-color: white;
 }
 .company-timeline-list .circle:before {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  right: -2px;
+  top: 0px;
   transform: translate(-50%, -50%);
-  border-radius: 6px;
-  width: 6px;
+  border-radius: 0px;
+  width: 4px;
   height: 6px;
-  background-color: #F80964;
+  background-color: #ff3d00;
+  border-radius: 0px 3px 0px 0px;
+  content: "";
+}
+.company-timeline-list .circle:after {
+  position: absolute;
+  right: -2px;
+  bottom: -6px;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  width: 4px;
+  height: 6px;
+  background-color: #ff3d00;
+  border-radius: 0px 0px 3px 0px;
   content: "";
 }
 .company-timeline-slider {
-  width: 75%;
+  width: 90%;
   margin-left: 0px;
   margin-top: 63px;
-  padding-left: 75px;
+  padding-left: 180px;
   padding-top: 310px;
   border-left: 1px solid #C2D7DA;
   overflow: visible;
@@ -120,14 +146,18 @@
   opacity: 1 !important;
 }
 .company-timeline-block .circle {
-  position: absolute;
-  left: -84px;
-  top: 32px;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #F80964;
-  border-radius: 16px;
-  background-color: #fff;
+    position: absolute;
+    left: -202px;
+    top: 63%;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 42px;
+    border: 3px solid #ff3d00;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #000;
+    border-right: 0px;
+    display: none;
+    z-index: 0;
 }
 .company-timeline-block .circle:before {
   position: absolute;
@@ -138,6 +168,7 @@
   width: 6px;
   height: 6px;
   background-color: #F80964;
+  display: none;
   content: "";
 }
 .company-timeline-block .image-block {
@@ -151,12 +182,29 @@
   line-height: 1.75;
 }
 .company-timeline-list .timeline-date .date2.finished  {opacity:0 !important;}
-.company-timeline-list .timeline-date .date2 {opacity:0}
-
-/* timeline 2022 - timeline-two */
-.company-timeline-two .company-timeline-slider {
-  padding-top: 395px;
+.company-timeline-list .timeline-date .date2 {opacity:0;margin-left: 12px;}
+.company-timeline.one .year-2021 {margin-top:-126px;}
+.timeline-heading h4.roadmap {
+  position: absolute;
+  left: 360px;
+  bottom: -324px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
 }
 
+/* timeline 2022 - timeline-two */
+.company-timeline.two .year-2022 {margin-top:-90px;}
+.company-timeline.two .company-timeline-slider {
+  padding-top: 290px;
+}
+.company-timeline.two .timeline-heading h4.roadmap {
+  color: #fff;
+}
 
-
+/* timeline 2023 */
+.company-timeline.three .year-2023 {margin-top:-208px;}
+.timeline .three {background: linear-gradient(180deg, #1A1A1A 0%, #000 30%);}
+.company-timeline.three .timeline-heading h4.roadmap {
+  color: #fff;
+}

@@ -15,19 +15,15 @@ const config: Config = {
       xxl: '1920px',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+     sans: ['"ABC"', 'arial' , 'sans-serif']
     },
     extend: {
       backgroundImage: {
         'homepage': "url('/media/images/homepage-bg.jpg')",
       },
       colors: {
-        'primary': '#FF3D00',
+        'primary': '#FF3D00'
       },
-      fontFamily: {
-        sans: ['"ABC"', 'arial' , 'sans-serif']
-      }
     },
   },
   plugins: [],

@@ -8,7 +8,7 @@ import { addClass } from "rsuite/esm/DOMHelper";
 // Register the GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
-export default function TimelineAnims() {
+export default function TimelineAnimsThree() {
   useLayoutEffect(() => {
     // Create a timeline context
 
@@ -16,20 +16,20 @@ export default function TimelineAnims() {
   // Create a timeline context
   let ctx = gsap.context(() => {
 
-    gsap.to(".company-timeline.one .year-2021", {
+    gsap.to(".year-2023", {
       marginLeft: 220,
       rotation: 0,
       scrollTrigger: {
-        trigger: ".company-timeline.one",
+        trigger: ".company-timeline.three",
         start: "top bottom-=100px",
         end: "top+=600px bottom-=400px",
         scrub: true,
         //markers: true,
-        id: "2021"
+        id: "2023"
       }
     });
 
-    const blocks = gsap.utils.toArray(".company-timeline.one .company-timeline-block");
+    const blocks = gsap.utils.toArray(".company-timeline.three .company-timeline-block");
     const firstBlockIndex = 0;
     const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
     const lastIndex = blocks.length - 1; // Get the index of the last block
@@ -49,7 +49,7 @@ export default function TimelineAnims() {
         });
 
         const dateElement = document.querySelector(
-          `.company-timeline.one .timeline-date:nth-child(${index + 1}) .date span.date .date2`
+          `.company-timeline.three .timeline-date:nth-child(${index + 1}) .date span.date .date2`
         );
 
         if (dateElement) {
@@ -64,19 +64,19 @@ export default function TimelineAnims() {
                // Check if it's the last iteration and prevent onComplete
                   if (index === lastIndex) {
                     gsap.set(dateElement, { display: "inline" });
-                      console.log(`.company-timeline.one .timeline-date:nth-child(${index+1}) span.circle`)
+                      console.log(`.company-timeline.three .timeline-date:nth-child(${index+1}) span.circle`)
                       console.log(`Removed onComplete for last iteration (index ${index})`);
                    }
               console.log(`Play animation for index ${index}`);
               // Hide the circle element when the animation is complete
               if (index !== lastIndex) {
-                gsap.set(`.company-timeline.one .timeline-date:nth-child(${index + 1}) span.circle`, { display: "none" });
+                gsap.set(`.company-timeline.three .timeline-date:nth-child(${index + 1}) span.circle`, { display: "none" });
                }
             },
             onReverseComplete: () => {
               console.log("reverse");
               // Hide the circle element when the animation is complete
-              gsap.set(`.company-timeline.one .timeline-date:nth-child(${index+1}) span.circle`, { display: "block" });
+              gsap.set(`.company-timeline.three .timeline-date:nth-child(${index+1}) span.circle`, { display: "block" });
             },
             scrollTrigger: {
               trigger: block,
@@ -100,11 +100,11 @@ export default function TimelineAnims() {
 
   return (
           <>
-      <section className="company-timeline one" id="company-timeline">
+      <section className="company-timeline three" id="company-timeline">
           <div className="contain">
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
-                  <h2 className="year-2021 text-[674px] leading-[1] ml-[1000px] text-white -mb-[450px] font-extrabold">2021</h2>
+                  <h2 className="year-2023 text-[674px] leading-[1] ml-[1000px] text-[#FF3D00] -mb-[450px] font-extrabold">2023</h2>
                   <h4 className="roadmap">Roadmap</h4>
                  </div>
               <div className="company-timeline-list">
