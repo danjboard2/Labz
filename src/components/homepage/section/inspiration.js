@@ -24,7 +24,7 @@ export default function InspirationAnims() {
         start: "top bottom-=100px",
         end: "top+=800px bottom-=400px",
         scrub: true,
-        markers: true,
+        //markers: true,
         id: "quote"
       }
     });
