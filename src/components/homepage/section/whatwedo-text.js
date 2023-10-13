@@ -232,7 +232,7 @@ useEffect(() => {
           id: "E"
         }
       });
-
+      const firstel = document.querySelector('.icon.a');
       const box = document.querySelector('.wwd-buttons');
       let animationCompleted = false;
 
@@ -248,6 +248,7 @@ useEffect(() => {
           animationCompleted = true;
           if (animationCompleted) {
               box.classList.add('completed');
+              firstel.click();
           }
       },
       onReverseComplete: () => {
