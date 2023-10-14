@@ -54,7 +54,7 @@ export default function TeamAnims() {
           <>
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
             <article className="flex flex-row w-full mx-[93px] items-center">
-            <div className="team-inner-left flex w-2/3 flex-col pr-10">
+            <div className="team-inner-left flex w-3/5 flex-col pr-10">
           <h2 className="relative quote text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12 border-[#828282] mt-12 mb-24"/>
           <div className="member-wrap flex flex-row items-center">
@@ -83,9 +83,9 @@ export default function TeamAnims() {
           </div>
           </div>
           </div>  
-          <div className="team-inner-right flex w-1/3 flex-wrap">
+          <div className="team-inner-right flex w-2/5 flex-wrap">
             {/* team member */}
-          <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4 active">
+          <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4 active">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"
@@ -107,7 +107,7 @@ export default function TeamAnims() {
           {/* end team member */}
 
           {/* team member */}
-           <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
+           <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"
@@ -129,73 +129,7 @@ export default function TeamAnims() {
           {/* end team member */}
 
           {/* team member */}
-          <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
-              <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
-                  <Image
-                    src="/media/images/team/team-member-1.png"
-                    alt="Picture of the team member"
-                    width={200}
-                    height={200}
-                    className="-mt-10 pb-4"/>
-                </div>
-                <div className="member-details flex flex-row justify-between pb-8 items-center">
-                <div className="names-small mr-10">
-                  <h3 className="text-base font-bold text-white">Name Surname</h3>
-                  <h4 className="text-base font-bold text-primary">CEO/Founder</h4>
-                </div>
-                <div className="linkedin-small">
-                  <a href="https://www.linkedin.com/in/"><Image src="/media/images/linkedin.svg" width={30} height={30} alt="LinkedIn"/></a>
-                </div>
-              </div>
-              </div>
-          {/* end team member */}
-
-            {/* team member */}
-            <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
-              <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
-                  <Image
-                    src="/media/images/team/team-member-1.png"
-                    alt="Picture of the team member"
-                    width={200}
-                    height={200}
-                    className="-mt-10 pb-4"/>
-                </div>
-                <div className="member-details flex flex-row justify-between pb-8 items-center">
-                <div className="names-small mr-10">
-                  <h3 className="text-base font-bold text-white">Name Surname</h3>
-                  <h4 className="text-base font-bold text-primary">CEO/Founder</h4>
-                </div>
-                <div className="linkedin-small">
-                  <a href="https://www.linkedin.com/in/"><Image src="/media/images/linkedin.svg" width={30} height={30} alt="LinkedIn"/></a>
-                </div>
-              </div>
-              </div>
-          {/* end team member */}
-
-          {/* team member */}
-           <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
-              <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
-                  <Image
-                    src="/media/images/team/team-member-1.png"
-                    alt="Picture of the team member"
-                    width={200}
-                    height={200}
-                    className="-mt-10 pb-4"/>
-                </div>
-                <div className="member-details flex flex-row justify-between pb-8 items-center">
-                <div className="names-small mr-10">
-                  <h3 className="text-base font-bold text-white">Name Surname</h3>
-                  <h4 className="text-base font-bold text-primary">CEO/Founder</h4>
-                </div>
-                <div className="linkedin-small">
-                  <a href="https://www.linkedin.com/in/"><Image src="/media/images/linkedin.svg" width={30} height={30} alt="LinkedIn"/></a>
-                </div>
-              </div>
-              </div>
-          {/* end team member */}
-
-          {/* team member */}
-          <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
+          <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"
@@ -217,7 +151,7 @@ export default function TeamAnims() {
           {/* end team member */}
 
             {/* team member */}
-            <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
+            <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"
@@ -239,7 +173,7 @@ export default function TeamAnims() {
           {/* end team member */}
 
           {/* team member */}
-           <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
+           <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"
@@ -261,7 +195,73 @@ export default function TeamAnims() {
           {/* end team member */}
 
           {/* team member */}
-          <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
+          <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
+              <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
+                  <Image
+                    src="/media/images/team/team-member-1.png"
+                    alt="Picture of the team member"
+                    width={200}
+                    height={200}
+                    className="-mt-10 pb-4"/>
+                </div>
+                <div className="member-details flex flex-row justify-between pb-8 items-center">
+                <div className="names-small mr-10">
+                  <h3 className="text-base font-bold text-white">Name Surname</h3>
+                  <h4 className="text-base font-bold text-primary">CEO/Founder</h4>
+                </div>
+                <div className="linkedin-small">
+                  <a href="https://www.linkedin.com/in/"><Image src="/media/images/linkedin.svg" width={30} height={30} alt="LinkedIn"/></a>
+                </div>
+              </div>
+              </div>
+          {/* end team member */}
+
+            {/* team member */}
+            <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
+              <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
+                  <Image
+                    src="/media/images/team/team-member-1.png"
+                    alt="Picture of the team member"
+                    width={200}
+                    height={200}
+                    className="-mt-10 pb-4"/>
+                </div>
+                <div className="member-details flex flex-row justify-between pb-8 items-center">
+                <div className="names-small mr-10">
+                  <h3 className="text-base font-bold text-white">Name Surname</h3>
+                  <h4 className="text-base font-bold text-primary">CEO/Founder</h4>
+                </div>
+                <div className="linkedin-small">
+                  <a href="https://www.linkedin.com/in/"><Image src="/media/images/linkedin.svg" width={30} height={30} alt="LinkedIn"/></a>
+                </div>
+              </div>
+              </div>
+          {/* end team member */}
+
+          {/* team member */}
+           <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
+              <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
+                  <Image
+                    src="/media/images/team/team-member-1.png"
+                    alt="Picture of the team member"
+                    width={200}
+                    height={200}
+                    className="-mt-10 pb-4"/>
+                </div>
+                <div className="member-details flex flex-row justify-between pb-8 items-center">
+                <div className="names-small mr-10">
+                  <h3 className="text-base font-bold text-white">Name Surname</h3>
+                  <h4 className="text-base font-bold text-primary">CEO/Founder</h4>
+                </div>
+                <div className="linkedin-small">
+                  <a href="https://www.linkedin.com/in/"><Image src="/media/images/linkedin.svg" width={30} height={30} alt="LinkedIn"/></a>
+                </div>
+              </div>
+              </div>
+          {/* end team member */}
+
+          {/* team member */}
+          <div class="member-wrap w-[30%] mr-[3%] max-w-[200px] my-4">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"

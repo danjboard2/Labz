@@ -46,9 +46,6 @@ export default function InspirationAnims() {
     });
 
     gsap.to(".quote-wrap h6.attribution", {
-      lineHeight: "130px",
-      paddingTop:"0px",
-      rotation: 0,
       scrollTrigger: {
         trigger: ".inspiration-inner",
         start: "top bottom-=100px",
@@ -61,8 +58,6 @@ export default function InspirationAnims() {
 
     gsap.to(".quote-wrap h6.attribution", {
       filter: "blur(80px)",
-      opacity:0,
-      rotation: 0,
       scrollTrigger: {
         trigger: ".inspiration-inner",
         start: "bottom+=450px bottom-=100px",
