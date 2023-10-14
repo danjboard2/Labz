@@ -17,7 +17,7 @@ export default function InspirationAnims() {
   // Create a timeline context
   let ctx = gsap.context(() => {
 
-    gsap.to(".quote-wrap h1.quote", {
+    gsap.to(".quote-wrap h4.quote", {
       lineHeight: "130px",
       paddingTop:"0px",
       rotation: 0,
@@ -31,7 +31,35 @@ export default function InspirationAnims() {
       }
     });
 
-    gsap.to(".quote-wrap h1.quote", {
+    gsap.to(".quote-wrap h4.quote", {
+      filter: "blur(80px)",
+      opacity:0,
+      rotation: 0,
+      scrollTrigger: {
+        trigger: ".inspiration-inner",
+        start: "bottom+=450px bottom-=100px",
+        end: "bottom+=1000px bottom-=400px",
+        scrub: true,
+        //markers: true,
+        id: "quote"
+      }
+    });
+
+    gsap.to(".quote-wrap h6.attribution", {
+      lineHeight: "130px",
+      paddingTop:"0px",
+      rotation: 0,
+      scrollTrigger: {
+        trigger: ".inspiration-inner",
+        start: "top bottom-=100px",
+        end: "top+=800px bottom-=400px",
+        scrub: true,
+        //markers: true,
+        id: "quote"
+      }
+    });
+
+    gsap.to(".quote-wrap h6.attribution", {
       filter: "blur(80px)",
       opacity:0,
       rotation: 0,
@@ -54,8 +82,9 @@ export default function InspirationAnims() {
 
   return (
           <>
-        <div className="quote-wrap h-full absolute flex justify-center items-center top-0 bottom-0 left-0 right-0">
-          <h1 className="relative quote text-9xl text-white w-4/5 font-bold pt-[400px]"><span className="text-primary">“Great</span> things in a business are never done by one person but instead by a <span className="text-primary">team</span> of people.”</h1>
+        <div className="quote-wrap flex-col h-full absolute flex justify-center items-center top-0 bottom-0 left-0 right-0">
+          <h4 className="relative quote text-9xl text-white w-4/5 font-bold pt-[400px]"><span className="text-primary">“Great</span> things in a business are never done by one person but instead by a <span className="text-primary">team</span> of people.”</h4>
+          <h6 className="attribution w-[70%] pt-24 text-6xl text-right text-white">- Steve Jobs</h6>
         </div>
       </>
   );
