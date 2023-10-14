@@ -53,7 +53,7 @@ export default function TeamAnims() {
   return (
           <>
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
-            <article className="flex flex-row w-full mx-[93px]">
+            <article className="flex flex-row w-full mx-[93px] items-center">
             <div className="team-inner-left flex w-2/3 flex-col pr-10">
           <h2 className="relative quote text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12 border-[#828282] mt-12 mb-24"/>
