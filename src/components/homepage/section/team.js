@@ -85,7 +85,7 @@ export default function TeamAnims() {
           </div>  
           <div className="team-inner-right flex w-1/3 flex-wrap">
             {/* team member */}
-          <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4">
+          <div class="member-wrap w-[30%] mr-[3%] max-w-[230px] my-4 active">
               <div class="member-thumb border-4 border-primary rounded-lg mb-2 bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
                   <Image
                     src="/media/images/team/team-member-1.png"
