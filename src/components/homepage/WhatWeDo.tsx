@@ -33,7 +33,7 @@ export default function WhatWeDo() {
 
     return (
         <>
-        <section className="whatwedo relative w-full min-h-full overflow-hidden block">
+        <section className="whatwedo relative w-full min-h-full overflow-hidden flex justify-center items-center">
         <HomepageBackground />
             <WhatWeDoText />
         </section>

@@ -108,8 +108,6 @@
   width: 90%;
   margin-left: 0px;
   margin-top: 63px;
-  padding-left: 180px;
-  padding-top: 310px;
   border-left: 1px solid #C2D7DA;
   overflow: visible;
 }
@@ -186,25 +184,24 @@
 .company-timeline.one .year-2021 {margin-top:-126px;}
 .timeline-heading h4.roadmap {
   position: absolute;
-  left: 360px;
-  bottom: -324px;
-  font-size: 50px;
   font-weight: 700;
   color: #000;
 }
 
 /* timeline 2022 - timeline-two */
-.company-timeline.two .year-2022 {margin-top:-90px;}
-.company-timeline.two .company-timeline-slider {
-  padding-top: 290px;
-}
+
 .company-timeline.two .timeline-heading h4.roadmap {
   color: #fff;
 }
 
 /* timeline 2023 */
-.company-timeline.three .year-2023 {margin-top:-208px;}
 .timeline .three {background: linear-gradient(180deg, #1A1A1A 0%, #000 30%);}
 .company-timeline.three .timeline-heading h4.roadmap {
   color: #fff;
+}
+@media screen and (min-width:1024px) and (max-width: 1440px){
+.company-timeline-list .circle {
+  width: 43px;
+  height: 45px;
+}
 }

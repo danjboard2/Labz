@@ -56,7 +56,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 export default function TeamAnims() {
 
-  const [selectedMemberIndex, setSelectedMemberIndex] = useState(-1);
+  const [selectedMemberIndex, setSelectedMemberIndex] = useState(0);
 
   const handleMemberClick = (index) => {
     setSelectedMemberIndex(index);
