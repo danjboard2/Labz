@@ -72,7 +72,7 @@ export default function TeamAnims() {
 
     gsap.to(".team-inner-left", {
       filter: "blur(0px)",
-      opacity:1,
+      autoAlpha:1,
       rotation: 0,
       scrollTrigger: {
         trigger: ".inspiration-inner",
@@ -85,7 +85,7 @@ export default function TeamAnims() {
     });
     gsap.to(".team-inner-right", {
       filter: "blur(0px)",
-      opacity:1,
+      autoAlpha:1,
       rotation: 0,
       scrollTrigger: {
         trigger: ".inspiration-inner",
