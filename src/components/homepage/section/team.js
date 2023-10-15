@@ -17,7 +17,7 @@ const teamMembers = [
   {
     name: "Team Member 2 Name",
     jobTitle: "Job Title 2",
-    linkedinURL: "https://www.linkedin.com/in/member3",
+    linkedinURL: "https://www.linkedin.com/in/member2",
     bio: "Bio for Team Member 2",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
@@ -31,21 +31,21 @@ const teamMembers = [
   {
     name: "Team Member 4 Name",
     jobTitle: "Job Title 4",
-    linkedinURL: "https://www.linkedin.com/in/member3",
+    linkedinURL: "https://www.linkedin.com/in/member4",
     bio: "Bio for Team Member 4",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
     name: "Team Member 5 Name",
     jobTitle: "Job Title 5",
-    linkedinURL: "https://www.linkedin.com/in/member3",
+    linkedinURL: "https://www.linkedin.com/in/member5",
     bio: "Bio for Team Member 5",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
     name: "Team Member 6 Name",
     jobTitle: "Job Title 6",
-    linkedinURL: "https://www.linkedin.com/in/member3",
+    linkedinURL: "https://www.linkedin.com/in/member6",
     bio: "Bio for Team Member 6",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
