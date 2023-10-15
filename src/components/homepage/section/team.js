@@ -15,35 +15,35 @@ const teamMembers = [
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
-    name: "Team Member 2 Name",
-    jobTitle: "Job Title 2",
+    name: "Name Surname",
+    jobTitle: "Operations Manager",
     linkedinURL: "https://www.linkedin.com/in/member2",
     bio: "Bio for Team Member 2",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
-    name: "Team Member 3 Name",
-    jobTitle: "Job Title 3",
+    name: "Name Surname",
+    jobTitle: "Frontend Developer",
     linkedinURL: "https://www.linkedin.com/in/member3",
     bio: "Bio for Team Member 3",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
-    name: "Team Member 4 Name",
-    jobTitle: "Job Title 4",
+    name: "Name Surname",
+    jobTitle: "UX/UI Designer",
     linkedinURL: "https://www.linkedin.com/in/member4",
     bio: "Bio for Team Member 4",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
-    name: "Team Member 5 Name",
+    name: "Name Surname",
     jobTitle: "Job Title 5",
     linkedinURL: "https://www.linkedin.com/in/member5",
     bio: "Bio for Team Member 5",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
   },
   {
-    name: "Team Member 6 Name",
+    name: "Name Surname",
     jobTitle: "Job Title 6",
     linkedinURL: "https://www.linkedin.com/in/member6",
     bio: "Bio for Team Member 6",
@@ -106,9 +106,9 @@ export default function TeamAnims() {
   return (
           <>
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
-            <article className="flex flex-row w-full mx-[93px] items-center">
-            <div className="team-inner-left flex w-3/5 flex-col pr-10">
-          <h2 className="relative quote text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
+            <article className="flex flex-row w-full lg:mx-[40px] xl:mx-[93px] items-center justify-evenly">
+            <div className="team-inner-left flex w-3/5 flex-col pr-[10]">
+          <h2 className="relative quote lg:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12 border-[#828282] mt-12 mb-24"/>
           <div className="member-wrap flex flex-row items-center min-h-[300px]">
             <div className="profile-photo w-2/5 max-w-[250px] flex justify-center items-center border-4 border-primary rounded-lg mr-10  bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
@@ -117,7 +117,7 @@ export default function TeamAnims() {
                 alt={`Picture of ${teamMembers[selectedMemberIndex]?.name}`}
                 width={200}
                 height={200}
-                className="-mt-10 pb-4"
+                className="-mt-10 pb-4 max-w-full"
               />
             </div>
             <div className="member-info w-3/5">
@@ -136,13 +136,13 @@ export default function TeamAnims() {
           </div>
           </div>
           </div>  
-          <div className="team-inner-right flex w-2/5 flex-wrap">
+          <div className="team-inner-right flex w-2/5 flex-wrap lg:justify-end xl:justify-around">
 
             {/* team member */}
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap w-[30%] mr-[3%] max-w-[200px] my-4 ${
+              className={`member-wrap lg:w-[40%] xl:w-[40%] xxl:w-[30%] mr-[3%] xxl:max-w-[200px] my-4 ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}
@@ -153,7 +153,7 @@ export default function TeamAnims() {
                   alt={`Picture of ${member.name}`}
                   width={200}
                   height={200}
-                  className="-mt-10 pb-4"
+                  className="-mt-10 pb-4 w-full"
                 />
               </div>
               <div className="member-details flex flex-row justify-between pb-8 items-center">

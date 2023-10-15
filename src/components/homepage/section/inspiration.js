@@ -18,7 +18,7 @@ export default function InspirationAnims() {
   let ctx = gsap.context(() => {
 
     gsap.to(".quote-wrap h4.quote", {
-      lineHeight: "110%",
+      lineHeight: "1em",
       paddingTop:"0px",
       rotation: 0,
       scrollTrigger: {
@@ -78,8 +78,8 @@ export default function InspirationAnims() {
   return (
           <>
         <div className="quote-wrap flex-col h-full absolute flex justify-center items-center top-0 bottom-0 left-0 right-0">
-          <h4 className="relative quote lg:text-5xl xl:text-7xl xxl:text-9xl text-white w-4/5 font-bold pt-[400px]"><span className="text-primary">“Great</span> things in a business are never done by one person but instead by a <span className="text-primary">team</span> of people.”</h4>
-          <h6 className="attribution w-[70%] pt-24 text-6xl text-right text-white">- Steve Jobs</h6>
+          <h4 className="relative quote lg:text-5xl xl:text-7xl xxl:text-9xl text-white w-4/5 font-bold pt-[400px] lg:leading-[8em] xl:leading-[6em] xxl:leading-[3em]"><span className="text-primary">“Great</span> things in a business are never done by one person but instead by a <span className="text-primary">team</span> of people.”</h4>
+          <h6 className="attribution w-[70%] pt-24 lg:text-2xl xl:text-4xl xxl:text-6xl text-right text-white">- Steve Jobs</h6>
         </div>
       </>
   );
