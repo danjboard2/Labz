@@ -2,7 +2,7 @@
 
 /* team section */
 .team-inner-left, .team-inner-right {filter:blur(80px); opacity:0;}
-.member-wrap img.-mt-10.pb-4 {filter: grayscale(1);}
-.member-wrap img.-mt-10.pb-4:hover, .member-wrap.active img.-mt-10.pb-4 {filter: grayscale(0);}
-.member-wrap.active .member-thumb, .member-wrap .member-thumb:hover {background: linear-gradient(180deg, #FF3D00 0%, rgba(255, 61, 0, 0.00) 100%);border-color:#FF3D00 }
-.member-wrap .member-thumb {background:transparent; border-color:#91371b}
+.team-inner-right .member-wrap img.-mt-10.pb-4 {filter: grayscale(1);}
+.team-inner-right .member-wrap img.-mt-10.pb-4:hover, .team-inner-right .member-wrap.active img.-mt-10.pb-4 {filter: grayscale(0);}
+.team-inner-right .member-wrap.active .member-thumb, .team-inner-right .member-wrap .member-thumb:hover {background: linear-gradient(180deg, #FF3D00 0%, rgba(255, 61, 0, 0.00) 100%);border-color:#FF3D00 }
+.team-inner-right .member-wrap .member-thumb {background:transparent; border-color:#91371b}
