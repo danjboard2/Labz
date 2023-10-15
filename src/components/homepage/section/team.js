@@ -110,7 +110,7 @@ export default function TeamAnims() {
             <div className="team-inner-left flex w-3/5 flex-col pr-10">
           <h2 className="relative quote text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12 border-[#828282] mt-12 mb-24"/>
-          <div className="member-wrap flex flex-row items-center">
+          <div className="member-wrap flex flex-row items-center min-h-[300px]">
             <div className="profile-photo w-2/5 max-w-[250px] flex justify-center items-center border-4 border-primary rounded-lg mr-10  bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
             <Image
                 src={teamMembers[selectedMemberIndex]?.imageUrl}
