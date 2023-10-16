@@ -168,7 +168,14 @@ export default class CustomButton extends Component {
         if (this.props.onFailure) {
           this.props.onFailure();
         }
-  
+        // If the user is dragging the slider, set the opacity to 0
+        const outerRectangles = document.querySelector('.outer-rectangles');
+        const arrowRight = document.querySelector('.rsbcSliderText.arrow-right');
+    
+        if (outerRectangles && arrowRight) {
+          outerRectangles.style.opacity = 1;
+          arrowRight.style.opacity = 1;
+        }
         // Gradually decrease the count back to zero over half a second
         const maxCount = 57; // Maximum count value
         const startCount = this.state.count;
@@ -198,6 +205,14 @@ export default class CustomButton extends Component {
     } else {
       this.startX = e.clientX;
     }
+      // If the user is dragging the slider, set the opacity to 0
+      const outerRectangles = document.querySelector('.outer-rectangles');
+      const arrowRight = document.querySelector('.rsbcSliderText.arrow-right');
+  
+      if (outerRectangles && arrowRight) {
+        outerRectangles.style.opacity = 0;
+        arrowRight.style.opacity = 0;
+      }
   };
 
   onSuccess = () => {
@@ -238,7 +253,7 @@ export default class CustomButton extends Component {
 
   componentWillUnmount() {
     // this.unmounted = true;
-    console.log("Component tried to unmount"); // Debug statement
+    //console.log("Component tried to unmount"); // Debug statement
   }
 
   render() {
