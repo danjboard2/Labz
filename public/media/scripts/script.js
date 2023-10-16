@@ -41,7 +41,7 @@ let config = {
     SPLAT_RADIUS: 0.35,
     SPLAT_FORCE: 8000,
     SHADING: true,
-    COLORFUL: false,
+    COLORFUL: true,
     COLOR_UPDATE_SPEED: 100,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
@@ -207,7 +207,7 @@ function startGUI () {
     captureFolder.addColor(config, 'BACK_COLOR').name('background color');
     captureFolder.add(config, 'TRANSPARENT').name('transparent');
     captureFolder.add({ fun: captureScreenshot }, 'fun').name('take screenshot');
-
+    gui.close();
     if (isMobile())
         gui.close();
 }
