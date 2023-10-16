@@ -248,7 +248,7 @@ export default class CustomButton extends Component {
       <div className="ReactSwipeButton">
         <div
           className={
-            "rsbContainer " +
+            "rsbContainer sm:scale-[65%] md:scale-75 lg:scale-100 z-10 " +
             (this.state.unlocked ? "Unlocked" : "")
           }
           ref={container}
