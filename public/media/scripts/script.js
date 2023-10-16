@@ -1143,7 +1143,7 @@ function updateColors (dt) {
     if (colorUpdateTimer >= 1) {
         colorUpdateTimer = wrap(colorUpdateTimer, 0, 1);
         pointers.forEach(p => {
-            p.color = generateShadeOfOrange();
+            p.color = generateColor();
         });
     }
 }
@@ -1358,7 +1358,7 @@ function splatPointer (pointer) {
 
 function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
-        const color = generateShadeOfOrange()
+        const color = generateColor()
         color.r *= 10.0;
         color.g *= 10.0;
         color.b *= 10.0;
@@ -1465,7 +1465,7 @@ function updatePointerDownData (pointer, id, posX, posY) {
     pointer.prevTexcoordY = pointer.texcoordY;
     pointer.deltaX = 0;
     pointer.deltaY = 0;
-    pointer.color = generateShadeOfOrange()
+    pointer.color = generateColor()
 }
 
 function updatePointerMoveData (pointer, posX, posY) {
