@@ -105,16 +105,20 @@
     opacity: 0;
     transition: 0.3s;
 }
-  .rsbcSlider:hover .pulsing-rectangle .outer-rectangles,
-   .rsbcSlider:focus .pulsing-rectangle .outer-rectangles,
- .rsbcSlider:active .pulsing-rectangle .outer-rectangles,
- .rsbcSlider:target .pulsing-rectangle .outer-rectangles,
- .rsbContainer.Unlocked .pulsing-rectangle .outer-rectangles {
-  opacity:0 !important;
-  transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
-  }
+.rsbContainer:hover .pulsing-rectangle .outer-rectangles,
+.rsbContainer:focus .pulsing-rectangle .outer-rectangles,
+.rsbContainerr:active .pulsing-rectangle .outer-rectangles,
+.rsbContainer:target .pulsing-rectangle .outer-rectangles,
+.rsbcSlider:hover .pulsing-rectangle .outer-rectangles,
+.rsbcSlider:focus .pulsing-rectangle .outer-rectangles,
+.rsbcSlider:active .pulsing-rectangle .outer-rectangles,
+.rsbcSlider:target .pulsing-rectangle .outer-rectangles,
+.rsbContainer.Unlocked .pulsing-rectangle .outer-rectangles {
+opacity:0 !important;
+transition: opacity 1s ease-in-out;
+-moz-transition: opacity 1s ease-in-out;
+-webkit-transition: opacity 1s ease-in-out;
+}
   .right-top, .right-bottom, .right-middle {position:absolute; width:6px; height:13.7%; transition: height 0.1s ease;  background-color: #fc3d03; transition: width 0.1s ease; /* You can adjust the transition duration */}
 .right-top {
   top: -0.8px;
