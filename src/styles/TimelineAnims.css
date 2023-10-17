@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-.company-timeline {
-  padding: 120px 0;
-}
 .company-timeline.two {
   padding: 0px 0px 120px 0px;
 }
@@ -181,7 +178,6 @@
 }
 .company-timeline-list .timeline-date .date2.finished  {opacity:0 !important;}
 .company-timeline-list .timeline-date .date2 {opacity:0;margin-left: 12px;}
-.company-timeline.one .year-2021 {margin-top:-126px;}
 .timeline-heading h4.roadmap {
   position: absolute;
   font-weight: 700;

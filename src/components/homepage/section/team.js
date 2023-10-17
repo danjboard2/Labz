@@ -106,9 +106,9 @@ export default function TeamAnims() {
   return (
           <>
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
-            <article className="flex flex-row w-full lg:mx-[40px] xl:mx-[93px] items-center justify-evenly">
+            <article className="flex flex-row w-full md:mx-[40px] xl:mx-[93px] items-center justify-evenly">
             <div className="team-inner-left flex w-3/5 flex-col pr-[10]">
-          <h2 className="relative quote lg:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
+          <h2 className="relative quote md:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12 border-[#828282] mt-12 mb-24"/>
           <div className="member-wrap flex flex-row items-center min-h-[300px]">
             <div className="profile-photo w-2/5 max-w-[250px] flex justify-center items-center border-4 border-primary rounded-lg mr-10  bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
@@ -127,22 +127,22 @@ export default function TeamAnims() {
                   <h4 className="text-3xl font-bold text-primary">{teamMembers[selectedMemberIndex]?.jobTitle}</h4>
                 </div>
                 <div className="linkedin">
-                  <a href={teamMembers[selectedMemberIndex]?.linkedinURL}><Image src="/media/images/linkedin.svg" width={60} height={60} alt="LinkedIn"/></a>
+                  <a href={teamMembers[selectedMemberIndex]?.linkedinURL}><Image src="/media/images/linkedin.svg" width={60} height={60} alt="LinkedIn" className="min-w-[30px]"/></a>
                 </div>
               </div>
-              <div className="member-desc text-xl text-white">
+              <div className="member-desc md:text-base xl:text-xl text-white">
                 <p>{teamMembers[selectedMemberIndex]?.bio}</p>
                 </div>
           </div>
           </div>
           </div>  
-          <div className="team-inner-right flex w-2/5 flex-wrap lg:justify-end xl:justify-around">
+          <div className="team-inner-right flex w-2/5 flex-wrap justify-end xl:justify-around">
 
             {/* team member */}
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap lg:w-[40%] xl:w-[40%] xxl:w-[30%] mr-[3%] xxl:max-w-[200px] my-4 ${
+              className={`member-wrap md:w-[40%] xl:w-[40%] xxl:w-[30%] mr-[3%] xxl:max-w-[200px] my-4 ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}
@@ -157,7 +157,7 @@ export default function TeamAnims() {
                 />
               </div>
               <div className="member-details flex flex-row justify-between pb-8 items-center">
-                <div className="names-small mr-10">
+                <div className="names-small">
                   <h3 className="text-base font-bold text-white">
                     {member.name}
                   </h3>
@@ -172,6 +172,7 @@ export default function TeamAnims() {
                       width={30}
                       height={30}
                       alt="LinkedIn"
+                      className="min-w-[20px]"
                     />
                   </a>
                 </div>

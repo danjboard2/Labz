@@ -94,7 +94,7 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
       transition:1s;}
 .icon.active:before {
     display: block;
-    width: 126.8px;
+    width: 115%;
     height: 7.9px;
     background: #ff3d00;
     content: '';
@@ -105,7 +105,7 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
 }
 .icon.active:after {
   display: block;
-  width: 126.8px;
+  width: 115%;
   height: 7.9px;
   background: #ff3d00;
   content: '';
