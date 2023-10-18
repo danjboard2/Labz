@@ -42,7 +42,9 @@ useEffect(() => {
   if (typeof window !== 'undefined') {
     const intervalId = setInterval(() => {
       const parentElement = document.querySelector('.wwd-buttons');
-      if (parentElement && parentElement.classList.contains('completed')) {
+      const viewportWidth = window.innerWidth; // Get the viewport width
+
+      if (parentElement && parentElement.classList.contains('completed') && viewportWidth > 767) {
         animateChildElements();
       }
     }, 4000);
@@ -107,12 +109,22 @@ useEffect(() => {
   }
 
   useLayoutEffect(() => {
-  
-    // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
-    let ctx = gsap.context(() => {
+    // Create a timeline context
+  const mm = gsap.matchMedia();
 
+  mm.add(
+    {
+      sm: '(min-width: 480px) and (max-width: 767px)',
+      md: '(min-width: 768px) and (max-width: 1023px)',
+      lg: '(min-width: 1024px) and (max-width: 1439px)',
+      xl: '(min-width: 1440px) and (max-width: 1919px)',
+      xxl: '(min-width: 1920px) and (max-width: 5000px)',
+    },
+    (c) => {
+      let { sm, md, lg, xl, xxl } = c.conditions;
+      console.log("sm:", sm); // Debug output to check the value of md
       gsap.to(".box.a", {
-        marginLeft: 93,
+        marginLeft: sm ? 40 : 93,
         rotation: 0,
         scrollTrigger: {
           trigger: ".box.a",
@@ -267,32 +279,32 @@ useEffect(() => {
 
     },); // <- IMPORTANT! Scopes selector text
     
-    return () => ctx.revert(); // cleanup
+    return () => mm.revert();
   }, []); // <- empty dependency Array so it doesn't re-run on every render
 
   return (
    <>
    <div className="wwd-content w-full h-full flex overflow-hidden">
-      <div className="w-1/2 flex flex-col justify-center">
-          <div className="wwd-container min-w-[5000px] pb-[20px] overflow-hidden">
-            <div className="box a mr-[20px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-primary">What</div>
-            <div className="box b mr-[20px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">we</div>
-            <div className="box c mr-[20px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">do</div>
+      <div className="w-2/3 md:w-1/2 flex flex-col md:justify-center">
+          <div className="wwd-container min-w-[5000px] pb-[20px] pt-[20px] md:pt-0 overflow-hidden">
+            <div className="box a mr-[20px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-primary">What</div>
+            <div className="box b mr-[20px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">we</div>
+            <div className="box c mr-[20px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">do</div>
           </div>
-        <p className="labz-wwd-text md:ml-[93px] lg:ml-[93px] lg:w-4/5 md:text-base lg:text-xl xl:text-2xl xxl:text-3xl text-white z-1 relative pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
-      <div className="ml-[93px] pt-16 relative w-4/5">
-        <h3 className={`wwd-changing-text text-white font-bold lg:text-2xl xl:text-3xl xxl:text-4xl ${isFading ? "fade-out" : "fade-in"}`}>{dataOneValue}</h3>
-        <p className={`wwd-changing-text text-white md:text-base text-xl pt-4 leading-[168.5%] min-h-[250px] ${isFading ? "fade-out" : "fade-in"}`}>{dataTwoValue}</p>
+        <p className="labz-wwd-text sm:ml-[40px] md:ml-[93px] lg:ml-[93px] lg:w-4/5 sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl text-white z-1 relative pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
+      <div className="sm:ml-[40px] md:ml-[93px] pt-16 relative w-4/5">
+        <h3 className={`wwd-changing-text text-white font-bold sm:text-xl lg:text-2xl xl:text-3xl xxl:text-4xl ${isFading ? "fade-out" : "fade-in"}`}>{dataOneValue}</h3>
+        <p className={`wwd-changing-text text-white sm:text-base md:text-xl pt-4 leading-[168.5%] min-h-[400px] md:min-h-[250px] ${isFading ? "fade-out" : "fade-in"}`}>{dataTwoValue}</p>
       </div>
       </div>
-      <div className="w-1/2 flex flex-col justify-center">
-         <div className="wwd-buttons flex flex-row md:pl-[20%] !flex-wrap lg:pl-[110px]  pt-[256px] w-full lg:min-w-[520px] max-w-[900px]">
-         <div className={`icon-wrap rounded-[5.73px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title" data-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et dolor lectus. Nullam augue orci, pulvinar et ex eget, maximus volutpat leo. Aenean ac mollis mauris. Aliquam pretium mauris nunc. Morbi in eros feugiat, pretium magna vitae, vulputate tortor. In mollis semper purus. In mollis et urna et ultrices. Sed ut feugiat tellus." className={`icon a md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'a' ? 'active' : '' }`} onClick={() => handleClick('a')}><Image src="/media/images/wwd-icons/icon-ip.svg" width={77} height={58} alt="Network" className="w-3/4"/></div></div>
-         <div className={`icon-wrap rounded-[5.73px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title two" data-two="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultrices ex sit amet turpis gravida, sit amet rutrum dui eleifend. Mauris eu eros quis orci laoreet scelerisque. Suspendisse faucibus cursus commodo." className={`icon b md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'b' ? 'active' : '' }`} onClick={() => handleClick('b')}><Image src="/media/images/wwd-icons/icon-wa.svg" width={85} height={72} alt="Wallet" className="w-3/4"/></div></div>
-         <div className={`icon-wrap rounded-[5.73px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title three" data-two="Morbi vitae tellus a magna gravida vestibulum. Suspendisse mattis elementum nulla sed consectetur. Praesent consequat tempus est, vel pellentesque magna bibendum a. Sed aliquet velit ut velit rutrum feugiat. Duis non vestibulum felis. Pellentesque ultrices iaculis leo, ac blandit ipsum facilisis at." className={`icon c md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'c' ? 'active' : '' }`} onClick={() => handleClick('c')}><Image src="/media/images/wwd-icons/icon-se.svg" width={66} height={66} alt="Services" className="w-3/4"/></div></div>
-            <div className={`icon-wrap rounded-[5.73px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title four" data-two="Donec tincidunt, neque at vestibulum euismod, purus nulla tincidunt nunc, vel mattis nibh ex non sem. Pellentesque eu ex tellus. Duis sit amet libero id ligula volutpat mattis. Maecenas et commodo odio, at consequat dui. Duis placerat enim sed massa efficitur consequat. Cras ac sem erat." className={`icon d md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'd' ? 'active' : '' }`} onClick={() => handleClick('d')}><Image src="/media/images/wwd-icons/icon-cg.svg" width={64} height={64} alt="Cg" className="w-3/4"/></div></div>
-            <div className={`icon-wrap rounded-[5.73px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title five" data-two="Ut eget ligula eleifend, tempus dui vitae, euismod libero. Cras eget nisl felis. Aenean maximus fringilla lorem non sagittis. Curabitur congue rhoncus arcu, id semper nulla pharetra sit amet. Duis dignissim vestibulum mi eget laoreet." className={`icon e md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'e' ? 'active' : '' }`} onClick={() => handleClick('e')}><Image src="/media/images/wwd-icons/icon-bc.svg" width={62} height={72} alt="Blockchain" className="w-3/4"/></div></div>
-            <div className={`icon-wrap rounded-[5.73px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title six" data-two="Suspendisse eleifend est lacus, quis venenatis eros dapibus sit amet. Aenean lorem massa, facilisis eget urna eu, vestibulum porttitor mi. Nam enim augue, tempus a mollis in, interdum vel augue." className={`icon f md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'f' ? 'active' : '' }`} onClick={() => handleClick('f')}><Image src="/media/images/wwd-icons/icon-co.svg" width={86} height={46} alt="Co" className="w-3/4"/></div></div>
+      <div className="w-1/3 md:w-1/2 flex flex-col  md:justify-center">
+         <div className="wwd-buttons flex flex-row sm:pl-[25%] md:pl-[20%] !flex-wrap lg:pl-[110px] sm:pt-[120px] md:pt-[256px] w-full lg:min-w-[520px] max-w-[900px]">
+         <div className={`icon-wrap rounded-[5.73px] sm:w-[80%] sm:h-[110px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title" data-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et dolor lectus. Nullam augue orci, pulvinar et ex eget, maximus volutpat leo. Aenean ac mollis mauris. Aliquam pretium mauris nunc. Morbi in eros feugiat, pretium magna vitae, vulputate tortor. In mollis semper purus. In mollis et urna et ultrices. Sed ut feugiat tellus." className={`icon a w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'a' ? 'active' : '' }`} onClick={() => handleClick('a')}><Image src="/media/images/wwd-icons/icon-ip.svg" width={77} height={58} alt="Network" className="w-3/4"/></div></div>
+         <div className={`icon-wrap rounded-[5.73px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title two" data-two="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultrices ex sit amet turpis gravida, sit amet rutrum dui eleifend. Mauris eu eros quis orci laoreet scelerisque. Suspendisse faucibus cursus commodo." className={`icon b w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'b' ? 'active' : '' }`} onClick={() => handleClick('b')}><Image src="/media/images/wwd-icons/icon-wa.svg" width={85} height={72} alt="Wallet" className="w-3/4"/></div></div>
+         <div className={`icon-wrap rounded-[5.73px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title three" data-two="Morbi vitae tellus a magna gravida vestibulum. Suspendisse mattis elementum nulla sed consectetur. Praesent consequat tempus est, vel pellentesque magna bibendum a. Sed aliquet velit ut velit rutrum feugiat. Duis non vestibulum felis. Pellentesque ultrices iaculis leo, ac blandit ipsum facilisis at." className={`icon c  w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'c' ? 'active' : '' }`} onClick={() => handleClick('c')}><Image src="/media/images/wwd-icons/icon-se.svg" width={66} height={66} alt="Services" className="w-3/4"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title four" data-two="Donec tincidunt, neque at vestibulum euismod, purus nulla tincidunt nunc, vel mattis nibh ex non sem. Pellentesque eu ex tellus. Duis sit amet libero id ligula volutpat mattis. Maecenas et commodo odio, at consequat dui. Duis placerat enim sed massa efficitur consequat. Cras ac sem erat." className={`icon d w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'd' ? 'active' : '' }`} onClick={() => handleClick('d')}><Image src="/media/images/wwd-icons/icon-cg.svg" width={64} height={64} alt="Cg" className="w-3/4"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title five" data-two="Ut eget ligula eleifend, tempus dui vitae, euismod libero. Cras eget nisl felis. Aenean maximus fringilla lorem non sagittis. Curabitur congue rhoncus arcu, id semper nulla pharetra sit amet. Duis dignissim vestibulum mi eget laoreet." className={`icon e w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'e' ? 'active' : '' }`} onClick={() => handleClick('e')}><Image src="/media/images/wwd-icons/icon-bc.svg" width={62} height={72} alt="Blockchain" className="w-3/4"/></div></div>
+            <div className={`icon-wrap rounded-[5.73px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title six" data-two="Suspendisse eleifend est lacus, quis venenatis eros dapibus sit amet. Aenean lorem massa, facilisis eget urna eu, vestibulum porttitor mi. Nam enim augue, tempus a mollis in, interdum vel augue." className={`icon f w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'f' ? 'active' : '' }`} onClick={() => handleClick('f')}><Image src="/media/images/wwd-icons/icon-co.svg" width={86} height={46} alt="Co" className="w-3/4"/></div></div>
          </div>
       </div>
     </div>

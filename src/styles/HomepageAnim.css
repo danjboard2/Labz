@@ -114,4 +114,49 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   border-radius: 5.87px;
   transition:1s;
 }
-
+@media screen and (max-width: 767px){ /* only on small devices and below */
+  .icon:before {
+    width: 7.9px;
+    height: 0%;
+    background: transparent;
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: -24px;
+    border-radius: 5.87px;
+    transition:1s;}
+    .icon:after {
+      width: 7.9px;
+      height: 0%;
+      background: transparent;
+      content: '';
+      position: absolute;
+      top: -7px;
+      right: -24px;
+      border-radius: 5.87px;
+      transition:1s;}
+  .icon.active:before {
+    display: block;
+    width: 7.9px;
+    height: 124%;
+    background: #ff3d00;
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: -24px;
+    border-radius: 5.87px;
+    transition:1s;
+  }
+  .icon.active:after {
+  display: block;
+    width: 7.9px;
+    height: 124%;
+    background: #ff3d00;
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: -24px;
+    border-radius: 5.87px;
+    transition:1s;
+  }
+}

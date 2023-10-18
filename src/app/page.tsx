@@ -20,16 +20,16 @@ const ParentComponent: React.FC<{}> = () => {
     setOpen(!open);
   };
   const h1s = [
-    <h1 key={1} className="font-regular leading-tight text-[24px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
+    <h1 key={1} className="font-regular leading-tight text-[24px] sm:text-[26px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
       We are <span className="font-bold text-[#FF3D00]">reshaping the future</span> of the digital world
     </h1>,
-    <h1 key={2} className="font-regular leading-tight text-[24px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
+    <h1 key={2} className="font-regular leading-tight text-[24px] sm:text-[26px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
       We are leaders in building <span className="font-bold text-[#FF3D00]">deep tech ecosystems</span>
     </h1>,
-    <h1 key={3} className="font-regular leading-tight text-[24px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
+    <h1 key={3} className="font-regular leading-tight text-[24px] sm:text-[26px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
       We specialize in innovative <span className="font-bold text-[#FF3D00]">Web3 technologies</span>
     </h1>,
-    <h1 key={4} className="font-regular leading-tight text-[24px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
+    <h1 key={4} className="font-regular leading-tight text-[24px] sm:text-[26px] md:text-[30px] lg:text-[40px] text-[#fff] select-none">
       We create <span className="font-bold text-[#FF3D00]">blockchain-focused</span> architecture
     </h1>,
   ];
