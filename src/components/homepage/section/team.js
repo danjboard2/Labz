@@ -9,7 +9,7 @@ import Image from 'next/image'
 const teamMembers = [
   {
     name: "Name Surname",
-    jobTitle: "CEO/Founder",
+    jobTitle: "CEO & Founder",
     linkedinURL: "https://www.linkedin.com/in/member1",
     bio: "A distinguished entrepreneur with over a decade of expertise in blockchain technology and a relentless drive to advance the adoption of digital assets. Specialising in innovative ideas and creative solutions propelling the industry forward with a visionary approach, leveraging a global network of esteemed web3 and deep tech professionals.",
     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
