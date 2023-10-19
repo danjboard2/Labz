@@ -15,6 +15,7 @@ export default function TimelineAnimsTwo() {
 
     mm.add(
       {
+        xs: '(min-width: 0px) and (max-width: 479px)',
         sm: '(min-width: 480px) and (max-width: 767px)',
         md: '(min-width: 768px) and (max-width: 1023px)',
         lg: '(min-width: 1024px) and (max-width: 1439px)',
@@ -22,10 +23,10 @@ export default function TimelineAnimsTwo() {
         xxl: '(min-width: 1920px) and (max-width: 5000px)',
       },
       (c) => {
-        let { sm, md, lg, xl, xxl } = c.conditions;
+        let { xs, sm, md, lg, xl, xxl } = c.conditions;
         console.log("md:", md); // Debug output to check the value of md
     gsap.to(".year-2022", {
-      marginLeft: sm ? 40 : md ? 120 : 220,
+      marginLeft: xs ? 20 : sm ? 40 : md ? 120 : 220,
       rotation: 0,
       scrollTrigger: {
         trigger: ".company-timeline.two",

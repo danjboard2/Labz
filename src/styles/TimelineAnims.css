@@ -208,3 +208,16 @@
  .company-timeline-slider {margin-top:0px; margin-left:40px;}
  .company-timeline-list .timeline-date {left: -32px;}
 }
+@media screen and (max-width: 479px){ /* only on small devices and below */
+.company-timeline-slider {
+  margin-left: 20px;
+}
+.company-timeline-list .timeline-date {
+  left: -45px;
+}
+.company-timeline-list .circle {
+  width: 32px;
+  height: 34px;
+  top: 66% !important;
+}
+}
