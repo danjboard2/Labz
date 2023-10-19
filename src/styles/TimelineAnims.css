@@ -192,12 +192,19 @@
 
 /* timeline 2023 */
 .timeline .three {background: linear-gradient(180deg, #1A1A1A 0%, #000 30%);}
-.company-timeline.three .timeline-heading h4.roadmap {
-  color: #fff;
-}
 @media screen and (min-width:1024px) and (max-width: 1440px){
 .company-timeline-list .circle {
   width: 43px;
   height: 45px;
 }
+}
+@media screen and (max-width: 767px){ /* only on small devices and below */
+.company-timeline .timeline-heading {
+  margin-bottom: 0px;    width: 100%;
+}
+.company-timeline-list .company-timeline-year {
+  overflow: visible;
+}
+ .company-timeline-slider {margin-top:0px; margin-left:40px;}
+ .company-timeline-list .timeline-date {left: -32px;}
 }

@@ -106,12 +106,12 @@ export default function TeamAnims() {
   return (
           <>
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
-            <article className="flex flex-row w-full md:mx-[40px] xl:mx-[93px] items-center justify-evenly">
-            <div className="team-inner-left flex w-3/5 flex-col pr-[10]">
-          <h2 className="relative quote md:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
-          <hr className=" w-5/12 border-[#828282] mt-12 mb-24"/>
-          <div className="member-wrap flex flex-row items-center min-h-[300px]">
-            <div className="profile-photo w-2/5 max-w-[250px] flex justify-center items-center border-4 border-primary rounded-lg mr-10  bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
+            <article className="flex sm:flex-col md:flex-row w-full md:mx-[40px] xl:mx-[93px] items-center justify-evenly">
+            <div className="team-inner-left flex w-[85%] md:w-3/5 flex-col pr-[10]">
+          <h2 className="relative quote w-full md:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
+          <hr className=" w-5/12  border-[#828282] mt-2 mb-4 md:mt-12 md:mb-24"/>
+          <div className="member-wrap md:w-full flex flex-row items-center mb-14 md:mb-0 md:min-h-[300px]">
+            <div className="profile-photo w-2/5 hidden max-w-[250px] md:flex justify-center items-center border-4 border-primary rounded-lg mr-10  bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
             <Image
                 src={teamMembers[selectedMemberIndex]?.imageUrl}
                 alt={`Picture of ${teamMembers[selectedMemberIndex]?.name}`}
@@ -120,7 +120,7 @@ export default function TeamAnims() {
                 className="-mt-10 pb-4 max-w-full"
               />
             </div>
-            <div className="member-info w-3/5">
+            <div className="member-info md:w-3/5">
               <div className="member-names flex flex-row pb-8 items-center">
                 <div className="names mr-10">
                   <h3 className="text-3xl font-bold text-white"> {teamMembers[selectedMemberIndex]?.name}</h3>
@@ -131,18 +131,18 @@ export default function TeamAnims() {
                 </div>
               </div>
               <div className="member-desc md:text-base xl:text-xl text-white">
-                <p>{teamMembers[selectedMemberIndex]?.bio}</p>
+                <p className="min-h-[130px]">{teamMembers[selectedMemberIndex]?.bio}</p>
                 </div>
           </div>
           </div>
           </div>  
-          <div className="team-inner-right flex w-2/5 flex-wrap justify-end xl:justify-around">
+          <div className="team-inner-right flex w-11/12 md:w-2/5 flex-wrap sm:justify-around md:justify-end xl:justify-around">
 
             {/* team member */}
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap md:w-[40%] xl:w-[40%] xxl:w-[30%] mr-[3%] xxl:max-w-[200px] my-4 ${
+              className={`member-wrap sm:w-[26%] md:w-[40%] xl:w-[40%] xxl:w-[30%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}

@@ -25,7 +25,7 @@ export default function TimelineAnims() {
       let { sm, md, lg, xl, xxl } = c.conditions;
       console.log("md:", md); // Debug output to check the value of md
     gsap.to(".company-timeline.one .year-2021", {
-      marginLeft: md ? 120 : 220,
+      marginLeft: sm ? 40 : md ? 120 : 220,
       rotation: 0,
       scrollTrigger: {
         trigger: ".company-timeline.one",
@@ -112,29 +112,29 @@ export default function TimelineAnims() {
           <div className="contain">
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
-                  <h2 className="year-2021 md:text-[280px] lg:text-[350px] xl:text-[550px] xxl:text-[674px] leading-[1] ml-[1000px] text-white md:-mt-[130px] lg:-mt-[140px] xl:-mt-[170px] xxl:-mt-[184px] -mb-[450px] font-extrabold">2021</h2>
-                  <h4 className="roadmap md:left-[170px] md:-bottom-[110px] lg:left-[310px] lg:-bottom-[155px] xl:left-[330px] xl:-bottom-[280px] xxl:left-[360px] xxl:-bottom-[324px] lg:xl:text-[24px] xl:text-[40px] xxl:text-[50px]">Roadmap</h4>
+                  <h2 className="year-2021 sm:text-[190px] md:text-[280px] lg:text-[350px] xl:text-[550px] xxl:text-[674px] leading-[1] ml-[1000px] text-white sm:-mt-[130px] md:-mt-[130px] lg:-mt-[140px] xl:-mt-[170px] xxl:-mt-[184px] -mb-[450px] font-extrabold">2021</h2>
+                  <h4 className="roadmap sm:left-[68px] sm:-bottom-[36px] md:left-[180px] md:-bottom-[110px] lg:left-[310px] lg:-bottom-[155px] xl:left-[330px] xl:-bottom-[280px] xxl:left-[360px] xxl:-bottom-[324px] sm:text-[16px] md:text-[20px] lg:xl:text-[24px] xl:text-[40px] xxl:text-[50px]">Roadmap</h4>
                  </div>
               <div className="company-timeline-list">
             <div className="company-timeline-year">
                 <span className="timeline-date">
-                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white md:text-2xl xl:text-4xl !leading-[4rem]">Jan<span className="hidden lg:inline">uary</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
+                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white sm:text-2xl md:text-2xl xl:text-4xl !leading-[4rem]">Jan<span className="hidden lg:inline">uary</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
                 </span>
                 <span className="timeline-date">
-                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white md:text-2xl xl:text-4xl !leading-[4rem]">Mar<span className="hidden lg:inline">ch</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
+                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white sm:text-2xl md:text-2xl xl:text-4xl !leading-[4rem]">Mar<span className="hidden lg:inline">ch</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
                 </span>
                 <span className="timeline-date">
-                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white md:text-2xl xl:text-4xl !leading-[4rem]">Jun<span className="hidden lg:inline">e</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
+                    <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white sm:text-2xl md:text-2xl xl:text-4xl !leading-[4rem]">Jun<span className="hidden lg:inline">e</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
                  </span>
                  <span className="timeline-date">
-                     <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white md:text-2xl xl:text-4xl !leading-[4rem]">Aug<span className="hidden lg:inline">ust</span></span><div className="absolute top-0 bottom-0 left-0 right z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
+                     <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white sm:text-2xl md:text-2xl xl:text-4xl !leading-[4rem]">Aug<span className="hidden lg:inline">ust</span></span><div className="absolute top-0 bottom-0 left-0 right z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
                  </span>
                  <span className="timeline-date">
-                     <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white md:text-2xl xl:text-4xl !leading-[4rem]">Dec<span className="hidden lg:inline">ember</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
+                     <div className="date"><span className="date relative"><span className="date2 z-10 relative font-semibold text-white sm:text-2xl md:text-2xl xl:text-4xl !leading-[4rem]">Dec<span className="hidden lg:inline">ember</span></span><div className="absolute top-0 bottom-0 left-0 right-0 z-0"></div></span></div><span className="circle !top-[61%] lg:!top-[63.5%]"></span>
                 </span>
              </div>
     </div>
-      <div className="company-timeline-slider md:pl-[60px] lg:pt-[60px] xl:pt-[220px] xxl:pt-[260px] lg:pl-[160px] xl:pl-[170px] xxl:pl-[180px]">
+      <div className="company-timeline-slider sm:pl-[40px] md:pl-[60px] lg:pt-[60px] xl:pt-[220px] xxl:pt-[260px] lg:pl-[160px] xl:pl-[170px] xxl:pl-[180px]">
         <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">January</span><span className="circle"></span><h4 className="text-white xl:text-3xl xxl:text-4xl font-bold">The Labz team formed.</h4><p className="text-white md:text-base lg:text-xl">Although small we used our 10+ yrs blockchain experience to navigate this promising landscape with opportunity and knowledge to gain at each turn.</p></div></div>
         <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">March</span><span className="circle"></span><h4 className="text-white xl:text-3xl xxl:text-4xl font-bold">Lorem Ipsum Dolor 3</h4><p className="text-white  md:text-base lg:text-xl">pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed pscing elitr, sed pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verpscing elitr, sed diam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua. At verdiam voluptua. At verdiam nonumy eirmod tempor invidunt ut labore gna aliquyam erat, sed diam voluptua.  At verlorem </p></div></div>
         <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">June</span><span className="circle"></span><h4 className="text-white xl:text-3xl xxl:text-4xl font-bold">Lorem Ipsum Dolor 3</h4><p className="text-white  md:text-base lg:text-xl">Lorem ipsum dolor sit amet, consetetur lorem ips sadipscing elitr, sed diam nonumy eirmorem ipsum dolor sit amet, consetetur lorem ips sadipscing elitr, sed diam nonumy eirmod.d.</p></div></div>
