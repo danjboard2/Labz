@@ -106,7 +106,7 @@ export default function TeamAnims() {
   return (
           <>
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
-            <article className="flex sm:flex-col md:flex-row w-full md:mx-[40px] xl:mx-[93px] items-center justify-evenly">
+            <article className="flex flex-col md:flex-row w-full md:mx-[40px] xl:mx-[93px] items-center justify-evenly">
             <div className="team-inner-left flex w-[85%] md:w-3/5 flex-col pr-[10]">
           <h2 className="relative quote w-full md:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12  border-[#828282] mt-2 mb-4 md:mt-12 md:mb-24"/>
@@ -136,13 +136,13 @@ export default function TeamAnims() {
           </div>
           </div>
           </div>  
-          <div className="team-inner-right flex w-11/12 md:w-2/5 flex-wrap sm:justify-around md:justify-end xl:justify-around">
+          <div className="team-inner-right flex w-11/12 md:w-2/5 flex-wrap justify-around md:justify-end xl:justify-around">
 
             {/* team member */}
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap sm:w-[26%] md:w-[40%] xl:w-[40%] xxl:w-[30%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 ${
+              className={`member-wrap w-[26%] md:w-[40%] xl:w-[40%] xxl:w-[30%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}
