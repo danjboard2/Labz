@@ -108,7 +108,7 @@ export default function TeamAnims() {
         <section className="teams-wrap w-full h-full absolute flex justify-center items-center">
             <article className="flex flex-col md:flex-row w-full md:mx-[40px] xl:mx-[93px] items-center justify-evenly">
             <div className="team-inner-left flex w-[85%] md:w-3/5 flex-col pr-[10]">
-          <h2 className="relative quote w-full md:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
+          <h2 className="relative quote w-full text-3xl md:text-5xl xl:text-7xl xxl:text-9xl text-white font-bold">We are <span className="text-primary">Labz</span></h2>
           <hr className=" w-5/12  border-[#828282] mt-2 mb-4 md:mt-12 md:mb-24"/>
           <div className="member-wrap md:w-full flex flex-row items-center mb-14 md:mb-0 md:min-h-[300px]">
             <div className="profile-photo w-2/5 hidden max-w-[250px] md:flex justify-center items-center border-4 border-primary rounded-lg mr-10  bg-[linear-gradient(180deg,_#FF3D00_0%,_rgba(255,61,0,0.00)_100%)]">
@@ -123,11 +123,11 @@ export default function TeamAnims() {
             <div className="member-info md:w-3/5">
               <div className="member-names flex flex-row pb-8 items-center">
                 <div className="names mr-10">
-                  <h3 className="text-3xl font-bold text-white"> {teamMembers[selectedMemberIndex]?.name}</h3>
-                  <h4 className="text-3xl font-bold text-primary">{teamMembers[selectedMemberIndex]?.jobTitle}</h4>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white"> {teamMembers[selectedMemberIndex]?.name}</h3>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">{teamMembers[selectedMemberIndex]?.jobTitle}</h4>
                 </div>
                 <div className="linkedin">
-                  <a href={teamMembers[selectedMemberIndex]?.linkedinURL}><Image src="/media/images/linkedin.svg" width={60} height={60} alt="LinkedIn" className="min-w-[30px]"/></a>
+                  <a href={teamMembers[selectedMemberIndex]?.linkedinURL}><Image src="/media/images/linkedin.svg" width={60} height={60} alt="LinkedIn" className="max-w-[25px] sm:max-w-[0px] sm:min-w-[30px]"/></a>
                 </div>
               </div>
               <div className="member-desc md:text-base xl:text-xl text-white">
