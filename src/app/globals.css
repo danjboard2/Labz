@@ -129,6 +129,7 @@ canvas.homepage-bg-canvas {
   height: 100vh;
   z-index: -1;
 }
+canvas.homepage-bg-canvas.about {z-index:0}
 .dg.ac {display:none;}
 /* ===== styles ===== */
 
