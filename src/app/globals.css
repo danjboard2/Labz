@@ -5,7 +5,7 @@
 
 :root{ /* for the contact page cursor emitter */
   --primary : rgb(255,61,0);
-  --secondary : #fff;
+  --secondary : rgb(255,61,0);
 }
 
 @font-face {
