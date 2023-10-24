@@ -69,7 +69,7 @@ const Contact: React.FC<{}> = () => {
         </nav>
   
         <div className="w-2/5 h-screen flex flex-col justify-center ml-[93px] relative z-10">
-        <h1 className="text-white text-[120px] mb-8">Contact us</h1>
+        <h1 className="text-white text-[120px] mb-8 font-bold">Contact us</h1>
         <h2 className="text-primary text-[50px]">Ready to make waves?</h2>
         <hr className="w-2/5 my-8"/>
         <p className="text-white text-xl leading-relaxed">Form</p>
