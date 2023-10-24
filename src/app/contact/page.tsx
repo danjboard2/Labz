@@ -1,17 +1,46 @@
 "use client"
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Logo from "../../components/Logo"
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 import Link from 'next/link'
+import SetContainerCursor from '../../partials/layout'; 
+import { utils, getIndexPage } from '../../../public/media/scripts/utils';
+import { Cursor1 } from '../../../public/media/scripts/cursors/cursor1';
+import dynamic from "next/dynamic";
+
+const SwupTransitions = dynamic(() => import("../../components/swup"), { ssr: false });
 
 const Contact: React.FC<{}> = () => {
   const [open, setOpen] = useState<boolean>(false);
   const toggleOpen = () => {
     setOpen(!open);
   };
+  useEffect(() => {
+    const setCursor = () => {
+      const index = getIndexPage();
+      switch (index) {
+        case 1:
+          new Cursor1(index);
+          break;
+        default:
+      }
+    };
 
+    const initialize = async () => {
+      await utils();
+      setCursor();
+    };
+
+    window.addEventListener('load', initialize);
+
+    return () => {
+      window.removeEventListener('load', initialize);
+    };
+  }, []);
     return (
       <>
+       <SwupTransitions />
+      <SetContainerCursor number={1} />
       <main className="relative flex h-full w-full" id="about">
         <div className="about-bg bg-[url(/media/images/about-bg1.jpg)] bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
         <nav className="navigation absolute top-0 left-0 w-full flex p-[50px] justify-between z-0">

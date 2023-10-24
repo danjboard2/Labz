@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@swup/fade-theme": "^1.0.5",
+    "d3": "^7.3.0",
+    "detect-browser": "^5.3.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "mutation-observer": "^1.0.3",
@@ -18,9 +21,11 @@
     "react-native-gesture-handler": "^2.13.1",
     "react-native-reanimated": "^3.5.4",
     "rn-slide-button": "^1.0.3",
-    "rsuite": "^5.40.0"
+    "rsuite": "^5.40.0",
+    "swup": "^2.0.14"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -31,6 +36,8 @@
     "postcss": "latest",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
+    "process": "^0.11.10",
+    "sharp": "^0.31.3",
     "tailwindcss": "latest",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2"

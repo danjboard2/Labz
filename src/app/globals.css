@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root{ /* for the contact page cursor emitter */
+  --primary : rgb(255,61,0);
+  --secondary : #fff;
+}
+
 @font-face {
   font-family: 'ABC';
   src: url("../../public/media/fonts/abc-diatype-regular.otf") format("opentype");
