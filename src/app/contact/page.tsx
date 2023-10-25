@@ -42,7 +42,7 @@ const Contact: React.FC<{}> = () => {
        <SwupTransitions />
       <SetContainerCursor />
       <main className="relative flex h-full w-full" id="about">
-        <div className="about-bg bg-[url(/media/images/about-bg1.jpg)] bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
+        <div className="about-bg bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
         <nav className="navigation absolute top-0 left-0 w-full flex p-[50px] justify-between z-0">
         <Logo /> 
         <ButtonToolbar>

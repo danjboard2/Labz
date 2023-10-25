@@ -7,7 +7,7 @@ interface SetContainerCursorProps {
 
 const SetContainerCursor: React.FC<SetContainerCursorProps> = ({ number }) => {
   return (
-    <section className="cursor-container" id={`cursor-${number}`}>
+    <section className="cursor-container w-full h-full absolute top-0 left-0 right-0 bottom-0" id={`cursor-${number}`}>
       {/* Your content here */}
     </section>
   );
