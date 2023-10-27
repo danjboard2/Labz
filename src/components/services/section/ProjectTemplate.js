@@ -28,12 +28,12 @@ const ContentTemplate = ({ dataPath }) => {
 
   return (
     <>
-      <h1 className="text-white text-[120px]">{data.sectionTitle}</h1>
-      <h2 className="text-primary text-[50px] mt-10">{data.subtitle}</h2>
+      <h1 className="text-white text-[120px] text-bold">{data.sectionTitle}</h1>
+      <h2 className="text-primary text-[50px] mt-10 text-bold">{data.subtitle}</h2>
       <div className="flex flex-row w-full">
           <div className="flex w-1/2 flex-col pr-8">
           <hr className="  border-[#828282] w-3/5"/>
-          <h1 className="text-white text-[30px]">{data.title}</h1>
+          <h1 className="text-white text-[30px] text-bold">{data.title}</h1>
           <p className="text-white text-xl mb-6">{data.paragraph}</p>
           <div className="text-white text-xl ml-[30px]" dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
@@ -51,7 +51,7 @@ const ContentTemplate = ({ dataPath }) => {
     </div>
       {/* projects list */}
 
-      <h2 className="text-primary text-[30px]">{data.title2}</h2>
+      <h2 className="text-primary text-[30px] text-bold">{data.title2}</h2>
       <div className="text-white text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
       <Carousel serviceName={dataPath} carouselData={data?.carouselData} />
       </>
