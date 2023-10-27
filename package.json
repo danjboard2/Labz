@@ -20,8 +20,10 @@
     "react-dom": "latest",
     "react-native-gesture-handler": "^2.13.1",
     "react-native-reanimated": "^3.5.4",
+    "react-slick": "^0.29.0",
     "rn-slide-button": "^1.0.3",
     "rsuite": "^5.40.0",
+    "slick-carousel": "^1.8.1",
     "swup": "^2.0.14"
   },
   "devDependencies": {
