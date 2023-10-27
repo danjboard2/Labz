@@ -32,7 +32,7 @@ const ContentTemplate = ({ dataPath }) => {
       <h2 className="text-primary text-[50px] mt-10 font-bold">{data.subtitle}</h2>
       <div className="flex flex-row w-full">
           <div className="flex w-1/2 flex-col pr-8">
-          <hr className="  border-[#828282] w-3/5"/>
+          <hr className="  border-[#828282] w-3/5 my-10"/>
           <h1 className="text-white text-[30px] font-bold">{data.title}</h1>
           <p className="text-white text-xl mb-6">{data.paragraph}</p>
           <div className="text-white text-xl ml-[30px]" dangerouslySetInnerHTML={{ __html: data.list }} />
