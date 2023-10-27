@@ -9,7 +9,7 @@ const Navigation = ({ setDataPath }) => {
     setActiveButton(path);
   };
 
-  const buttonClass = "services-nav relative mt-6 a w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px] xl:w-[126.8px] xl:h-[130.67px] border-[4px] sm:border-[7.88px] border-[#828282] rounded-[5.73px] flex justify-center items-center";
+  const buttonClass = "services-nav relative mt-6 a w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px] xl:w-[126.8px] xl:h-[130.67px] border-[4px] sm:border-[7.88px] border-[#828282] rounded-[5.73px] flex justify-center items-center transition-all duration-500 delay-300";
 
   return (
     <>
