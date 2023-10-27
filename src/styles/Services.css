@@ -1,4 +1,45 @@
 .services-hero h1 {line-height:700px}
+button.services-nav.active {border-color:#FF3D00}
+
+button.services-nav:before {
+    left:-24px
+}
+
+button.services-nav:after,button.services-nav:before {
+    width: 7.9px;
+    height: 0%;
+    background: transparent;
+    content: "";
+    position: absolute;
+    top: -7px;
+    border-radius: 5.87px;
+    transition: 1s
+}
+
+button.services-nav:after {
+    right: -24px
+}
+
+button.services-nav.active:before {
+    left: -24px
+}
+
+button.services-nav.active:after, button.services-nav.active:before {
+    display: block;
+    width: 7.9px;
+    height: 112%;
+    background: #ff3d00;
+    content: "";
+    position: absolute;
+    top: -7px;
+    border-radius: 5.87px;
+    transition: 1s
+}
+
+button.services-nav.active:after {
+    right: -24px
+}
+
 .project-points {list-style:circle}
 .slick-dots {
     top: -60px !important;

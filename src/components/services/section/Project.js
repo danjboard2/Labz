@@ -15,7 +15,7 @@ export default function Project() {
 
   return (
     <section className="flex w-full h-full justify-center items-center">
-      <div className="flex flex-col w-1/12 min-w-[180px]">
+      <div className="flex flex-col w-1/12 min-w-[180px] items-start">
         <Navigation setDataPath={setDataPath} />
       </div>
       <div className="flex flex-col w-9/12">
