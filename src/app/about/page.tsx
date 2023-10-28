@@ -1,5 +1,5 @@
 "use client"
-import React, { Component, useState,  useEffect } from "react";
+import React, { Component, useState,  useEffect, useRef } from "react";
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -38,20 +38,27 @@ const homepage = document.querySelector('.about-bg') as HTMLElement;
   }
 }
 
+const mainRef = useRef<HTMLDivElement>(null);  // Specify the type here
 
-  useEffect(() => {
-    document.addEventListener('mousemove', update);
-    document.addEventListener('touchmove', update); 
+useEffect(() => {
+  const mainElement = mainRef.current;
 
+  // Attach the event listener to mainElement instead of document
+  if (mainElement) {
+    mainElement.addEventListener('mousemove', update);
+    mainElement.addEventListener('touchmove', update);
+
+    // Cleanup
     return () => {
-      document.removeEventListener('mousemove', update);
-      document.removeEventListener('touchmove', update);
+      mainElement.removeEventListener('mousemove', update);
+      mainElement.removeEventListener('touchmove', update);
     };
-  }, []);
+  }
+}, []); 
 
     return (
     <>
-    <main className="relative flex h-full w-full" id="about">
+    <main  ref={mainRef}  className="relative flex h-full w-full" id="about">
       <div className="about-bg bg-[url(/media/images/about-bg1.jpg)] bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
       <nav className="navigation absolute top-0 left-0 w-full flex p-[50px] justify-between z-0">
       <Logo /> 
