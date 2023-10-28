@@ -125,6 +125,14 @@ h1,h2,h3,h4,h5,h6,p,span,ul,li,strong,b,a,div,button,textarea,input,select,optio
     opacity:0;
   }
 }
+
+body[data-unlocked="yes"] .bg-homepage, body[data-unlocked="yes"] .lockedhp {
+ display:none;
+}
+body[data-unlocked="yes"] .homepage {
+  opacity:1;
+ }
+
 canvas.homepage-bg-canvas {
   position: absolute;
   top: 0px;

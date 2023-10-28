@@ -222,8 +222,9 @@ export default class CustomButton extends Component {
       unlocked: true
     });
     setTimeout(function() {
+      window.location.href = "/home";
       //code to be executed after 1 second
-        var unlockedElements = document.getElementsByClassName("Unlocked");
+       /* var unlockedElements = document.getElementsByClassName("Unlocked");
         var unlockedPageBg = document.getElementsByClassName("bg-homepage");
         var unlockedPage = document.getElementsByClassName("lockedhp");
         var showHomepage = document.getElementsByClassName("homepage");
@@ -232,7 +233,7 @@ export default class CustomButton extends Component {
           unlockedPageBg[0].classList.add("fadeOut");
           unlockedPage[0].classList.add("fadeOut");
           showHomepage[0].classList.add("fadeIn");
-        }
+        } */
     }, 0);
   };
 
