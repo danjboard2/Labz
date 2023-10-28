@@ -3,8 +3,6 @@ import React, { Component, useState,  useEffect } from "react";
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import CustomButton from "../../components/slider/CustomButton.js";
-import "../../styles/CustomButton.css";
 import Logo from "../../components/Logo"
 import WhatWeDo from '../../components/homepage/WhatWeDo'
 import Timeline from '../../components/homepage/Timeline'
