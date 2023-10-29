@@ -21,7 +21,7 @@ export default function ProjectSection() {
                 end: "+=1200",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                //markers:true,
+                markers:true,
                 id: "Project",
                     }
         });
@@ -32,7 +32,7 @@ export default function ProjectSection() {
 
     return (
         <>
-        <section className="project-outer relative w-full h-screen overflow-hidden flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover ">
+        <section className="project-outer relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible">
             <Project />
         </section>
         </>
