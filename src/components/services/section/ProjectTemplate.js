@@ -32,7 +32,6 @@ const ContentTemplate = ({ dataPath }) => {
     }));
     setAdditionalContent(data.additionalData[button].image);
   };
-  const [hasAnimated, setHasAnimated] = useState(false);
   useLayoutEffect(() => {
     // Create a timeline context
   const mm = gsap.matchMedia();
@@ -71,27 +70,36 @@ const ContentTemplate = ({ dataPath }) => {
           id: "UL"
         }
       });
-      let timer;
-      if (Object.keys(data.additionalData).length > 0) {
-        clearTimeout(timer);
-  timer = setTimeout(() => {
-        //console.log('running');
         for (let i = 1; i <= Object.keys(data.additionalData).length; i++) {
+          let button = document.querySelector(`button.project-${i}`);
+          if (button) { // Check if the button exists in the DOM
           //console.log(`running inside number is: ${i}`)
         gsap.to(`button.project-${i}`, {
         marginTop: 0,
+        transitionDuration: 0,
         scrollTrigger: {
           trigger: ".project-outer",
-          start: "top+=1200 bottom-=100px",
+          start: "top+=1200px bottom-=100px",
           end: "top+=1900px bottom-=500px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "button1"
         }
       });
+    }
     };
-  }, 300); // 300 ms debounce time
-  };
+    gsap.to(".benefits-content", {
+      lineHeight: xs ? "1.5em" : sm ? "1.5em" : "1.5em",
+       rotation: 0,
+       scrollTrigger: {
+         trigger: ".project-outer",
+         start: "top+=1200px bottom-=100px",
+         end: "top+=1800px bottom-=500px",
+         scrub: true,
+         markers: true,
+         id: "benefit content"
+       }
+     });
     });
     // Revert the context when the component unmounts
     return () => mm.revert();
@@ -114,7 +122,7 @@ const ContentTemplate = ({ dataPath }) => {
       {/* projects list */}
       <div className="project-buttons flex flex-row w-full justify-around mt-10 mb-10">
       {data.additionalData && Object.keys(data.additionalData).map((buttonKey, index) => (
-        <button className={`h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-6 mb-6 text-white text-xl hover:scale-125 transition-all bg-black duration-300 max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
+        <button className={`h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-6 mb-6 text-white text-xl hover:scale-125 bg-black max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
           Project {index + 1}
         </button>
       ))}
@@ -122,7 +130,7 @@ const ContentTemplate = ({ dataPath }) => {
       {/* projects list */}
 
       <h2 className="text-primary text-[30px] font-bold">{data.title2}</h2>
-      <div className="text-white text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
+      <div className="benefits-content text-white text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
       <Carousel serviceName={dataPath} carouselData={data?.carouselData} />
       </>
   );

@@ -14,7 +14,7 @@ export default function Project() {
     const [dataPath, setDataPath] = useState('innovationData'); // Default data
 
   return (
-    <section className="flex w-full h-full justify-center items-center">
+    <section className="flex w-full h-full justify-center items-start pt-10">
       <div className="flex flex-col w-1/12 min-w-[180px] items-start">
         <Navigation setDataPath={setDataPath} />
       </div>
