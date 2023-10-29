@@ -18,7 +18,7 @@ export default function ProjectSection() {
                 trigger: ".project-outer",
                 pin: ".project-outer",
                 start: "top top",
-                end: "+=1200",
+                end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
                 markers:true,
