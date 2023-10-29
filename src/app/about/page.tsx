@@ -87,7 +87,7 @@ useEffect(() => {
 
       <div className="w-2/5 h-screen flex flex-col justify-center ml-[93px] relative z-10">
       <h1 className="text-white text-[120px] mb-8 font-bold">About us</h1>
-      <h2 className="text-primary text-[50px]">The Big Bang</h2>
+      <h2 className="text-primary text-[50px] font-bold">The Big Bang</h2>
       <hr className="w-2/5 my-8"/>
       <p className="text-white text-xl leading-relaxed">The Labs began as a Lorem ipsum dolor sit amet. Hic numquam corrupti ut quibusdam temporibus sed placeat doloremque At voluptatibus dolores aut esse quia hic omnis pariatur. Ex incidunt velit quo perferendis nihil in aperiam dolor id ullam veritatis. In that time The Labz Et aspernatur doloremque ex labore odio ut dignissimos nisi sed saepe iste sit consequatur temporibus est quibusdam doloribus.</p>
       <p className="text-white text-xl mt-4 leading-relaxed">In that time The Labz Et aspernatur doloremque ex labore odio ut dignissimos nisi sed saepe iste sit consequatur temporibus est quibusdam doloribus.</p>
