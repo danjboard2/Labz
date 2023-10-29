@@ -2,7 +2,7 @@ const innovationData = {
     sectionTitle: 'Innovative tech',
     subtitle: 'Igniting WEB3',
     paragraph:'At Labz, we\'re reshaping the future of the digital world. As pioneers in Web3 technologies, we\'re passionate about creating innovative, decentralised solutions that empower businesses and individuals alike.',
-    list:'<ul className="project-list" style="list-style:disc"><li>Agile development approach.</li><li>Strategic partner project development.</li><li>Ahead of the curve thinking for an ever changing digital landscape.</li><li>Another important goal of web3 is to give people back the power to manage there own data.</li><li>Web3 gives the opportunity back to the consumer to sell there own data back to companies.</li></ul>',
+    list:'<ul className="project-list" style="list-style:disc"><li>Agile development approach.</li><li>Strategic partner project development.</li><li>Ahead of the curve thinking for an ever changing digital landscape.</li><li>Another important goal of web3 is to give people back the power to manage there own data.</li><li>Web3 gives the opportunity back to the consumer to sell their own data back to companies.</li></ul>',
     title2: 'Key Benefits',
     content: '<p>The Labz is a trusted collaborator for Web2 projects seeking to bring there blockchain-based vision to life.</p> <p>Our expert team provides end-to-end support throughout the product development cycle, from ideation to strategic implementation of blockchain based solutions to empower existing successful web2 businesses with the wonders of blockchain.</p>',
     additionalData: {

@@ -32,7 +32,7 @@ const ContentTemplate = ({ dataPath }) => {
     }));
     setAdditionalContent(data.additionalData[button].image);
   };
-
+  const [hasAnimated, setHasAnimated] = useState(false);
   useLayoutEffect(() => {
     // Create a timeline context
   const mm = gsap.matchMedia();
@@ -55,7 +55,7 @@ const ContentTemplate = ({ dataPath }) => {
           start: "top-=500px bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
-          markers: true,
+         // markers: true,
           id: "First project"
         }
       });
@@ -67,27 +67,35 @@ const ContentTemplate = ({ dataPath }) => {
           start: "top-=500px bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
-          markers: true,
+          //markers: true,
           id: "UL"
         }
       });
-      gsap.to("button.project-1", {
-        //marginLeft: xs ? 20 : sm ? 40 : 93,
-        rotation: 0,
+      let timer;
+      if (Object.keys(data.additionalData).length > 0) {
+        clearTimeout(timer);
+  timer = setTimeout(() => {
+        //console.log('running');
+        for (let i = 1; i <= Object.keys(data.additionalData).length; i++) {
+          //console.log(`running inside number is: ${i}`)
+        gsap.to(`button.project-${i}`, {
+        marginTop: 0,
         scrollTrigger: {
           trigger: ".project-outer",
-          start: "top bottom-=100px",
-          end: "bottom+=100px bottom-=500px",
+          start: "top+=1200 bottom-=100px",
+          end: "top+=1900px bottom-=500px",
           scrub: true,
           markers: true,
-          id: "First project"
+          id: "button1"
         }
       });
+    };
+  }, 300); // 300 ms debounce time
+  };
     });
     // Revert the context when the component unmounts
     return () => mm.revert();
-  }, []); // Empty dependency array so it runs only once on mount
-
+  }, [data.additionalData]); // Empty dependency array so it runs only once on mount
   return (
     <>
       <h1 className="services-title text-white text-[120px] font-bold">{data.sectionTitle}</h1>
@@ -104,7 +112,7 @@ const ContentTemplate = ({ dataPath }) => {
           </div>
       </div>
       {/* projects list */}
-      <div className="flex flex-row w-full justify-around mt-10 mb-10">
+      <div className="project-buttons flex flex-row w-full justify-around mt-10 mb-10">
       {data.additionalData && Object.keys(data.additionalData).map((buttonKey, index) => (
         <button className={`h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-6 mb-6 text-white text-xl hover:scale-125 transition-all bg-black duration-300 max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
           Project {index + 1}
