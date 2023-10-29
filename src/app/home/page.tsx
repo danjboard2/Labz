@@ -47,7 +47,7 @@ const ParentComponent: React.FC<{}> = () => {
      <Script src="/media/scripts/dat.gui.min.js" strategy="afterInteractive" async/>
     <main className="lockedhp w-full min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100 hidden">
     </main>
-    <main className="homepage bg-[#000] min-h-screen p-0 relative w-full h-screen overflow-hidden opacity-100">
+    <main className="homepage bg-[#000] min-h-screen p-0 relative w-full h-screen overflow-visible opacity-100">
 
       <nav className="navigation absolute top-0 left-0 w-full flex p-[50px] justify-between">
       <Logo />
