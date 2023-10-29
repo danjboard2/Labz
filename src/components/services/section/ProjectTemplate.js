@@ -37,8 +37,8 @@ const ContentTemplate = ({ dataPath }) => {
           <p className="text-white text-xl mb-6">{data.paragraph}</p>
           <div className="text-white text-xl ml-[30px]" dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
-          <div className="flex w-1/2 justify-center items-center">
-          <img src={additionalContent} alt={data.title} />
+          <div className="flex w-1/2 justify-center items-center h-[400px]">
+          <img src={additionalContent} alt={data.title} className="max-h-[400px]"/>
           </div>
       </div>
       {/* projects list */}
