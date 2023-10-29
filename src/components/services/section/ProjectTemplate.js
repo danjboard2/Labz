@@ -59,6 +59,18 @@ const ContentTemplate = ({ dataPath }) => {
           id: "First project"
         }
       });
+      gsap.to(".inner-data", {
+       lineHeight: xs ? "1.5em" : sm ? "1.5em" : "1.5em",
+        rotation: 0,
+        scrollTrigger: {
+          trigger: ".project-outer",
+          start: "top-=500px bottom-=100px",
+          end: "bottom+=100px bottom-=500px",
+          scrub: true,
+          markers: true,
+          id: "UL"
+        }
+      });
       gsap.to("button.project-1", {
         //marginLeft: xs ? 20 : sm ? 40 : 93,
         rotation: 0,
@@ -85,7 +97,7 @@ const ContentTemplate = ({ dataPath }) => {
           <hr className="  border-[#828282] w-3/5 my-10"/>
           <h1 className="text-white text-[30px] font-bold">{data.title}</h1>
           <p className="text-white text-xl mb-6">{data.paragraph}</p>
-          <div className="text-white text-xl ml-[30px]" dangerouslySetInnerHTML={{ __html: data.list }} />
+          <div className="inner-data text-white text-xl ml-[30px]" dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
           <div className="flex w-1/2 justify-center items-center h-[400px]">
           <img src={additionalContent} alt={data.title} className="max-h-[400px]"/>
