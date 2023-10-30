@@ -22,7 +22,7 @@ export default function ProjectSection() {
         const updateEndPoint = (id, endPoint) => {
             setEndPoints(prevState => {
               const newState = { ...prevState, [id]: endPoint };
-              fakeScroll(id, endPoint);  // Trigger fakeScroll right after updating the endpoint
+              //fakeScroll(id, endPoint);  // Trigger fakeScroll right after updating the endpoint
               return newState;
             });
         };
