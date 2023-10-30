@@ -134,7 +134,7 @@ export default function ProjectSection() {
       if (el) {
         let endPoint = el.getBoundingClientRect().bottom + window.scrollY;
         if (id === "#designData") {
-            endPoint += 2000;  // add 1 pixel to the endpoint
+            endPoint += 5000;  // add 1 pixel to the endpoint
         }
         tl.to(window, {
           scrollTo: { y: endPoint, autoKill: false },
@@ -164,7 +164,7 @@ export default function ProjectSection() {
         <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible">
             <Project id="whitelabelData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
-                <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[200px]">
+                <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[500px]">
             <Project id="designData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
         </>
