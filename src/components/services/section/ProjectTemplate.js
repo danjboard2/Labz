@@ -55,11 +55,11 @@ const ContentTemplate = ({ dataPath }) => {
         marginTop: xs ? 20 : sm ? 40 : 20,
         rotation: 0,
         scrollTrigger: {
-          trigger: `.project-outer-${dataPath}`,
+          trigger: `#${dataPath}`,
           start: "top-=500px bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
-         // markers: true,
+          markers: true,
           id: "Project"
         }
       });
@@ -67,12 +67,12 @@ const ContentTemplate = ({ dataPath }) => {
        lineHeight: xs ? "1.5em" : sm ? "1.5em" : "1.5em",
         rotation: 0,
         scrollTrigger: {
-          trigger: `.project-outer-${dataPath}`,
+          trigger: `#${dataPath}`,
           start: "top-=500px bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
-          //markers: true,
-          id: "UL"
+          markers: true,
+          id: "List items"
         }
       });
         for (let i = 1; i <= Object.keys(data.additionalData).length; i++) {
@@ -83,12 +83,12 @@ const ContentTemplate = ({ dataPath }) => {
         marginTop: 0,
         transitionDuration: 0,
         scrollTrigger: {
-          trigger: `.project-outer-${dataPath}`,
+          trigger: `#${dataPath}`,
           start: "top+=1200px bottom-=100px",
           end: "top+=1900px bottom-=500px",
           scrub: true,
-          //markers: true,
-          id: "button1"
+          markers: true,
+          id: "buttons"
         }
       });
     }
@@ -97,11 +97,11 @@ const ContentTemplate = ({ dataPath }) => {
       lineHeight: xs ? "1.5em" : sm ? "1.5em" : "1.5em",
        rotation: 0,
        scrollTrigger: {
-         trigger: `.project-outer-${dataPath}`,
+         trigger: `#${dataPath}`,
          start: "top+=1200px bottom-=100px",
          end: "top+=1800px bottom-=500px",
          scrub: true,
-         //markers: true,
+         markers: true,
          id: "benefit content"
        }
      });
