@@ -7,8 +7,8 @@ const designData = {
     content: 'Whatever you need designing whether it\'s a logo, website, marketing material or mobile app we can utilise our in-house designers to get it done to the best standard.',
     additionalData: {
         button1: {
-          title: 'Wallet Project 1',
-          paragraph: 'About this wallet project lorem ipsum dolor blah blah blah',
+          title: 'Design Project 1',
+          paragraph: 'About this design project lorem ipsum dolor blah blah blah',
           list: '<ul style="list-style:disc"><li>Robust solidity contract creation.</li><li>User-friendly dApp that facilitated the largest ever pre-sale sell-out at the time on BSC.</li><li>Secure facilitation of the TGE to allow adoption of the native token.</li></ul>',
           image: '../../../media/images/projects/project-placeholder.png',
         },
