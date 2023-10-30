@@ -47,7 +47,7 @@ const ContentTemplate = ({ dataPath }) => {
     (c) => {
       let { xs, sm, md, lg, xl, xxl } = c.conditions;
       gsap.to(`#${dataPath} h1.services-title`, {
-        marginBottom: xs ? 20 : sm ? 40 : 20,
+        marginTop: xs ? 20 : sm ? 40 : 20,
         rotation: 0,
         scrollTrigger: {
           trigger: `.project-outer-${dataPath}`,
@@ -55,7 +55,7 @@ const ContentTemplate = ({ dataPath }) => {
           end: "bottom+=100px bottom-=500px",
           scrub: true,
          // markers: true,
-          id: "First project"
+          id: "Project"
         }
       });
       gsap.to(`#${dataPath} .inner-data`, {

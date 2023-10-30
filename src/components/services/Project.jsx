@@ -166,7 +166,7 @@ export default function ProjectSection() {
         <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible">
             <Project id="whitelabelData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
-                <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[500px]">
+                <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[200px]">
             <Project id="designData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
         </>

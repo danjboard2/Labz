@@ -46,7 +46,7 @@ const ParentComponent: React.FC<{}> = () => {
         </Drawer.Body>
       </Drawer>
       </nav>
-      <section className="h-full mb-[5000px]">
+      <section className="h-full">
           <ServicesHero />
          <ProjectSection/>
       </section>
