@@ -46,11 +46,11 @@ const ContentTemplate = ({ dataPath }) => {
     },
     (c) => {
       let { xs, sm, md, lg, xl, xxl } = c.conditions;
-      gsap.to("h1.services-title", {
+      gsap.to(`#${dataPath} h1.services-title`, {
         marginBottom: xs ? 20 : sm ? 40 : 20,
         rotation: 0,
         scrollTrigger: {
-          trigger: ".project-outer",
+          trigger: `.project-outer-${dataPath}`,
           start: "top-=500px bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
@@ -58,11 +58,11 @@ const ContentTemplate = ({ dataPath }) => {
           id: "First project"
         }
       });
-      gsap.to(".inner-data", {
+      gsap.to(`#${dataPath} .inner-data`, {
        lineHeight: xs ? "1.5em" : sm ? "1.5em" : "1.5em",
         rotation: 0,
         scrollTrigger: {
-          trigger: ".project-outer",
+          trigger: `.project-outer-${dataPath}`,
           start: "top-=500px bottom-=100px",
           end: "bottom+=100px bottom-=500px",
           scrub: true,
@@ -74,11 +74,11 @@ const ContentTemplate = ({ dataPath }) => {
           let button = document.querySelector(`button.project-${i}`);
           if (button) { // Check if the button exists in the DOM
           //console.log(`running inside number is: ${i}`)
-        gsap.to(`button.project-${i}`, {
+        gsap.to(`#${dataPath} button.project-${i}`, {
         marginTop: 0,
         transitionDuration: 0,
         scrollTrigger: {
-          trigger: ".project-outer",
+          trigger: `.project-outer-${dataPath}`,
           start: "top+=1200px bottom-=100px",
           end: "top+=1900px bottom-=500px",
           scrub: true,
@@ -88,11 +88,11 @@ const ContentTemplate = ({ dataPath }) => {
       });
     }
     };
-    gsap.to(".benefits-content", {
+    gsap.to(`#${dataPath} .benefits-content`, {
       lineHeight: xs ? "1.5em" : sm ? "1.5em" : "1.5em",
        rotation: 0,
        scrollTrigger: {
-         trigger: ".project-outer",
+         trigger: `.project-outer-${dataPath}`,
          start: "top+=1200px bottom-=100px",
          end: "top+=1800px bottom-=500px",
          scrub: true,
@@ -132,6 +132,7 @@ const ContentTemplate = ({ dataPath }) => {
       <h2 className="text-primary text-[30px] font-bold" id="keybenefits">{data.title2}</h2>
       <div className="benefits-content text-white text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
       <Carousel serviceName={dataPath} carouselData={data?.carouselData} />
+      <div id={'end-' + dataPath}></div>
       </>
   );
 };

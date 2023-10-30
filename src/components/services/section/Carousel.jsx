@@ -14,16 +14,25 @@ export default class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: 0
+      activeIndex: 0,
     };
   }
+  
   componentDidMount() {
     setTimeout(() => {
       this.runGsapCode();
     }, 500);  // 500 milliseconds, adjust as needed
   }
 
+  componentDidUpdate() {
+    
+    setTimeout(() => {
+      this.runGsapCode();
+    }, 500);  // 500 milliseconds, adjust as needed
+  }
+
   runGsapCode() {
+    const serviceName = this.props.serviceName;
     // Your gsap code here, e.g.:
   const mm = gsap.matchMedia();
   mm.add(
@@ -35,10 +44,10 @@ export default class Carousel extends Component {
       xl: '(min-width: 1440px) and (max-width: 1919px)',
       xxl: '(min-width: 1920px) and (max-width: 5000px)',
     },
-    (c) => {
+    (c, serviceName) => {
       let { xs, sm, md, lg, xl, xxl } = c.conditions;
       const carouselIcons = document.querySelectorAll('[id^="carouselIcon"]');
-      carouselIcons.forEach((icon, index) => {
+     /* carouselIcons.forEach((icon, index) => {
           if (icon) { // Check if the button exists in the DOM
           console.log(`running inside number is: ${index+1}`)
         gsap.to(`ul.slick-dots li:nth-of-type(${index+1})`, {
@@ -52,16 +61,16 @@ export default class Carousel extends Component {
           //markers: true,
           id: "carousel icons"
         }
-      });
+      }); 
     }
-  });
+  });*/
   gsap.to(`.slick-list`, {
     paddingTop: 0,
     transitionDuration: 0,
     scrollTrigger: {
-      trigger: ".inner-data",
-      start: "top+=700px bottom-=100px",
-      end: "top+=1100px bottom-=500px",
+      trigger: `#${serviceName} .inner-data`,
+      start: "top+=400px bottom-=500px",
+      end: "top+=800px bottom-=500px",
       scrub: true,
       markers: true,
       id: "list"
@@ -93,7 +102,7 @@ export default class Carousel extends Component {
         this.setState({ activeIndex: current });
       },
       dots: true,
-      dotsClass: "slick-dots slick-thumb",
+      dotsClass: `#${serviceName} slick-dots slick-thumb`,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
