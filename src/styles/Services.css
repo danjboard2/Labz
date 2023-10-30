@@ -61,7 +61,7 @@ button.services-nav.active:after {
 .slick-dots li:first-of-type {margin-left:0px;}
 
 h1.services-title {margin-top:600px;}
-.inner-data {line-height:10em}
+/* .inner-data {line-height:10em} */
 button.project-1 {margin-top:100px}
 button.project-2 {margin-top:200px}
 button.project-3 {margin-top:300px}
@@ -70,5 +70,5 @@ button.project-5 {margin-top:500px}
 button.project-6 {margin-top:600px}
 .benefits-content {line-height:10em}
 
-.slick-list {padding-top:500px}
+/* .slick-list {padding-top:500px} */
 .slick-dots li {height:auto !important;}

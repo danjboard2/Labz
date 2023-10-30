@@ -19,7 +19,6 @@ export default function ProjectSection() {
         }
       }
     useLayoutEffect(() => {
-  
         const updateEndPoint = (id, endPoint) => {
             setEndPoints(prevState => {
               const newState = { ...prevState, [id]: endPoint };
@@ -43,7 +42,7 @@ export default function ProjectSection() {
                 onUpdate: self => {
                     if (self.progress === 1) {
                         updateEndPoint("#innovationData", self.end);
-                      console.log('InnovationData completed....');
+                      //console.log('InnovationData completed....');
                     }
                   }
                     }
@@ -61,7 +60,7 @@ export default function ProjectSection() {
                 onUpdate: self => {
                     if (self.progress === 1) {
                         updateEndPoint("#walletData", self.end);
-                      console.log('walletData completed....');
+                      //console.log('walletData completed....');
                     }
                   }
                     }
@@ -79,7 +78,7 @@ export default function ProjectSection() {
                 onUpdate: self => {
                     if (self.progress === 1) {
                         updateEndPoint("#whitelabelData", self.end);
-                      console.log('whitelabelData completed....');
+                     // console.log('whitelabelData completed....');
                     }
                   }
                     }
@@ -97,7 +96,7 @@ export default function ProjectSection() {
                 onUpdate: self => {
                     if (self.progress === 1) {
                         updateEndPoint("#designData", self.end);
-                      console.log('designData completed....');
+                     // console.log('designData completed....');
                     }
                   }
                     }
@@ -123,9 +122,9 @@ export default function ProjectSection() {
     ids.forEach(id => {
       const el = document.querySelector(id);
       if (el) {
-        console.log(`Element ${id} exists`);
+       // console.log(`Element ${id} exists`);
       } else {
-        console.log(`Element ${id} does not exist`);
+        //console.log(`Element ${id} does not exist`);
       }
     });
   
@@ -141,7 +140,6 @@ export default function ProjectSection() {
           scrollTo: { y: endPoint, autoKill: false },
           duration: 0.01, // Very fast scroll
         })
-        .add(() => { console.log(`Finished scrolling to ${id}`); }, `+=0.01`);
       }
     });
   

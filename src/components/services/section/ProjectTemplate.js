@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
+import debounce from 'lodash.debounce';
 import Carousel from './Carousel';
 import '../../../styles/Services.css'
 import { gsap } from "gsap";
@@ -11,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 const ContentTemplate = ({ dataPath }) => {
   const [data, setData] = useState({ title: '', subtitle: '', paragraph: '', list: '', additionalData: {}, carouselData: {} });
-
   const [additionalContent, setAdditionalContent] = useState({ text: [], images: [] });
 
   useEffect(() => {
@@ -24,15 +24,20 @@ const ContentTemplate = ({ dataPath }) => {
   }, [dataPath]);
 
   const handleAdditionalClick = (button) => {
-    setData(prevData => ({
-      ...prevData,
-      title: prevData.additionalData[button].title,
-      paragraph: prevData.additionalData[button].paragraph,
-      list: prevData.additionalData[button].list,
-    }));
-    setAdditionalContent(data.additionalData[button].image);
+    const newAdditionalData = data.additionalData[button];
+    setData({
+      ...data,
+      ...newAdditionalData,
+    });
+    setAdditionalContent(newAdditionalData.image);
   };
+  
   useLayoutEffect(() => {
+    const debouncedHandleResize = debounce(() => {
+      // Your resize code here
+    }, 100);
+
+    window.addEventListener('resize', debouncedHandleResize);
     // Create a timeline context
   const mm = gsap.matchMedia();
   mm.add(
