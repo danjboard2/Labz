@@ -38,7 +38,7 @@ export default function ProjectSection() {
                 end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "innovationData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -56,7 +56,7 @@ export default function ProjectSection() {
                 end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "walletData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -74,7 +74,7 @@ export default function ProjectSection() {
                 end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "whitelabelData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -92,7 +92,7 @@ export default function ProjectSection() {
                 end: "+=3500px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "designData",
                 onUpdate: self => {
                     if (self.progress === 1) {

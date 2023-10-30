@@ -72,7 +72,7 @@ export default class Carousel extends Component {
       start: "top+=400px bottom-=500px",
       end: "top+=800px bottom-=500px",
       scrub: true,
-      markers: true,
+      //markers: true,
       id: "list"
     }
   });

@@ -96,7 +96,7 @@ const ContentTemplate = ({ dataPath }) => {
          start: "top+=1200px bottom-=100px",
          end: "top+=1800px bottom-=500px",
          scrub: true,
-         markers: true,
+         //markers: true,
          id: "benefit content"
        }
      });
