@@ -72,3 +72,13 @@ button.project-6 {margin-top:600px}
 
 /* .slick-list {padding-top:500px} */
 .slick-dots li {height:auto !important;}
+
+.fade-out {
+    opacity: 0 !important;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1 !important;
+    transition: opacity 300ms ease-in-out;
+  }

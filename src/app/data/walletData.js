@@ -16,13 +16,13 @@ const walletData = {
         title: 'Wallet Project 2',
         paragraph: 'About this project lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
         list: '<ul style="list-style:disc"><li>Information about this project</li><li>More information about this project</li><li>Even more information about this project</li></ul>',
-        image: '../../../media/images/projects/project-placeholder.png',
+        image: '../../../media/images/projects/project-placeholder2.png',
       },
       button3: {
         title: 'Wallet Project 3',
         paragraph: 'About this project lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
         list: '<ul style="list-style:disc"><li>Information about this project</li><li>More information about this project</li><li>Even more information about this project</li></ul>',
-        image: '../../../media/images/projects/project-placeholder.png',
+        image: '../../../media/images/projects/project-placeholder3.png',
       },
     },
     carouselData: {

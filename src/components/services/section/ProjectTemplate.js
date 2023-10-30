@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 const ContentTemplate = ({ dataPath }) => {
   const [data, setData] = useState({ title: '', subtitle: '', paragraph: '', list: '', additionalData: {}, carouselData: {} });
   const [additionalContent, setAdditionalContent] = useState({ text: [], images: [] });
+  const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,13 +26,25 @@ const ContentTemplate = ({ dataPath }) => {
 
   const handleAdditionalClick = (button) => {
     const newAdditionalData = data.additionalData[button];
-    setData({
-      ...data,
-      ...newAdditionalData,
-    });
-    setAdditionalContent(newAdditionalData.image);
+    if (additionalContent !== newAdditionalData.image) { // Check for new content
+      setData({
+        ...data,
+        ...newAdditionalData,
+      });
+      setAdditionalContent(newAdditionalData.image);
+      setFadeIn(false);  // Reset fade-in only if new content is set
+    }
   };
   
+  useEffect(() => {
+    if (additionalContent && !fadeIn) {
+      setTimeout(() => {
+        setFadeIn(true);  // Then "fade in"
+      }, 300);
+    }
+  }, [additionalContent, fadeIn]);
+
+
   useLayoutEffect(() => {
     const debouncedHandleResize = debounce(() => {
       // Your resize code here
@@ -116,12 +129,12 @@ const ContentTemplate = ({ dataPath }) => {
       <div className="flex flex-row w-full">
           <div className="flex w-1/2 flex-col pr-8">
           <hr className="  border-[#828282] w-3/5 my-10"/>
-          <h1 className="text-white text-[30px] font-bold">{data.title}</h1>
-          <p className="text-white text-xl mb-6">{data.paragraph}</p>
-          <div className="inner-data text-white text-xl ml-[30px]" dangerouslySetInnerHTML={{ __html: data.list }} />
+          <h1  key={`${data.title}-${dataPath}-title`}  className={`text-white text-[30px] font-bold ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.title}</h1>
+          <p  key={`${data.title}-${dataPath}-paragraph`} className={`text-white text-xl mb-6 ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.paragraph}</p>
+          <div  key={`${data.title}-${dataPath}-list`}  className={`inner-data text-white text-xl ml-[30px] ${fadeIn ? 'fade-in' : 'fade-out'}`} dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
           <div className="flex w-1/2 justify-center items-center h-[400px]">
-          <img src={additionalContent} alt={data.title} className="max-h-[400px]"/>
+          <img src={additionalContent}  key={`${data.title}-${dataPath}`}    alt={data.title} className={`max-h-[400px] ${fadeIn ? 'fade-in' : 'fade-out'}`}/>
           </div>
       </div>
       {/* projects list */}
