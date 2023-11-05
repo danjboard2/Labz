@@ -25,6 +25,7 @@ export default function ServicesHeroAnim() {
             (c) => {
             let { xs, sm, md, lg, xl, xxl } = c.conditions;
             gsap.to(".services-hero h1", {
+              marginTop:xs ? "200px" : sm ? "200px" : "0px",
             lineHeight:xs ? "50px" : sm ? "60px" : "100px",
             rotation: 0,
             scrollTrigger: {

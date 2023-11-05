@@ -35,7 +35,7 @@ export default function ServicesHero() {
 
     return (
         <>
-        <section className="services-hero-outer relative w-full h-screen overflow-hidden flex justify-center items-center">
+        <section className="services-hero-outer relative w-full h-screen overflow-hidden flex justify-center md:items-center">
         <ServicesHeroBackground />
             <ServicesHeroAnim />
             <ScrollDown />
