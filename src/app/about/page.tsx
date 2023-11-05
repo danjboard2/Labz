@@ -55,12 +55,12 @@ useEffect(() => {
       <div className="about-bg bg-[url(/media/images/about-bg1.jpg)] bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
       <Navigation />
 
-      <div className="w-2/5 h-screen flex flex-col justify-center ml-[93px] relative z-10">
-      <h1 className="text-white text-[120px] mb-8 font-bold">About us</h1>
-      <h2 className="text-primary text-[50px] font-bold">The Big Bang</h2>
-      <hr className="w-2/5 my-8"/>
-      <p className="text-white text-xl leading-relaxed">The Labs began as a Lorem ipsum dolor sit amet. Hic numquam corrupti ut quibusdam temporibus sed placeat doloremque At voluptatibus dolores aut esse quia hic omnis pariatur. Ex incidunt velit quo perferendis nihil in aperiam dolor id ullam veritatis. In that time The Labz Et aspernatur doloremque ex labore odio ut dignissimos nisi sed saepe iste sit consequatur temporibus est quibusdam doloribus.</p>
-      <p className="text-white text-xl mt-4 leading-relaxed">In that time The Labz Et aspernatur doloremque ex labore odio ut dignissimos nisi sed saepe iste sit consequatur temporibus est quibusdam doloribus.</p>
+      <div className="w-full px-[20px] lg:px-0 lg:w-2/5 h-screen flex flex-col justify-center lg:ml-[93px] relative z-10">
+      <h1 className="text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] mb-0 md:mb-8  font-bold">About us</h1>
+      <h2 className="text-primary text-xl sm:text-[26px] md:text-[30px] lg:text-[40px] xl:text-[50px] font-bold">The Big Bang</h2>
+      <hr className="w-2/5 my-2 md:my-8"/>
+      <p className="text-white text-base sm:text-xl leading-relaxed">The Labs began as a Lorem ipsum dolor sit amet. Hic numquam corrupti ut quibusdam temporibus sed placeat doloremque At voluptatibus dolores aut esse quia hic omnis pariatur. Ex incidunt velit quo perferendis nihil in aperiam dolor id ullam veritatis. In that time The Labz Et aspernatur doloremque ex labore odio ut dignissimos nisi sed saepe iste sit consequatur temporibus est quibusdam doloribus.</p>
+      <p className="text-white text-base sm:text-xl mt-4 leading-relaxed">In that time The Labz Et aspernatur doloremque ex labore odio ut dignissimos nisi sed saepe iste sit consequatur temporibus est quibusdam doloribus.</p>
     </div>
     </main>
     </>
