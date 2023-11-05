@@ -54,8 +54,8 @@ const ParentComponent: React.FC<{}> = () => {
         </div>
       ))}
     </div>
-    <ScrollDown />
       </section>
+      <ScrollDown />
       <WhatWeDo />
       <Timeline />
       <Inspiration />
