@@ -147,13 +147,13 @@ export default function ProjectSection() {
 
     return (
         <>
-        <section className="project-outer-innovationData relative w-full h-full flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1200px]">
+        <section className="project-outer-innovationData relative w-full h-full flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[700px]">
             <Project id="innovationData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
-        <section className="project-outer-walletData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1200px]">
+        <section className="project-outer-walletData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[700px]">
             <Project id="walletData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints} />
         </section>
-        <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1200px]">
+        <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[700px]">
             <Project id="whitelabelData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
                 <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[500px]">

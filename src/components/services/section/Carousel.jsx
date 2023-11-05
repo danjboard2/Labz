@@ -51,8 +51,8 @@ export default class Carousel extends Component {
         <Slider {...settings}>
         {Object.values(carouselData || {}).map((item, index) => (
             <div key={index}>
-              <h1 className="text-primary text-[40px] font-bold">{item.carouseltitle}</h1>
-              <p className="text-white text-xl">{item.carouselcontent}</p>
+              <h1 className="text-primary text-2xl md:text-3xl xl:text-4xl font-bold">{item.carouseltitle}</h1>
+              <p className="text-white md:text-base xl:text-xl">{item.carouselcontent}</p>
             </div>
           ))}
         </Slider>

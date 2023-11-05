@@ -45,7 +45,7 @@ export default function ServicesHeroAnim() {
   return (
           <>
        <section className="services-hero" id="services-hero">
-                <h1 className="text-white text-center text-[120px] font-bold">Our<br/>
+                <h1 className="text-white text-center text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold">Our<br/>
                 <span className="text-primary font-bold">Services</span></h1>
       </section>
       </>

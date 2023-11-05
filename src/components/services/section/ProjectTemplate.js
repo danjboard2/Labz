@@ -124,14 +124,14 @@ const ContentTemplate = ({ dataPath }) => {
   }, [data.additionalData]); // Empty dependency array so it runs only once on mount
   return (
     <>
-      <h1 className="services-title text-white text-[120px] font-bold">{data.sectionTitle}</h1>
-      <h2 className="text-primary text-[50px] mt-6 font-bold">{data.subtitle}</h2>
+      <h1 className="services-title text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold ">{data.sectionTitle}</h1>
+      <h2 className="text-primary text-3xl md:text-5xl xl:text-7xl xxl:text-9xl mt-6 font-bold">{data.subtitle}</h2>
       <div className="flex flex-row w-full">
           <div className="flex w-1/2 flex-col pr-8">
           <hr className="  border-[#828282] w-3/5 my-4"/>
           <h1  key={`${data.title}-${dataPath}-title`}  className={`text-white text-[30px] font-bold ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.title}</h1>
-          <p  key={`${data.title}-${dataPath}-paragraph`} className={`text-white text-xl mb-6 ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.paragraph}</p>
-          <div  key={`${data.title}-${dataPath}-list`}  className={`inner-data text-white text-xl ml-[30px] ${fadeIn ? 'fade-in' : 'fade-out'}`} dangerouslySetInnerHTML={{ __html: data.list }} />
+          <p  key={`${data.title}-${dataPath}-paragraph`} className={`text-white md:text-base xl:text-xl mb-6 ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.paragraph}</p>
+          <div  key={`${data.title}-${dataPath}-list`}  className={`inner-data text-white md:text-base xl:text-xl ml-[30px] ${fadeIn ? 'fade-in' : 'fade-out'}`} dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
           <div className="flex w-1/2 justify-center items-center h-[400px]">
           <img src={additionalContent}  key={`${data.title}-${dataPath}`}    alt={data.title} className={`max-h-[400px] ${fadeIn ? 'fade-in' : 'fade-out'}`}/>
@@ -140,7 +140,7 @@ const ContentTemplate = ({ dataPath }) => {
       {/* projects list */}
       <div className="project-buttons flex flex-row w-full justify-around mt-4 mb-4">
       {data.additionalData && Object.keys(data.additionalData).map((buttonKey, index) => (
-        <button className={`h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-6 text-white text-xl hover:scale-125 bg-black max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
+        <button className={`h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-6 text-white md:text-base xl:text-xl hover:scale-125 bg-black max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
           Project {index + 1}
         </button>
       ))}
@@ -148,7 +148,7 @@ const ContentTemplate = ({ dataPath }) => {
       {/* projects list */}
 
       <h2 className="text-primary text-[30px] font-bold" id="keybenefits">{data.title2}</h2>
-      <div className="benefits-content text-white text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
+      <div className="benefits-content text-white md:text-base xl:text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
       <Carousel serviceName={dataPath} carouselData={data?.carouselData} />
       <div id={'end-' + dataPath}></div>
       </>
