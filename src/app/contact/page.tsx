@@ -83,18 +83,18 @@ const Contact: React.FC<{}> = () => {
         <div className="contact-bg bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
         <Navigation />
   
-        <div className="w-2/5 h-screen flex flex-col justify-center ml-[93px] relative z-10">
+        <div className="w-full lg:w-2/5 h-screen flex flex-col justify-center mx-[20px] lg:ml-[93px] relative z-10">
         {submitted ? (
             <>
-   <h1 className="text-white text-[120px] mb-8 font-bold">Thank you.</h1>
-        <h2 className="text-primary text-[50px] font-bold">We will be in touch soon.</h2>
+   <h1 className="text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] mb-0 md:mb-8 mt-8 font-bold">Thank you.</h1>
+        <h2 className="text-primary text-[24px] sm:text-[26px] md:text-[30px] lg:text-[40px] xl:text-[50px] font-bold">We will be in touch soon.</h2>
             </>
           ) : (
             <>
-        <h1 className="text-white text-[120px] mb-8 font-bold">Contact us</h1>
-        <h2 className="text-primary text-[50px] font-bold">Ready to make waves?</h2>
-        <hr className="w-2/5 my-8"/>
-        <p className="text-white text-xl leading-relaxed">Please fill in the contact form and we will get back to you</p>
+        <h1 className="text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] mb-0 md:mb-8 mt-[100px] md:mt-0 font-bold">Contact us</h1>
+        <h2 className="text-primary text-xl sm:text-[26px] md:text-[30px] lg:text-[40px] xl:text-[50px] font-bold">Ready to make waves?</h2>
+        <hr className="w-2/5 my-2 md:my-8"/>
+        <p className="text-white text-base sm:text-xl leading-relaxed">Please fill in the contact form and we will get back to you</p>
         <form
       action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
