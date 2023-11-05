@@ -11,10 +11,6 @@ interface ParentState {
   count: number;
 }
 const ParentComponent: React.FC<{}> = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
 
     return (
     <>

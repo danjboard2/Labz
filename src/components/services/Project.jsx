@@ -37,7 +37,7 @@ export default function ProjectSection() {
                 end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "innovationData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -55,7 +55,7 @@ export default function ProjectSection() {
                 end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "walletData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -73,7 +73,7 @@ export default function ProjectSection() {
                 end: "+=2200px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "whitelabelData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -91,7 +91,7 @@ export default function ProjectSection() {
                 end: "+=3500px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                markers:true,
+                //markers:true,
                 id: "designData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -105,15 +105,6 @@ export default function ProjectSection() {
         
     return () => ctx.revert(); // cleanup
     }, []); // <- empty dependency Array so it doesn't re-run on every render
-  // Watch for changes to endPoints and fake scroll when all are available
-  const fakeScroll = (id, endPoint) => {
-    if (endPoint != null) {
-      gsap.to(window, {
-        scrollTo: { y: endPoint, autoKill: false },
-        duration: 0,
-      });
-    }
-  };
   useEffect(() => {
     const ids = ["#innovationData", "#walletData", "#whitelabelData", "#designData"];
     const tl = gsap.timeline({ onComplete: resetScroll });

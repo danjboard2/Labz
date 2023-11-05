@@ -4,7 +4,7 @@ const walletData = {
     paragraph: 'The Labz take pride in there wallet innovation and this must be seen as our most practised and valued group of products and services ,having strong relationships across Europe and the world with Regulated entities and service providers as well as having cutting edge in house blockchain developers allow us to be at and keep our clients at the very front of every new feature.',
     list: '<ul className="project-list" style="list-style:disc"><li>Generate your crypto wallet with just a social login or email.</li><li>Mirroring traditional finance capabilities with digital assets.</li><li>Borrow or lend money peer-to-peer with full transparency.</li><li>No complicated seed phrases.</li><li>No extra clicks and transaction confirmations.</li><li>Generate your crypto wallet with just a social login or email.</li><li>No limitation to centralized rules as we provide all options to clients.</li></ul>',
     title2: 'What we can do with wallets',
-    content: '<p>Lorem ipsum dolor sit amet. Sit enim eveniet qui rerum fuga et dolor autem rem molestias provident sed quis deserunt. Et deserunt aspernatur a voluptatem earum sit consequuntur eius sit minima minima qui rerum voluptas ut quam expedita.</p><p>Below are just a sample of some of the capabilities that are available and already in build by our trusted blockchain development team.</p>',
+    content: '<p>Below are just a sample of some of the capabilities that are available and already in build by our trusted blockchain development team.</p>',
     additionalData: {
       button1: {
         title: 'Wallet Project 1',

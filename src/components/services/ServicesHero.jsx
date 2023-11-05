@@ -5,6 +5,7 @@ import "../../styles/HomepageAnim.css";
 import { gsap } from "gsap";
 import React, {useLayoutEffect} from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollDown from "../../components/ScrollDown";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +38,7 @@ export default function ServicesHero() {
         <section className="services-hero-outer relative w-full h-screen overflow-hidden flex justify-center items-center">
         <ServicesHeroBackground />
             <ServicesHeroAnim />
+            <ScrollDown />
         </section>
         </>
     )

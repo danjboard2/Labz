@@ -159,6 +159,7 @@ canvas.homepage-bg-canvas.about {z-index:0}
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+.rs-drawer-right.rs-drawer-xs {backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);}
 
 @media (prefers-color-scheme: dark) {
   :root {
