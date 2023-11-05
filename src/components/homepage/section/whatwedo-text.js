@@ -286,7 +286,7 @@ useEffect(() => {
    <>
    <div className="wwd-content sm:justify-center flex-col sm:flex-row w-full h-full flex overflow-hidden">
       <div className="w-[95%] sm:w-2/3 md:w-1/2 flex flex-col justify-center">
-          <div className="wwd-container min-w-[5000px] pb-[20px] pt-[100px] sm:pt-[60px] md:pt-0 overflow-hidden">
+          <div className="wwd-container min-w-[5000px] lg:pb-[20px] pt-[100px] sm:pt-[60px] md:pt-0 overflow-hidden">
             <div className="box a mr-[20px] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-primary">What</div>
             <div className="box b mr-[20px] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">we</div>
             <div className="box c mr-[20px] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">do</div>
@@ -294,7 +294,7 @@ useEffect(() => {
         <p className="labz-wwd-text ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[93px] lg:w-4/5 sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl text-white z-1 relative pb-4 sm:pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
       <div className="ml-[20px] sm:ml-[40px] md:ml-[93px] pt-4 sm:pt-16 relative w-[95%] sm:w-4/5">
         <h3 className={`wwd-changing-text text-white font-bold sm:text-xl lg:text-2xl xl:text-3xl xxl:text-4xl ${isFading ? "fade-out" : "fade-in"}`}>{dataOneValue}</h3>
-        <p className={`wwd-changing-text text-white sm:text-base lg:text-xl pt-4 leading-[168.5%] sm:min-h-[250px] md:min-h-[250px] ${isFading ? "fade-out" : "fade-in"}`}>{dataTwoValue}</p>
+        <p className={`wwd-changing-text text-white sm:text-base lg:text-xl lg:pt-4 min-h-[180px] leading-[168.5%] sm:min-h-[250px] md:min-h-[250px] ${isFading ? "fade-out" : "fade-in"}`}>{dataTwoValue}</p>
       </div>
       </div>
       <div className="w-full mt-6 sm:mt-0 sm:w-1/3 md:w-1/2 flex flex-col  justify-center">
