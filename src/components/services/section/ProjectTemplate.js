@@ -65,7 +65,7 @@ const ContentTemplate = ({ dataPath }) => {
     (c) => {
       let { xs, sm, md, lg, xl, xxl } = c.conditions;
       gsap.to(`#${dataPath} h1.services-title`, {
-        marginTop: xs ? 20 : sm ? 40 : 20,
+        marginTop: xs ? 20 : sm ? 40 : 40,
         rotation: 0,
         scrollTrigger: {
           trigger: `#${dataPath}`,

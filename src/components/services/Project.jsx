@@ -35,9 +35,9 @@ export default function ProjectSection() {
                 pin: ".project-outer-innovationData",
                 start: "top top",
                 end: "+=2200px",
-                pinSpacing: "margin", // Disable automatic spacing adjustment
+                pinSpacing: "padding", // Disable automatic spacing adjustment
                 scrub:true,
-                //markers:true,
+                markers:true,
                 id: "innovationData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -53,9 +53,9 @@ export default function ProjectSection() {
                 pin: ".project-outer-walletData",
                 start: "top top",
                 end: "+=2200px",
-                pinSpacing: "margin", // Disable automatic spacing adjustment
+                pinSpacing: "padding", // Disable automatic spacing adjustment
                 scrub:true,
-                //markers:true,
+                markers:true,
                 id: "walletData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -71,9 +71,9 @@ export default function ProjectSection() {
                 pin: ".project-outer-whitelabelData",
                 start: "top top",
                 end: "+=2200px",
-                pinSpacing: "margin", // Disable automatic spacing adjustment
+                pinSpacing: "padding", // Disable automatic spacing adjustment
                 scrub:true,
-                //markers:true,
+                markers:true,
                 id: "whitelabelData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -84,6 +84,7 @@ export default function ProjectSection() {
                     }
                 });
                 gsap.to(".project-outer-designData", {
+                  
                     scrollTrigger: {
                 trigger: ".project-outer-designData",
                 pin: ".project-outer-designData",
@@ -91,7 +92,7 @@ export default function ProjectSection() {
                 end: "+=3500px",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                //markers:true,
+                markers:true,
                 id: "designData",
                 onUpdate: self => {
                     if (self.progress === 1) {
@@ -146,13 +147,13 @@ export default function ProjectSection() {
 
     return (
         <>
-        <section className="project-outer-innovationData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible">
+        <section className="project-outer-innovationData relative w-full h-full flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1200px]">
             <Project id="innovationData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
-        <section className="project-outer-walletData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible">
+        <section className="project-outer-walletData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1200px]">
             <Project id="walletData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints} />
         </section>
-        <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible">
+        <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1200px]">
             <Project id="whitelabelData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
                 <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[500px]">
