@@ -82,3 +82,6 @@ button.project-6 {margin-top:600px}
     opacity: 1 !important;
     transition: opacity 300ms ease-in-out;
   }
+@media only screen and (max-width: 768px){
+    .services-hero h1 {line-height:400px}
+}
