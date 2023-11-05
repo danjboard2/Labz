@@ -284,20 +284,20 @@ useEffect(() => {
 
   return (
    <>
-   <div className="wwd-content justify-center flex-col sm:flex-row w-full h-full flex overflow-hidden">
+   <div className="wwd-content sm:justify-center flex-col sm:flex-row w-full h-full flex overflow-hidden">
       <div className="w-[95%] sm:w-2/3 md:w-1/2 flex flex-col justify-center">
-          <div className="wwd-container min-w-[5000px] pb-[20px] pt-[20px] md:pt-0 overflow-hidden">
+          <div className="wwd-container min-w-[5000px] pb-[20px] pt-[100px] sm:pt-[60px] md:pt-0 overflow-hidden">
             <div className="box a mr-[20px] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-primary">What</div>
             <div className="box b mr-[20px] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">we</div>
             <div className="box c mr-[20px] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff]">do</div>
           </div>
-        <p className="labz-wwd-text ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[93px] lg:w-4/5 sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl text-white z-1 relative pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
-      <div className="ml-[20px] sm:ml-[40px] md:ml-[93px] pt-16 relative w-[95%] sm:w-4/5">
+        <p className="labz-wwd-text ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[93px] lg:w-4/5 sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl text-white z-1 relative pb-4 sm:pb-16 border-b-2 border-[#828282]">The Labz is a trusted collaborator for Web3 projects seeking to bring their blockchain-based vision to life. Our expert team provides end-to-end support throughout the product development cycle, from ideation to ecosystem launch.</p>
+      <div className="ml-[20px] sm:ml-[40px] md:ml-[93px] pt-4 sm:pt-16 relative w-[95%] sm:w-4/5">
         <h3 className={`wwd-changing-text text-white font-bold sm:text-xl lg:text-2xl xl:text-3xl xxl:text-4xl ${isFading ? "fade-out" : "fade-in"}`}>{dataOneValue}</h3>
-        <p className={`wwd-changing-text text-white sm:text-base lg:text-xl pt-4 leading-[168.5%] min-h-[250px] md:min-h-[250px] ${isFading ? "fade-out" : "fade-in"}`}>{dataTwoValue}</p>
+        <p className={`wwd-changing-text text-white sm:text-base lg:text-xl pt-4 leading-[168.5%] sm:min-h-[250px] md:min-h-[250px] ${isFading ? "fade-out" : "fade-in"}`}>{dataTwoValue}</p>
       </div>
       </div>
-      <div className="w-full sm:w-1/3 md:w-1/2 flex flex-col  justify-center">
+      <div className="w-full mt-6 sm:mt-0 sm:w-1/3 md:w-1/2 flex flex-col  justify-center">
          <div className="wwd-buttons flex flex-row pl-[32px] sm:pl-[25%] md:pl-[20%] !flex-wrap lg:pl-[110px] sm:pt-[0px] md:pt-[256px] w-full lg:min-w-[520px] max-w-[900px]">
          <div className={`icon-wrap rounded-[5.73px] w-[33%] h-[100px] sm:w-[80%] sm:h-[110px] md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title" data-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et dolor lectus. Nullam augue orci, pulvinar et ex eget, maximus volutpat leo. Aenean ac mollis mauris. Aliquam pretium mauris nunc. Morbi in eros feugiat, pretium magna vitae, vulputate tortor. In mollis semper purus. In mollis et urna et ultrices. Sed ut feugiat tellus." className={`icon a w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[4px] sm:border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'a' ? 'active' : '' }`} onClick={() => handleClick('a')}><Image src="/media/images/wwd-icons/icon-ip.svg" width={77} height={58} alt="Network" className="w-3/4"/></div></div>
          <div className={`icon-wrap rounded-[5.73px] w-[33%] h-[100px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title two" data-two="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultrices ex sit amet turpis gravida, sit amet rutrum dui eleifend. Mauris eu eros quis orci laoreet scelerisque. Suspendisse faucibus cursus commodo." className={`icon b w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[4px] sm:border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'b' ? 'active' : '' }`} onClick={() => handleClick('b')}><Image src="/media/images/wwd-icons/icon-wa.svg" width={85} height={72} alt="Wallet" className="w-3/4"/></div></div>

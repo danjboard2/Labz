@@ -30,8 +30,8 @@ export default function TimelineAnimsTwo() {
       rotation: 0,
       scrollTrigger: {
         trigger: ".company-timeline.two",
-        start: "top bottom-=100px",
-        end: "top+=600px bottom-=400px",
+        start: "top bottom",
+        end: "top+=650px bottom",
         scrub: true,
         //markers: true,
         id: "2022"

@@ -29,9 +29,9 @@ export default function TimelineAnims() {
       marginLeft: xs ? 20 : sm ? 40 : md ? 120 : 220,
       rotation: 0,
       scrollTrigger: {
-        trigger: ".company-timeline.one",
-        start: "top bottom-=100px",
-        end: "top+=600px bottom-=400px",
+        trigger: ".timeline",
+        start: "top bottom",
+        end: "top+=650px bottom",
         scrub: true,
         //markers: true,
         id: "2021"

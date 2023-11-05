@@ -12,7 +12,7 @@ const Navigation = () => {
     };
 
   return (
-    <nav className="navigation top-0 left-0 w-full flex p-[50px] justify-between z-[1000] fixed">
+    <nav className="navigation top-0 left-0 w-full flex p-[20px] md:p-[50px] justify-between z-[1000] fixed">
     <Logo /> 
     <ButtonToolbar>
       <Button style={{ background: 'transparent', overflow: 'visible', zIndex: 10000}} onClick={toggleOpen}>
