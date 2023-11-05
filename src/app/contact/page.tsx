@@ -79,7 +79,7 @@ const Contact: React.FC<{}> = () => {
       <>
        <SwupTransitions />
       <SetContainerCursor />
-      <main className="relative flex h-full w-full" id="about">
+      <main className="relative flex h-screen lg:h-full w-full" id="about">
         <div className="contact-bg bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
         <Navigation />
   

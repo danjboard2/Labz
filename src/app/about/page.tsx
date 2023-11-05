@@ -51,7 +51,7 @@ useEffect(() => {
 
     return (
     <>
-    <main  ref={mainRef}  className="relative flex h-full w-full" id="about">
+    <main  ref={mainRef}  className="relative flex h-screen lg:h-full w-full" id="about">
       <div className="about-bg bg-[url(/media/images/about-bg1.jpg)] bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
       <Navigation />
 
