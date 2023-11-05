@@ -25,7 +25,7 @@ export default function ServicesHeroAnim() {
             (c) => {
             let { xs, sm, md, lg, xl, xxl } = c.conditions;
             gsap.to(".services-hero h1", {
-            lineHeight:"100px",
+            lineHeight:xs ? "50px" : sm ? "60px" : "100px",
             rotation: 0,
             scrollTrigger: {
                 trigger: ".services-hero h1",
@@ -44,7 +44,7 @@ export default function ServicesHeroAnim() {
 
   return (
           <>
-       <section className="services-hero" id="services-hero">
+       <section className="services-hero" id="services-hero h-screen !overflow-hidden">
                 <h1 className="text-white text-center text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold">Our<br/>
                 <span className="text-primary font-bold">Services</span></h1>
       </section>

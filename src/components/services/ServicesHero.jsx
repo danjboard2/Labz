@@ -24,7 +24,7 @@ export default function ServicesHero() {
                 end: "+=1200",
                 pinSpacing: "margin", // Disable automatic spacing adjustment
                 scrub:true,
-                //markers:true,
+                markers:true,
                 id: "Services",
                     }
         });
