@@ -15,7 +15,7 @@ const ParentComponent: React.FC<{}> = () => {
     return (
     <>
     <main className="services bg-[#000] h-screen p-0 opacity-1 relative w-full">
-    <Navigation />
+    <Navigation page="services"/>
       <section className="h-screen">
           <ServicesHero />
          <ProjectSection/>

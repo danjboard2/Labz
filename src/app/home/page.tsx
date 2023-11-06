@@ -39,7 +39,7 @@ const ParentComponent: React.FC<{}> = () => {
     <main className="lockedhp w-full min-h-screen flex-col items-center justify-center p-24 absolute top-0 bottom-0 left-0 right-0 z-100 hidden">
     </main>
     <main className="homepage bg-[#000] min-h-screen p-0 relative w-full h-screen overflow-visible opacity-100">
-      <Navigation />
+      <Navigation page="home"/>
       <canvas className="homepage-bg-canvas flex !w-full"></canvas>
       <section className="hp-content pointer-events-none flex w-full h-screen items-center justify-center flex-col">
       <div className="h1-container relative w-full">

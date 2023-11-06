@@ -81,7 +81,7 @@ const Contact: React.FC<{}> = () => {
       <SetContainerCursor />
       <main className="relative flex h-screen lg:h-full w-full" id="about">
         <div className="contact-bg bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
-        <Navigation />
+        <Navigation page="contact"/>
   
         <div className="w-full lg:w-2/5 h-screen flex flex-col justify-center mx-[20px] lg:ml-[93px] relative z-10">
         {submitted ? (

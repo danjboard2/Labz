@@ -53,7 +53,7 @@ useEffect(() => {
     <>
     <main  ref={mainRef}  className="relative flex h-screen lg:h-full w-full" id="about">
       <div className="about-bg bg-[url(/media/images/about-bg1.jpg)] bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
-      <Navigation />
+      <Navigation page="about"/>
 
       <div className="w-full px-[20px] lg:px-0 lg:w-2/5 h-screen flex flex-col justify-center lg:ml-[93px] relative z-10">
       <h1 className="text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] mb-0 md:mb-8  font-bold">About us</h1>

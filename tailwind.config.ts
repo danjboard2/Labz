@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
   content: [
@@ -26,6 +27,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+     plugins: [
+      plugin(function({ addVariant }: { addVariant:any}) {
+        addVariant('current', '&.active')
+      })
+    ],
 }
 export default config

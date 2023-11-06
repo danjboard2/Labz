@@ -1,15 +1,16 @@
 import Logo from "../components/Logo"
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 import Link from 'next/link';
-import {useState} from 'react';
+import {use, useEffect, useState} from 'react';
 
 
-const Navigation = () => {
+const Navigation = ({ page }) => {
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen(!open);
 
-    const [open, setOpen] = useState(false);
-    const toggleOpen = () => {
-      setOpen(!open);
-    };
+  const getLinkClassName = (linkPage) => {
+      return `navlink px-[30px] py-[20px] text-[#fff] text-xl select-none ${page === linkPage ? 'active' : ''} current:bg-primary`;
+  };
 
   return (
     <nav className="navigation top-0 left-0 w-full flex p-[20px] md:p-[50px] justify-between z-[1000] fixed">
@@ -30,10 +31,16 @@ const Navigation = () => {
     <Drawer backdropClassName={'backdrop'} backdrop={false} size={'xs'} style={{zIndex: '20'}} open={open} onClose={() => setOpen(false)}>
       <div className="absolute top-0 bottom-0 left-0 right-0 backdrop-blur-md"></div>
       <Drawer.Body>
-        <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl select-none" href="/about" title="About us">About us</Link>
-        <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl select-none" href="/services" title="Services &amp; Projects">Services &amp; projects</Link>
-        <Link className="navlink px-[30px] py-[20px] text-[#fff] text-xl select-none" href="/contact" title="Contact us">Contact us</Link>
-      </Drawer.Body>
+                <Link className={getLinkClassName('about')} href="/about" title="About us">
+                    About us
+                </Link>
+                <Link className={getLinkClassName('services')} href="/services" title="Services & Projects">
+                    Services & projects
+                </Link>
+                <Link className={getLinkClassName('contact')} href="/contact" title="Contact us">
+                    Contact us
+                </Link>
+            </Drawer.Body>
     </Drawer>
     </nav>
   );
