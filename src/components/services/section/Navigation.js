@@ -2,15 +2,16 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { gsap} from "gsap";
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 
 gsap.registerPlugin(ScrollToPlugin);
 
 const navItems = [
-  { id: 'innovationData', imgSrc: '/media/images/wwd-icons/icon-bc.svg', imgAlt: 'Blockchain' },
-  { id: 'walletData', imgSrc: '/media/images/wwd-icons/icon-wa.svg', imgAlt: 'Wallet' },
-  { id: 'whitelabelData', label: 'White Label' },
-  { id: 'designData', imgSrc: '/media/images/wwd-icons/icon-cg.svg', imgAlt: 'Cg' },
+  { id: 'innovationData', imgSrc: '/media/images/wwd-icons/icon-mo.svg', imgAlt: 'Blockchain' },
+  { id: 'walletData', imgSrc: '/media/images/wwd-icons/icon-ch.svg', imgAlt: 'Wallet' },
+  { id: 'whitelabelData', imgSrc: '/media/images/wwd-icons/icon-bc2.svg', label: 'White Label' },
+  { id: 'designData', imgSrc: '/media/images/wwd-icons/icon-cg.svg', imgAlt: 'Design' },
+  { id: 'decentralisationData', imgSrc: '/media/images/wwd-icons/icon-wa.svg', imgAlt: 'Decentralisation' },
+  { id: 'consultancyData', imgSrc: '/media/images/wwd-icons/icon-con.svg', imgAlt: 'Consultancy' },
 ];
 
 const Navigation = ({ dataPath, endPoints, scrollToScrubEnd }) => {

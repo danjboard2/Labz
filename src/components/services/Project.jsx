@@ -89,7 +89,7 @@ export default function ProjectSection() {
                 trigger: ".project-outer-designData",
                 pin: ".project-outer-designData",
                 start: "top top",
-                end: "+=3500px",
+                end: "+=2200px",
                 pinSpacing: "padding", // Disable automatic spacing adjustment
                 scrub:true,
                 //markers:true,
@@ -102,12 +102,48 @@ export default function ProjectSection() {
                   }
                     }
                 });
+                gsap.to(".project-outer-decentralisationData", {
+                  scrollTrigger: {
+              trigger: ".project-outer-decentralisationData",
+              pin: ".project-outer-decentralisationData",
+              start: "top top",
+              end: "+=2200px",
+              pinSpacing: "padding", // Disable automatic spacing adjustment
+              scrub:true,
+              //markers:true,
+              id: "decentralisationData",
+              onUpdate: self => {
+                  if (self.progress === 1) {
+                      updateEndPoint("#decentralisationData", self.end);
+                   // console.log('decentralisationData completed....');
+                  }
+                }
+                  }
+              });
+              gsap.to(".project-outer-consultancyData", {
+                scrollTrigger: {
+            trigger: ".project-outer-consultancyData",
+            pin: ".project-outer-consultancyData",
+            start: "top top",
+            end: "+=4500px",
+            pinSpacing: "padding", // Disable automatic spacing adjustment
+            scrub:true,
+            //markers:true,
+            id: "consultancyData",
+            onUpdate: self => {
+                if (self.progress === 1) {
+                    updateEndPoint("#consultancyData", self.end);
+                 // console.log('decentralisationData completed....');
+                }
+              }
+                }
+            });
     },); // <- IMPORTANT! Scopes selector text
         
     return () => ctx.revert(); // cleanup
     }, []); // <- empty dependency Array so it doesn't re-run on every render
   useEffect(() => {
-    const ids = ["#innovationData", "#walletData", "#whitelabelData", "#designData"];
+    const ids = ["#innovationData", "#walletData", "#whitelabelData", "#designData", "#decentralisationData", "#consultancyData"];
     const tl = gsap.timeline({ onComplete: resetScroll });
   
     // Check that elements are available
@@ -125,7 +161,7 @@ export default function ProjectSection() {
       const el = document.querySelector(id);
       if (el) {
         let endPoint = el.getBoundingClientRect().bottom + window.scrollY;
-        if (id === "#designData") {
+        if (id === "#consultancyData") { /* always set this to the last project block id */
             endPoint += 5000;  // add 1 pixel to the endpoint
         }
         tl.to(window, {
@@ -156,8 +192,14 @@ export default function ProjectSection() {
         <section className="project-outer-whitelabelData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[700px]">
             <Project id="whitelabelData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
-                <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[6500px]">
+                <section className="project-outer-designData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible  pb-[700px]">
             <Project id="designData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
+        </section>
+        <section className="project-outer-decentralisationData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[700px]">
+            <Project id="decentralisationData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
+        </section>
+        <section className="project-outer-consultancyData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible mb-[6500px]">
+            <Project id="consultancyData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
         </>
     )

@@ -6,7 +6,6 @@ import { utils, getIndexPage } from '../../../public/media/scripts/utils';
 import { Cursor1 } from '../../../public/media/scripts/cursors/cursor1';
 import dynamic from "next/dynamic";
 import Navigation from "../../components/Navigation";
-import ScrollDown from "../../components/ScrollDown";
 
 const SwupTransitions = dynamic(() => import("../../components/swup"), { ssr: false });
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/ff912cc0-7774-11ee-8bcd-4fcc9e7e7286"; // TODO - update to the correct endpoint

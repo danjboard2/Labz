@@ -1,9 +1,5 @@
 "use client"
-import React, { Component, useState,  useEffect } from "react";
-import Image from 'next/image'
-import Link from 'next/link'
-import Script from 'next/script'
-import Logo from "../../components/Logo"
+import React from "react";
 import ServicesHero from '../../components/services/ServicesHero'
 import ProjectSection from '../../components/services/Project'
 import "../../styles/Services.css";

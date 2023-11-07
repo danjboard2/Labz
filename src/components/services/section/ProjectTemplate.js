@@ -125,7 +125,7 @@ const ContentTemplate = ({ dataPath }) => {
   return (
     <>
       <h1 className="services-title text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold ">{data.sectionTitle}</h1>
-      <h2 className="text-primary text-3xl md:text-5xl xl:text-7xl xxl:text-9xl mt-6 font-bold">{data.subtitle}</h2>
+      <h2 className="text-primary text-2xl md:text-3xl xl:text-4xl xxl:text-5xl mt-6 font-bold">{data.subtitle}</h2>
       <div className="flex flex-row w-full">
           <div className="flex w-1/2 flex-col pr-8">
           <hr className="  border-[#828282] w-3/5 my-4"/>

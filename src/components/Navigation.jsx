@@ -2,6 +2,8 @@ import Logo from "../components/Logo"
 import { Drawer, ButtonToolbar, Button, Placeholder } from 'rsuite';
 import Link from 'next/link';
 import {use, useEffect, useState} from 'react';
+import 'rsuite/dist/rsuite.min.css';
+import '../app/nav-overrides.css';
 
 
 const Navigation = ({ page }) => {
