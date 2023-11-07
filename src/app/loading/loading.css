@@ -1,0 +1,53 @@
+body {
+    background-color: #000;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    margin: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    position: relative;
+    border-radius: 100%;
+    background-color: #000;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .txt {
+    display: none;
+    color: #000;
+    font-family: "Red Hat Text";
+    font-weight: 700;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  @keyframes loading_anim {
+    0% {
+      background-color: #000;
+      filter: drop-shadow(0px 0px 0rem rgba(255, 61, 0, 0.8));
+    }
+    50% {
+      transform: translate(15px, 0px);
+      background-color: #ff3d00;
+      filter: drop-shadow(0px 0px 1rem rgba(255, 61, 0, 0.8)) saturate(4);
+    }
+    100% {
+      background-color: #000;
+      /*    filter: drop-shadow(0px 0px 0rem rgba(var(--orange), 0.8)); */
+    }
+  }
+  
