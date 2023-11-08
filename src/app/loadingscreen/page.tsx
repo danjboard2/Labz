@@ -38,13 +38,17 @@ export default function Loading() {
 
   return (
     <>
-      <div className="box"><span className="txt">L</span></div>
-      <div className="box"><span className="txt">o</span></div>
-      <div className="box"><span className="txt">a</span></div>
-      <div className="box"><span className="txt">d</span></div>
-      <div className="box"><span className="txt">i</span></div>
-      <div className="box"><span className="txt">n</span></div>
-      <div className="box"><span className="txt">g</span></div>
+    <section className="absolute top-0 left-0 bottom-0 right-0">
+      <section className="justify-center items-center h-full flex gap-4">
+        <div className="box"><span className="txt">L</span></div>
+        <div className="box"><span className="txt">o</span></div>
+        <div className="box"><span className="txt">a</span></div>
+        <div className="box"><span className="txt">d</span></div>
+        <div className="box"><span className="txt">i</span></div>
+        <div className="box"><span className="txt">n</span></div>
+        <div className="box"><span className="txt">g</span></div>
+      </section>
+    </section>
     </>
   );
 }
