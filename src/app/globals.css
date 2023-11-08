@@ -7,7 +7,9 @@
   --primary : rgb(255,61,0);
   --secondary : rgb(255,61,0);
 }
-
+.focus\:ring:focus {
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) rgb(255 61 0) !important;
+}
 @font-face {
   font-family: 'ABC';
   src: url("../../public/media/fonts/abc-diatype-regular.otf") format("opentype");
