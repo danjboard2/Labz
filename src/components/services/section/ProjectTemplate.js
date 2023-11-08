@@ -126,21 +126,21 @@ const ContentTemplate = ({ dataPath }) => {
     <>
       <h1 className="services-title text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] font-bold ">{data.sectionTitle}</h1>
       <h2 className="text-primary text-2xl md:text-3xl xl:text-4xl xxl:text-5xl mt-6 font-bold">{data.subtitle}</h2>
-      <div className="flex flex-row w-full">
-          <div className="flex w-1/2 flex-col pr-8">
-          <hr className="  border-[#828282] w-3/5 my-4"/>
+      <div className="flex flex-col-reverse lg:flex-row w-full">
+          <div className="flex w-full lg:w-1/2 flex-col pr-8">
+          <hr className="  border-[#828282] w-full lg:w-3/5 my-4"/>
           <h1  key={`${data.title}-${dataPath}-title`}  className={`text-white text-[30px] font-bold ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.title}</h1>
           <p  key={`${data.title}-${dataPath}-paragraph`} className={`text-white md:text-base xl:text-xl mb-6 ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.paragraph}</p>
           <div  key={`${data.title}-${dataPath}-list`}  className={`inner-data text-white md:text-base xl:text-xl ml-[30px] ${fadeIn ? 'fade-in' : 'fade-out'}`} dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
-          <div className="flex w-1/2 justify-center items-center h-[400px]">
-          <img src={additionalContent}  key={`${data.title}-${dataPath}`}    alt={data.title} className={`max-h-[400px] ${fadeIn ? 'fade-in' : 'fade-out'}`}/>
+          <div className="flex  w-full lg:w-1/2 justify-center items-center h-[200px] lg:h-[400px]">
+          <img src={additionalContent}  key={`${data.title}-${dataPath}`}    alt={data.title} className={`max-h-full pt-4 lg:max-h-[400px] lg:pt-0 ${fadeIn ? 'fade-in' : 'fade-out'}`}/>
           </div>
       </div>
       {/* projects list */}
       <div className="project-buttons flex flex-row w-full justify-around mt-4 mb-4">
       {data.additionalData && Object.keys(data.additionalData).map((buttonKey, index) => (
-        <button className={`h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-6 text-white md:text-base xl:text-xl hover:scale-125 bg-black max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
+        <button className={`h-[50px] lg:h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-2 lg:mr-6 text-white md:text-base xl:text-xl hover:scale-125 bg-black max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
           Project {index + 1}
         </button>
       ))}

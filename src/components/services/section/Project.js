@@ -15,7 +15,7 @@ export default function Project({ id, scrollToScrubEnd, endPoints  }) {
 //console.log(id)
   return (
     <section className="flex w-full h-full justify-center items-start pt-4 ">
-      <div className="flex flex-col w-1/12 min-w-[180px] pt-28">
+      <div className="flex flex-col w-1/12 min-w-[120px] lg:min-w-[180px] pt-28">
         <Navigation dataPath={id}  endPoints={endPoints} scrollToScrubEnd={scrollToScrubEnd} />
       </div>
       <div className="flex flex-col w-9/12" id={id}>
