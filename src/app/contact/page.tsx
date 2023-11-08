@@ -76,13 +76,12 @@ const Contact: React.FC<{}> = () => {
 
     return (
       <>
-       <SwupTransitions />
-      <SetContainerCursor />
       <main className="relative flex h-screen lg:h-full w-full" id="about">
-        <div className="contact-bg bg-cover min-h-screen p-0 opacity-1 w-full h-screen overflow-hidden absolute"></div>
+      <SwupTransitions />
+      <SetContainerCursor />
         <Navigation page="contact"/>
   
-        <div className="w-full lg:w-2/5 h-screen flex flex-col justify-center mx-[20px] lg:ml-[93px] relative z-10">
+        <div className="w-full lg:w-2/5 h-full flex flex-col justify-center mx-[20px] lg:ml-[93px] relative z-10">
         {submitted ? (
             <>
    <h1 className="text-white text-[40px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] mb-0 md:mb-8 mt-8 font-bold">Thank you.</h1>
