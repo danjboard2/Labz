@@ -65,7 +65,7 @@ const ContentTemplate = ({ dataPath }) => {
     (c) => {
       let { xs, sm, md, lg, xl, xxl } = c.conditions;
       gsap.to(`#${dataPath} h1.services-title`, {
-        marginTop: xs ? 20 : sm ? 40 : 40,
+        marginTop: xs ? 10 : sm ? 10  : md ? -10 : lg ? 100 : 40 ,
         rotation: 0,
         scrollTrigger: {
           trigger: `#${dataPath}`,
@@ -133,7 +133,7 @@ const ContentTemplate = ({ dataPath }) => {
           <p  key={`${data.title}-${dataPath}-paragraph`} className={`text-white md:text-base xl:text-xl mb-6 ${fadeIn ? 'fade-in' : 'fade-out'}`}>{data.paragraph}</p>
           <div  key={`${data.title}-${dataPath}-list`}  className={`inner-data text-white md:text-base xl:text-xl ml-[30px] ${fadeIn ? 'fade-in' : 'fade-out'}`} dangerouslySetInnerHTML={{ __html: data.list }} />
           </div>
-          <div className="flex  w-full lg:w-1/2 justify-center items-center h-[200px] lg:h-[400px]">
+          <div className="flex  w-full lg:w-1/2 justify-center items-center h-[140px] lg:h-[400px]">
           <img src={additionalContent}  key={`${data.title}-${dataPath}`}    alt={data.title} className={`max-h-full pt-4 lg:max-h-[400px] lg:pt-0 ${fadeIn ? 'fade-in' : 'fade-out'}`}/>
           </div>
       </div>

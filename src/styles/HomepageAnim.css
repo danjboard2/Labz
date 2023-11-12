@@ -139,7 +139,8 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
     top: -7px;
     left: -24px;
     border-radius: 5.87px;
-    transition:1s;}
+    transition:1s;
+  }
     .icon:after {
       width: 7.9px;
       height: 0%;

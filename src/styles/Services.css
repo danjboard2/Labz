@@ -100,8 +100,10 @@ button.project-6 {margin-top:600px}
     .services-hero h1 {line-height:400px}
 button.services-nav.active:before {
 left:-14px;
+display:none;
     }
     button.services-nav.active:after {
         right:-14px;
+        display:none;
             }
 }

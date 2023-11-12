@@ -21,7 +21,7 @@ const Navigation = ({ dataPath, endPoints, scrollToScrubEnd }) => {
     }
   };
 
-  const buttonClass = "services-nav relative md:mt-6 a w-[60px] h-[62px] md:w-[70px] md:h-[72px] lg:w-[90px] lg:h-[92.67px] border-[4px] lg:border-[5.5px] border-[#828282] rounded-[10px] flex justify-center items-center transition-all duration-500 hover:border-primary";
+  const buttonClass = "services-nav relative md:mt-6 a w-[48px] h-[50px] md:w-[70px] md:h-[72px] lg:w-[90px] lg:h-[92.67px] border-[4px] lg:border-[5.5px] border-[#828282] rounded-[10px] flex justify-center items-center transition-all duration-500 hover:border-primary";
 
   return (
     <>
