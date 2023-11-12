@@ -147,7 +147,7 @@ const ContentTemplate = ({ dataPath }) => {
     </div>
       {/* projects list */}
 
-      <h2 className="text-primary text-[30px] font-bold" id="keybenefits">{data.title2}</h2>
+      <h2 className="text-primary text-2xl xl:text-3xl font-bold" id="keybenefits">{data.title2}</h2>
       <div className="benefits-content text-white md:text-base xl:text-xl" dangerouslySetInnerHTML={{ __html: data.content }} />
       <Carousel serviceName={dataPath} carouselData={data?.carouselData} />
       <div id={'end-' + dataPath}></div>

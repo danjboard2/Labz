@@ -18,7 +18,7 @@ export default function Project({ id, scrollToScrubEnd, endPoints  }) {
       <div className="flex flex-col w-1/12 min-w-[120px] lg:min-w-[180px] pt-28">
         <Navigation dataPath={id}  endPoints={endPoints} scrollToScrubEnd={scrollToScrubEnd} />
       </div>
-      <div className="flex flex-col w-9/12" id={id}>
+      <div className="flex flex-col w-10/12" id={id}>
       <ProjectTemplate dataPath={id} />
       </div>
     </section>

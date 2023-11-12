@@ -14,13 +14,47 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
     const [dataOneValue, setDataOneValue] = useState("");
     const [dataTwoValue, setDataTwoValue] = useState("");
     const [isFading, setIsFading] = useState(false);
-  
+    const [isAnimating, setIsAnimating] = useState(false);
+    const originalPositions = useRef([]);
+    const intervalIdRef = useRef(null);
+    const timeoutIdsRef = useRef([]);
+
+      useEffect(() => {
+          const iconWraps = document.querySelectorAll('.icon-wrap');
+          originalPositions.current = Array.from(iconWraps).map(iconWrap => {
+              const { top, left } = iconWrap.getBoundingClientRect();
+              return { top, left };
+          });
+      }, []);
+      function resetChildPositions() {
+        setIsAnimating(false);
+        // Clear the interval
+        clearInterval(intervalIdRef.current);
+    
+        // Clear all timeouts
+        timeoutIdsRef.current.forEach(clearTimeout);
+        timeoutIdsRef.current = [];
+    
+        const iconWraps = document.querySelectorAll('.icon-wrap');
+        iconWraps.forEach(iconWrap => {
+            gsap.killTweensOf(iconWrap);
+            gsap.to(iconWrap, {
+                x: 0,
+                y: 0,
+                scale: 1,
+                rotation: 0,
+                duration: 1,
+                clearProps: "transform"
+            });
+        });
+    }
+
 // Function to animate child elements
 function animateChildElements() {
+  setIsAnimating(true);
   const parentElement = document.querySelector('.wwd-buttons');
-    const childElements = parentElement.querySelectorAll('.icon-wrap');
-    childElements.forEach((child) => {
-      // Function to set a random position with a delay
+  const childElements = parentElement.querySelectorAll('.icon-wrap');
+  childElements.forEach((child) => {
       function setRandomPositionWithDelay() {
         // Generate random coordinates within a 100px circle
         const angle = Math.random() * Math.PI * 2;
@@ -32,15 +66,14 @@ function animateChildElements() {
         child.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
       }
 
-      // Set a random position with a delay (e.g., 1 second)
-      setTimeout(setRandomPositionWithDelay, Math.random() * 4000);
-    });
+      const timeoutId = setTimeout(setRandomPositionWithDelay, Math.random() * 4000);
+      timeoutIdsRef.current.push(timeoutId);
+  });
 }
-let intervalId; // Declare intervalId here
 useEffect(() => {
   // Check if we are in a browser environment before using document
   if (typeof window !== 'undefined') {
-    const intervalId = setInterval(() => {
+    intervalIdRef.current = setInterval(() => {
       const parentElement = document.querySelector('.wwd-buttons');
       const viewportWidth = window.innerWidth; // Get the viewport width
 
@@ -49,7 +82,7 @@ useEffect(() => {
       }
     }, 4000);
   }
-  return () => clearInterval(intervalId);
+  return () => clearInterval(intervalIdRef.current);
 }, []); // Empty dependency array to run this effect once on component mount
 
 
@@ -305,6 +338,7 @@ useEffect(() => {
             <div className={`icon-wrap rounded-[5.73px] w-[33%] h-[100px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px] flex relative`}><div data-one="Title four" data-two="Donec tincidunt, neque at vestibulum euismod, purus nulla tincidunt nunc, vel mattis nibh ex non sem. Pellentesque eu ex tellus. Duis sit amet libero id ligula volutpat mattis. Maecenas et commodo odio, at consequat dui. Duis placerat enim sed massa efficitur consequat. Cras ac sem erat." className={`icon d w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[4px] md:border-[5px] xl:border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'd' ? 'active' : '' }`} onClick={() => handleClick('d')}><Image src="/media/images/wwd-icons/icon-cg.svg" width={64} height={64} alt="Cg" className="w-3/4"/></div></div>
             <div className={`icon-wrap rounded-[5.73px] w-[33%] h-[100px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title five" data-two="Ut eget ligula eleifend, tempus dui vitae, euismod libero. Cras eget nisl felis. Aenean maximus fringilla lorem non sagittis. Curabitur congue rhoncus arcu, id semper nulla pharetra sit amet. Duis dignissim vestibulum mi eget laoreet." className={`icon e w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[4px] md:border-[5px] xl:border-[7.88px] border-[#FF3D00] rounded-[5.73px] absolute z-10 flex justify-center ${activeElement === 'e' ? 'active' : '' }`} onClick={() => handleClick('e')}><Image src="/media/images/wwd-icons/icon-bc.svg" width={62} height={72} alt="Blockchain" className="w-3/4"/></div></div>
             <div className={`icon-wrap rounded-[5.73px] w-[33%] h-[100px] sm:w-[80%] sm:h-[110px]  md:w-[40%] md:h-[130px] lg:w-[130px] lg:h-[130px] md:mb-[103px] lg:ml-[30px] lg:mr-[40px] xl:mr-[103px]  flex relative`}><div data-one="Title six" data-two="Suspendisse eleifend est lacus, quis venenatis eros dapibus sit amet. Aenean lorem massa, facilisis eget urna eu, vestibulum porttitor mi. Nam enim augue, tempus a mollis in, interdum vel augue." className={`icon f w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px]  xl:w-[126.8px] xl:h-[130.67px] border-[4px] md:border-[5px] border-[#FF3D00] rounded-[5.73px] xl:border-[7.88px] absolute z-10 flex justify-center ${activeElement === 'f' ? 'active' : '' }`} onClick={() => handleClick('f')}><Image src="/media/images/wwd-icons/icon-co.svg" width={86} height={46} alt="Co" className="w-3/4"/></div></div>
+                 <button onClick={resetChildPositions} className={`z-10 w-full justify-end flex button-fade ${isAnimating ? 'button-visible' : ''}`}>Arrange{isAnimating ? '' : 'd'} for OCD</button>
          </div>
       </div>
     </div>

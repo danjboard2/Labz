@@ -21,7 +21,7 @@ const Navigation = ({ dataPath, endPoints, scrollToScrubEnd }) => {
     }
   };
 
-  const buttonClass = "services-nav relative mt-6 a w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[100px] lg:h-[102.67px] xl:w-[126.8px] xl:h-[130.67px] border-[4px] border-[5px] lg:border-[7.88px] border-[#828282] rounded-[5.73px] flex justify-center items-center transition-all duration-500 hover:border-primary";
+  const buttonClass = "services-nav relative mt-6 a w-[70px] h-[72px] md:w-[70px] md:h-[72px] lg:w-[90px] lg:h-[92.67px] border-[4px] lg:border-[5.5px] border-[#828282] rounded-[10px] flex justify-center items-center transition-all duration-500 hover:border-primary";
 
   return (
     <>
@@ -32,7 +32,7 @@ const Navigation = ({ dataPath, endPoints, scrollToScrubEnd }) => {
           onClick={() => handleButtonClick(item.id)}
         >
           {item.imgSrc ? (
-            <Image src={item.imgSrc} width={62} height={72} alt={item.imgAlt} className="w-3/4" />
+            <Image src={item.imgSrc} width={62} height={72} alt={item.imgAlt} className="w-3/5" />
           ) : (
             item.label
           )}

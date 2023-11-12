@@ -23,7 +23,7 @@
 @font-face {
   font-family: 'ABC';
   src: url("../../public/media/fonts/abc-diatype-bold.otf") format("opentype");
-  font-weight:bold;
+  font-weight:bold; 
 }
 @font-face {
   font-family: 'ABC';

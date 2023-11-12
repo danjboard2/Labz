@@ -17,6 +17,18 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+.button-fade {
+  opacity: 1;
+  color:#a1a1a1;
+  font-weight:100;
+  transition: opacity 0.5s ease-in-out; /* Adjust the timing as needed */
+}
+
+.button-visible {
+  opacity: 1;
+  color:#FF3D00;
+  font-weight:100;
+}
 
 .box.active {
     background-color: blue;
@@ -115,6 +127,7 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   transition:1s;
 }
 @media screen and (max-width: 767px){ /* only on small devices and below */
+  .button-fade {display:none} /* buttons don't randomly move below 767 px */
   .icon:before {
     width: 7.9px;
     height: 0%;

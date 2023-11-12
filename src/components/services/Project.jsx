@@ -198,7 +198,7 @@ export default function ProjectSection() {
         <section className="project-outer-decentralisationData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1300px]">
             <Project id="decentralisationData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
-        <section className="project-outer-consultancyData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1000px] mb-[6500px]">
+        <section className="project-outer-consultancyData relative w-full h-screen flex justify-center items-center z-10 bg-[url(/media/images/projects-bg.jpg)] bg-cover !overflow-visible pb-[1400px] mb-[6500px]">
             <Project id="consultancyData" scrollToScrubEnd={scrollToScrubEnd} endPoints={endPoints}/>
         </section>
         </>
