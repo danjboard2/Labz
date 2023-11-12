@@ -142,7 +142,7 @@ export default function TeamAnims() {
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap w-[26%] md:w-[40%] xl:w-[40%] xxl:w-[30%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 ${
+              className={`member-wrap w-[26%] md:w-[30%] xl:w-[30%] xxl:w-[30%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}

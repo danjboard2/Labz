@@ -18,16 +18,18 @@ box-shadow:0px 0px 0px rgba(255, 255, 255, 0.15), 0px 0px 0px #000;
   transition: opacity 0.5s ease-in-out;
 }
 .button-fade {
-  opacity: 1;
+  opacity:0;
   color:#a1a1a1;
   font-weight:100;
-  transition: opacity 0.5s ease-in-out; /* Adjust the timing as needed */
+  transition: opacity 1s ease-out; /* Adjust the timing as needed */
 }
 
-.button-visible {
-  opacity: 1;
+.button-active {
   color:#FF3D00;
   font-weight:100;
+}
+.button-visible {
+  opacity: 1;
 }
 
 .box.active {
