@@ -98,4 +98,10 @@ button.project-6 {margin-top:600px}
   }
 @media only screen and (max-width: 768px){
     .services-hero h1 {line-height:400px}
+button.services-nav.active:before {
+left:-14px;
+    }
+    button.services-nav.active:after {
+        right:-14px;
+            }
 }
