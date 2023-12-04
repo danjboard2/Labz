@@ -141,7 +141,8 @@ const ContentTemplate = ({ dataPath }) => {
       <div className="project-buttons flex flex-row w-full justify-around mt-4 mb-4">
       {data.additionalData && Object.keys(data.additionalData).map((buttonKey, index) => (
         <button className={`h-[50px] lg:h-[90px] mt-6 project-${index+1} rounded-[5px] border-[1px] border-[#828282] w-full mr-2 lg:mr-6 text-white md:text-base xl:text-xl hover:scale-125 bg-black max-w-[235px]`} key={index} onClick={() => handleAdditionalClick(buttonKey)}>
-          Project {index + 1}
+         {/* Project {index + 1} */}
+         Project Details Coming Soon.
         </button>
       ))}
     </div>
