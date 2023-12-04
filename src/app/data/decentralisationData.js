@@ -1,17 +1,17 @@
 const decentralisationData = {
   sectionTitle: 'Decentralisation',
     subtitle: 'Decentralised technology',
-    paragraph: 'We at the Labz, believe it’s very important to remember why bitcoin was developed,  and in turn the whole point of decentralisation.If people wish to follow them original purposes, which actually to be clear, means “putting power back in the hands of the people”  And general antiestablishment sentiment, we are at the Labz respect that. As long as you don’t break any laws in the country you’re in, we will build it for you,  we respect privacy, and the need for anonymity, and you will not be judged by us!<br><br>Secure lines of communication can be set up upon request , just ask!',
+    paragraph: 'At The Labz, we are deeply committed to the ethos of decentralization, valuing the power and freedom it brings to the people. Respecting privacy and the need for anonymity, we offer secure, bespoke solutions in line with the original spirit of Bitcoin and decentralization, without judgment. Whether it\'s true decentralization, free initial consultations, or providing complete intellectual property rights on original builds, we ensure that our services are legal, private, and tailored to empower our clients.',
     list: '<ul className="project-list" style="list-style:disc"><li>True decentralisation if required</li><li>Free consultation on any area of this we understand (upon initial product deposit)</li><li>We will build and provide all IP to the clients on projects that are original builds</li></ul>',
     title2: 'What is decentralisation',
     content: 'In tech, decentralisation means that there is no one single point of control therefor cant be governed by one decisionmaker so less opportunity for Bias.  Which in terms of web3 this allows for a more reliable structure with no one point of failure alone.',
     additionalData: {
-        button1: {
-          title: 'Decentralised Project 1',
-          paragraph: 'About this design project lorem ipsum dolor blah blah blah',
-          list: '<ul style="list-style:disc"><li>Robust solidity contract creation.</li><li>User-friendly dApp that facilitated the largest ever pre-sale sell-out at the time on BSC.</li><li>Secure facilitation of the TGE to allow adoption of the native token.</li></ul>',
-          image: '../../../media/images/projects/project-placeholder.png',
-        },
+      button1: {
+        title: 'Coming Soon',
+        paragraph: 'Information about previous decentralised projects is coming soon',
+        list: '<ul style="list-style:disc"><li>Coming soon</li></ul>',
+        image: '../../../media/images/projects/project-placeholder.png',
+      }
       },
       carouselData: {
         carouselitem1: {

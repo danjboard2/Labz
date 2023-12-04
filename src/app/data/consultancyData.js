@@ -1,17 +1,17 @@
 const consultancyData = {
   sectionTitle: 'Consultancy',
     subtitle: 'Independent Web3 advice',
-    paragraph: 'At Labz, we\'re reshaping the future of the digital world. As pioneers in Web3 technologies, we\'re passionate about creating innovative solutions that empower businesses and individuals alike. We have partnered with an expert consulting team known for there success and reach in the web2 sphere and now leaving there mark on web3 and applying blockchain into currently successful businesses to bring further growth and measurable metrics to a whole new level.',
+    paragraph: 'At Labz, we are at the forefront of digital innovation, specializing in integrating Web3 technologies into existing businesses. Our expert consulting team, with a strong background in Web2 and a growing impact in Web3, offers comprehensive services including full Web2 to Web3 blockchain integration, cutting-edge DeFi consultancy, and tailored Venture Labz packages to support funding rounds. We\'re dedicated to driving growth and elevating businesses to new heights with measurable and advanced blockchain solutions.',
     list: '<ul className="project-list" style="list-style:disc"><li>Full web2 to web3 blockchain  integration consultancy</li><li>Defi consultancy from industry leaders</li><li>Venture labz packages to move through funding rounds</li></ul>',
     title2: 'Why work with us',
     content: 'We believe that business should be conducted in a transparent and resonsible manner always acting with integrity and the best interest of our clients.  Our consultancy team is committed to help you optimise your business operations, increase revenue and help you achieve your goals.',
     additionalData: {
-        button1: {
-          title: 'Consultancy Project 1',
-          paragraph: 'About this consultancy project lorem ipsum dolor blah blah blah',
-          list: '<ul style="list-style:disc"><li>Robust solidity contract creation.</li><li>User-friendly dApp that facilitated the largest ever pre-sale sell-out at the time on BSC.</li><li>Secure facilitation of the TGE to allow adoption of the native token.</li></ul>',
-          image: '../../../media/images/projects/project-placeholder.png',
-        },
+      button1: {
+        title: 'Coming Soon',
+        paragraph: 'Information about previous consultancy projects is coming soon',
+        list: '<ul style="list-style:disc"><li>Coming soon</li></ul>',
+        image: '../../../media/images/projects/project-placeholder.png',
+      }
       },
       carouselData: {
         carouselitem1: {

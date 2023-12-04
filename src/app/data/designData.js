@@ -1,17 +1,17 @@
 const designData = {
   sectionTitle: 'Design solutions',
     subtitle: 'Bespoke graphics and CGI',
-    paragraph: 'Our in-house team of designers and developers are here to bring your ideas to life and create captivating experiences for web3 companies. Their expertise in design principles, attention to detail and collaboration with other teams ensure that our products and services are not only visually  appealing but also optimised for performance and usability.  We take pride in the contribution of our graphics team in shaping the identity and appeal of the best web3 companies ',
+    paragraph: 'Our expert in-house team specializes in creating engaging experiences for Web3 companies, blending exceptional design with performance and usability. This includes a renowned "Full Stack" artist, notable for NFT art in the BSC space, and a UI/UX professional with experience at major brands like Harrods and Uber Eats, ensuring our products are not only visually striking but highly functional.',
     list: '<ul className="project-list" style="list-style:disc"><li>We have the best "Full Stack" artist , renowned for his Nft art in the BSC space.</li><li>Another UI/UX professional leads the site builds who is UK based and has worked with household names such as Harrods and Uber Eats.</li></ul>',
     title2: 'Our design services',
     content: 'Whatever you need designing whether it\'s a logo, website, marketing material or mobile app we can utilise our in-house designers to get it done to the best standard.',
     additionalData: {
-        button1: {
-          title: 'Design Project 1',
-          paragraph: 'About this design project lorem ipsum dolor blah blah blah',
-          list: '<ul style="list-style:disc"><li>Robust solidity contract creation.</li><li>User-friendly dApp that facilitated the largest ever pre-sale sell-out at the time on BSC.</li><li>Secure facilitation of the TGE to allow adoption of the native token.</li></ul>',
-          image: '../../../media/images/projects/project-placeholder.png',
-        },
+      button1: {
+        title: 'Coming Soon',
+        paragraph: 'Information about previous design and build projects is coming soon',
+        list: '<ul style="list-style:disc"><li>Coming soon</li></ul>',
+        image: '../../../media/images/projects/project-placeholder.png',
+      }
       },
       carouselData: {
         carouselitem1: {
